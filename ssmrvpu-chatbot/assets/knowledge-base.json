@@ -1,0 +1,386 @@
+[
+  {
+    "id": "greeting",
+    "category": "general",
+    "title": "Greetings & Welcome",
+    "keywords": [
+      "hi",
+      "hello",
+      "hey",
+      "namaste",
+      "good morning",
+      "good afternoon",
+      "good evening",
+      "start",
+      "help",
+      "menu"
+    ],
+    "weight": 1,
+    "answer": "👋 Welcome to **SSMRV Pre-University College, Jayanagar** Official AI Assistant!\n\nI can help you with admissions, course combinations, eligibility, campus facilities, contact information, and direct website navigation.\n\nWhat would you like to explore today?",
+    "quickChips": [
+      "Courses & Combinations",
+      "Admission Process",
+      "Required Documents",
+      "Campus Facilities",
+      "Contact & Location",
+      "Navigate Website"
+    ]
+  },
+  {
+    "id": "courses_all",
+    "category": "academics",
+    "title": "Courses and Combinations Offered",
+    "keywords": [
+      "courses",
+      "combinations",
+      "streams",
+      "subjects",
+      "pcmb",
+      "pcmc",
+      "seba",
+      "ceba",
+      "bams",
+      "bame",
+      "meba",
+      "peba",
+      "science",
+      "commerce",
+      "programs",
+      "study",
+      "academic"
+    ],
+    "weight": 2,
+    "answer": "🎓 **Courses & Combinations at SSMRV PU**\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Public exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n**📊 Commerce Stream**:\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n• **CEBA**: Computer Science, Economics, Business Studies, Accountancy\n• **MEBA**: Basic Mathematics, Economics, Business Studies, Accountancy\n• **PEBA**: Political Science, Economics, Business Studies, Accountancy\n\n**Languages**:\n• Compulsory: English\n• Second Language Options: Kannada, Hindi, Sanskrit, French",
+    "quickChips": [
+      "Admission Process",
+      "Science Stream",
+      "Commerce Stream",
+      "Required Documents",
+      "Go to Courses Page"
+    ],
+    "navigation": {
+      "label": "Visit Courses Page",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+    }
+  },
+  {
+    "id": "courses_science",
+    "category": "academics",
+    "title": "Science Stream Combinations",
+    "keywords": [
+      "science",
+      "science stream",
+      "pcmb",
+      "pcmc",
+      "physics",
+      "chemistry",
+      "maths",
+      "mathematics",
+      "biology",
+      "computer science",
+      "neet",
+      "jee",
+      "kcet",
+      "engineering",
+      "medical"
+    ],
+    "weight": 2.5,
+    "answer": "🔬 **Science Stream Combinations at SSMRV PU**:\n\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n• **PCMB**: Ideal for Medical (NEET), Biotechnology, Pure Sciences, and Engineering.\n• **PCMC**: Ideal for Engineering (JEE/KCET), Computer Science, and IT careers.\n\nAll science programs feature intensive laboratory practicals and competitive exam preparatory orientation.",
+    "quickChips": [
+      "Commerce Stream",
+      "Admission Process",
+      "Science Labs",
+      "Contact Admissions"
+    ],
+    "navigation": {
+      "label": "Explore Science Courses",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+    }
+  },
+  {
+    "id": "courses_commerce",
+    "category": "academics",
+    "title": "Commerce Stream Combinations",
+    "keywords": [
+      "commerce",
+      "commerce stream",
+      "bams",
+      "bame",
+      "seba",
+      "ceba",
+      "meba",
+      "peba",
+      "business studies",
+      "accountancy",
+      "economics",
+      "statistics",
+      "ca",
+      "cs",
+      "finance"
+    ],
+    "weight": 2.5,
+    "answer": "📊 **Commerce Stream Combinations at SSMRV PU**:\n\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n• **CEBA**: Computer Science, Economics, Business Studies, Accountancy\n• **MEBA**: Basic Mathematics, Economics, Business Studies, Accountancy\n• **PEBA**: Political Science, Economics, Business Studies, Accountancy\n\nThese combinations build a solid foundation for careers in Chartered Accountancy (CA), Company Secretary (CS), Business Administration (BBA/MBA), Financial Analysis, and Economics.",
+    "quickChips": [
+      "Science Stream",
+      "Admission Process",
+      "Required Documents",
+      "Contact Admissions"
+    ],
+    "navigation": {
+      "label": "Explore Commerce Courses",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+    }
+  },
+  {
+    "id": "languages",
+    "category": "academics",
+    "title": "Language Options",
+    "keywords": [
+      "language",
+      "languages",
+      "second language",
+      "kannada",
+      "hindi",
+      "sanskrit",
+      "french",
+      "english",
+      "medium"
+    ],
+    "weight": 2,
+    "answer": "🗣️ **Language Options at SSMRV PU**:\n\n• **Part I (Compulsory)**: English\n• **Part II (Second Language Choice)**: Kannada, Hindi, Sanskrit, French\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada as per DPUE regulations.",
+    "quickChips": [
+      "Courses & Combinations",
+      "Admission Process",
+      "Campus Facilities"
+    ]
+  },
+  {
+    "id": "admissions_process",
+    "category": "admissions",
+    "title": "Admission Procedure & Steps",
+    "keywords": [
+      "admission",
+      "admissions",
+      "apply",
+      "application",
+      "how to apply",
+      "procedure",
+      "process",
+      "enroll",
+      "seat",
+      "registration",
+      "form",
+      "dates"
+    ],
+    "weight": 2.5,
+    "answer": "📝 **Admission Procedure at SSMRV PU**:\n\n1. Application forms available immediately post-SSLC result announcement.\n2. Submit application with photocopies of 10th marksheet and passport photos.\n3. Cut-off percentage announcement and merit ranking list publication.\n4. Direct counseling and admission confirmation on merit basis.\n\n💡 **Tips**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.",
+    "quickChips": [
+      "Required Documents",
+      "Eligibility & Cutoffs",
+      "Contact Admissions",
+      "Take me to Admission Page"
+    ],
+    "navigation": {
+      "label": "Open Admission Portal",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/admissions/"
+    }
+  },
+  {
+    "id": "admissions_documents",
+    "category": "admissions",
+    "title": "Required Documents for Admission",
+    "keywords": [
+      "documents",
+      "required documents",
+      "certificates",
+      "marksheet",
+      "marks card",
+      "tc",
+      "transfer certificate",
+      "aadhaar",
+      "caste certificate",
+      "income certificate",
+      "photographs",
+      "eligibility certificate"
+    ],
+    "weight": 2.5,
+    "answer": "📄 **Documents Required for Admission at SSMRV PU**:\n\n• SSLC / 10th Marks Card (Original & Attested Photocopies)\n• Transfer Certificate (TC)\n• Conduct Certificate\n• Aadhaar Card copy\n• Caste & Income Certificate (if applicable)\n• Provisional Eligibility Certificate (for non-Karnataka/ICSE/CBSE/International students)\n• Recent passport-size color photographs\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.",
+    "quickChips": [
+      "Admission Process",
+      "Eligibility & Cutoffs",
+      "Contact & Location"
+    ]
+  },
+  {
+    "id": "eligibility_cutoff",
+    "category": "admissions",
+    "title": "Eligibility & Cutoff Criteria",
+    "keywords": [
+      "eligibility",
+      "cutoff",
+      "cut off",
+      "cut-off",
+      "percentage",
+      "marks",
+      "minimum marks",
+      "criteria",
+      "sslc percentage",
+      "pass marks"
+    ],
+    "weight": 2.5,
+    "answer": "🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.",
+    "quickChips": [
+      "Admission Process",
+      "Required Documents",
+      "Courses & Combinations"
+    ]
+  },
+  {
+    "id": "leadership_principal",
+    "category": "about",
+    "title": "Principal & Leadership Team",
+    "keywords": [
+      "principal",
+      "head",
+      "leadership",
+      "director",
+      "president",
+      "management",
+      "trust",
+      "rsst",
+      "rvei",
+      "who is principal",
+      "shyam",
+      "murthy",
+      "nagaraj"
+    ],
+    "weight": 2,
+    "answer": "🏛️ **Leadership at SSMRV PU**:\n\n• **Principal**: **Dr. S. Anil Kumar**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Trust**: Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI), delivering over 80+ years of educational excellence.",
+    "quickChips": [
+      "About College",
+      "Courses & Combinations",
+      "Contact & Location"
+    ],
+    "navigation": {
+      "label": "View Management Details",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/about-us/"
+    }
+  },
+  {
+    "id": "facilities",
+    "category": "campus",
+    "title": "Campus Facilities & Infrastructure",
+    "keywords": [
+      "facilities",
+      "infrastructure",
+      "labs",
+      "laboratory",
+      "library",
+      "sports",
+      "playground",
+      "auditorium",
+      "smart class",
+      "classrooms",
+      "gym",
+      "canteen",
+      "hostel",
+      "campus"
+    ],
+    "weight": 2,
+    "answer": "🏫 **Campus Facilities at SSMRV PU**:\n\n• State-of-the-art Physics, Chemistry, and Biology Laboratories\n• Air-conditioned Computer Science Lab with high-speed internet\n• Comprehensive Digital and Physical Library & Reading Hall\n• Modern Multipurpose Seminar Hall & Auditorium\n• Indoor Sports Complex and Outdoor Playgrounds\n• Active NCC, NSS, and Youth Red Cross units\n• Career Guidance and Competitive Exam Cell\n• Canteen & Cafeteria serving hygienic food\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "quickChips": [
+      "Courses & Combinations",
+      "Admission Process",
+      "Campus Location",
+      "Explore Facilities Page"
+    ],
+    "navigation": {
+      "label": "Explore Facilities Page",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/facilities/"
+    }
+  },
+  {
+    "id": "contact_location",
+    "category": "contact",
+    "title": "Contact Information, Address & Timings",
+    "keywords": [
+      "contact",
+      "address",
+      "phone",
+      "mobile",
+      "call",
+      "email",
+      "location",
+      "where",
+      "timings",
+      "working hours",
+      "map",
+      "directions",
+      "reach",
+      "helpline"
+    ],
+    "weight": 2.5,
+    "answer": "📍 **Contact Information — SSMRV PU**\n\n• **Campus Address**:\n  36th Cross, 4th 'T' Block, Jayanagar, Bengaluru – 560041, Karnataka, India\n• **Phone / Helpline**: 080-2244 3625, 080-2244 3620\n• **Email**: ssmrvpu@gmail.com\n• **Office Working Hours**: Monday – Saturday: 9:00 AM – 5:00 PM\n• **Official Website**: https://ssmrvpu.edu.in/new_ssmrvpu/",
+    "quickChips": [
+      "Admission Process",
+      "Take me to Contact Page",
+      "Courses & Combinations"
+    ],
+    "navigation": {
+      "label": "Open Contact Us Page",
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/contact-us/"
+    }
+  },
+  {
+    "id": "website_navigation",
+    "category": "navigation",
+    "title": "Website Direct Page Navigation",
+    "keywords": [
+      "website",
+      "navigation",
+      "navigate",
+      "link",
+      "portal",
+      "home page",
+      "open",
+      "go to",
+      "take me",
+      "redirect",
+      "visit",
+      "browse"
+    ],
+    "weight": 2,
+    "answer": "🧭 **Direct Navigation Directory for SSMRV PU**:\n\nClick any of the destination links below to jump directly to that section of our website:",
+    "navigationMenu": [
+      {
+        "title": "🏠 Home Page",
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/"
+      },
+      {
+        "title": "📖 About College",
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/about-us/"
+      },
+      {
+        "title": "🎓 Courses & Combinations",
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+      },
+      {
+        "title": "📝 Admissions & Criteria",
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/admissions/"
+      },
+      {
+        "title": "🏛️ Campus Facilities",
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/facilities/"
+      },
+      {
+        "title": "📞 Contact & Location",
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/contact-us/"
+      }
+    ],
+    "quickChips": [
+      "Take me to Admission Page",
+      "Go to Courses Page",
+      "Contact & Location"
+    ]
+  }
+]

@@ -1,0 +1,386 @@
+[
+  {
+    "id": "greeting",
+    "category": "general",
+    "title": "Greetings & Welcome",
+    "keywords": [
+      "hi",
+      "hello",
+      "hey",
+      "namaste",
+      "good morning",
+      "good afternoon",
+      "good evening",
+      "start",
+      "help",
+      "menu"
+    ],
+    "weight": 1,
+    "answer": "👋 Welcome to **NMKRV Pre-University College, Jayanagar** Official AI Assistant!\n\nI can help you with admissions, course combinations, eligibility, campus facilities, contact information, and direct website navigation.\n\nWhat would you like to explore today?",
+    "quickChips": [
+      "Courses & Combinations",
+      "Admission Process",
+      "Required Documents",
+      "Campus Facilities",
+      "Contact & Location",
+      "Navigate Website"
+    ]
+  },
+  {
+    "id": "courses_all",
+    "category": "academics",
+    "title": "Courses and Combinations Offered",
+    "keywords": [
+      "courses",
+      "combinations",
+      "streams",
+      "subjects",
+      "pcmb",
+      "pcmc",
+      "seba",
+      "ceba",
+      "bams",
+      "bame",
+      "meba",
+      "peba",
+      "science",
+      "commerce",
+      "programs",
+      "study",
+      "academic"
+    ],
+    "weight": 2,
+    "answer": "🎓 **Courses & Combinations at NMKRV PU**\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Public exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n**📊 Commerce Stream**:\n• **BAMS**: Business Studies, Accountancy, Basic Mathematics, Statistics\n• **BAME**: Business Studies, Accountancy, Basic Mathematics, Economics\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n\n**Languages**:\n• Compulsory: English\n• Second Language Options: Kannada, Hindi, Sanskrit",
+    "quickChips": [
+      "Admission Process",
+      "Science Stream",
+      "Commerce Stream",
+      "Required Documents",
+      "Go to Courses Page"
+    ],
+    "navigation": {
+      "label": "Visit Courses Page",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/our_courses/"
+    }
+  },
+  {
+    "id": "courses_science",
+    "category": "academics",
+    "title": "Science Stream Combinations",
+    "keywords": [
+      "science",
+      "science stream",
+      "pcmb",
+      "pcmc",
+      "physics",
+      "chemistry",
+      "maths",
+      "mathematics",
+      "biology",
+      "computer science",
+      "neet",
+      "jee",
+      "kcet",
+      "engineering",
+      "medical"
+    ],
+    "weight": 2.5,
+    "answer": "🔬 **Science Stream Combinations at NMKRV PU**:\n\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n• **PCMB**: Ideal for Medical (NEET), Biotechnology, Pure Sciences, and Engineering.\n• **PCMC**: Ideal for Engineering (JEE/KCET), Computer Science, and IT careers.\n\nAll science programs feature intensive laboratory practicals and competitive exam preparatory orientation.",
+    "quickChips": [
+      "Commerce Stream",
+      "Admission Process",
+      "Science Labs",
+      "Contact Admissions"
+    ],
+    "navigation": {
+      "label": "Explore Science Courses",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/our_courses/"
+    }
+  },
+  {
+    "id": "courses_commerce",
+    "category": "academics",
+    "title": "Commerce Stream Combinations",
+    "keywords": [
+      "commerce",
+      "commerce stream",
+      "bams",
+      "bame",
+      "seba",
+      "ceba",
+      "meba",
+      "peba",
+      "business studies",
+      "accountancy",
+      "economics",
+      "statistics",
+      "ca",
+      "cs",
+      "finance"
+    ],
+    "weight": 2.5,
+    "answer": "📊 **Commerce Stream Combinations at NMKRV PU**:\n\n• **BAMS**: Business Studies, Accountancy, Basic Mathematics, Statistics\n• **BAME**: Business Studies, Accountancy, Basic Mathematics, Economics\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n\nThese combinations build a solid foundation for careers in Chartered Accountancy (CA), Company Secretary (CS), Business Administration (BBA/MBA), Financial Analysis, and Economics.",
+    "quickChips": [
+      "Science Stream",
+      "Admission Process",
+      "Required Documents",
+      "Contact Admissions"
+    ],
+    "navigation": {
+      "label": "Explore Commerce Courses",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/our_courses/"
+    }
+  },
+  {
+    "id": "languages",
+    "category": "academics",
+    "title": "Language Options",
+    "keywords": [
+      "language",
+      "languages",
+      "second language",
+      "kannada",
+      "hindi",
+      "sanskrit",
+      "french",
+      "english",
+      "medium"
+    ],
+    "weight": 2,
+    "answer": "🗣️ **Language Options at NMKRV PU**:\n\n• **Part I (Compulsory)**: English\n• **Part II (Second Language Choice)**: Kannada, Hindi, Sanskrit\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada as per DPUE regulations.",
+    "quickChips": [
+      "Courses & Combinations",
+      "Admission Process",
+      "Campus Facilities"
+    ]
+  },
+  {
+    "id": "admissions_process",
+    "category": "admissions",
+    "title": "Admission Procedure & Steps",
+    "keywords": [
+      "admission",
+      "admissions",
+      "apply",
+      "application",
+      "how to apply",
+      "procedure",
+      "process",
+      "enroll",
+      "seat",
+      "registration",
+      "form",
+      "dates"
+    ],
+    "weight": 2.5,
+    "answer": "📝 **Admission Procedure at NMKRV PU**:\n\n1. Application forms available online via admission portal and at campus office post SSLC/10th results.\n2. Submit application with 4 passport photographs & attested copy of Class 10 marksheet.\n3. Cut-off percentages announced based on stream demand and board guidelines.\n4. Admissions finalized on merit and first-come, first-served basis.\n\n💡 **Tips**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.",
+    "quickChips": [
+      "Required Documents",
+      "Eligibility & Cutoffs",
+      "Contact Admissions",
+      "Take me to Admission Page"
+    ],
+    "navigation": {
+      "label": "Open Admission Portal",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/admissions/"
+    }
+  },
+  {
+    "id": "admissions_documents",
+    "category": "admissions",
+    "title": "Required Documents for Admission",
+    "keywords": [
+      "documents",
+      "required documents",
+      "certificates",
+      "marksheet",
+      "marks card",
+      "tc",
+      "transfer certificate",
+      "aadhaar",
+      "caste certificate",
+      "income certificate",
+      "photographs",
+      "eligibility certificate"
+    ],
+    "weight": 2.5,
+    "answer": "📄 **Documents Required for Admission at NMKRV PU**:\n\n• SSLC / 10th Standard Original Marks Card + attested photocopies\n• Aadhaar Card (Original + Photocopy)\n• Transfer Certificate (TC) from previous school/institution\n• Conduct Certificate from previous school/institution\n• Provisional Eligibility Certificate (issued by DPUE Bengaluru for foreign/NRI applicants)\n• Caste Certificate issued by Tahsildar (SC/ST/Category candidates)\n• Income Certificate (if family annual income is below ₹44,500)\n• 4 Recent Passport-size Photographs\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.",
+    "quickChips": [
+      "Admission Process",
+      "Eligibility & Cutoffs",
+      "Contact & Location"
+    ]
+  },
+  {
+    "id": "eligibility_cutoff",
+    "category": "admissions",
+    "title": "Eligibility & Cutoff Criteria",
+    "keywords": [
+      "eligibility",
+      "cutoff",
+      "cut off",
+      "cut-off",
+      "percentage",
+      "marks",
+      "minimum marks",
+      "criteria",
+      "sslc percentage",
+      "pass marks"
+    ],
+    "weight": 2.5,
+    "answer": "🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.",
+    "quickChips": [
+      "Admission Process",
+      "Required Documents",
+      "Courses & Combinations"
+    ]
+  },
+  {
+    "id": "leadership_principal",
+    "category": "about",
+    "title": "Principal & Leadership Team",
+    "keywords": [
+      "principal",
+      "head",
+      "leadership",
+      "director",
+      "president",
+      "management",
+      "trust",
+      "rsst",
+      "rvei",
+      "who is principal",
+      "shyam",
+      "murthy",
+      "nagaraj"
+    ],
+    "weight": 2,
+    "answer": "🏛️ **Leadership at NMKRV PU**:\n\n• **Principal**: **Mrs. Sheela Prakash S.N.**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Trust**: Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI), delivering over 80+ years of educational excellence.",
+    "quickChips": [
+      "About College",
+      "Courses & Combinations",
+      "Contact & Location"
+    ],
+    "navigation": {
+      "label": "View Management Details",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/about_college/"
+    }
+  },
+  {
+    "id": "facilities",
+    "category": "campus",
+    "title": "Campus Facilities & Infrastructure",
+    "keywords": [
+      "facilities",
+      "infrastructure",
+      "labs",
+      "laboratory",
+      "library",
+      "sports",
+      "playground",
+      "auditorium",
+      "smart class",
+      "classrooms",
+      "gym",
+      "canteen",
+      "hostel",
+      "campus"
+    ],
+    "weight": 2,
+    "answer": "🏫 **Campus Facilities at NMKRV PU**:\n\n• Modern Classrooms equipped with Digital Learning Aids & Projectors\n• Comprehensive Library with Textbooks, Reference Books, Journals & E-Resources\n• Specialized Physics, Chemistry, and Biology Laboratories\n• High-tech Computer Science Laboratory with high-speed internet\n• Sports Facilities for Indoor and Outdoor Games (Basketball, Football, Volleyball, Badminton)\n• Dedicated Gymnasium and Swimming Pool\n• Spacious Auditorium and Seminar Halls\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "quickChips": [
+      "Courses & Combinations",
+      "Admission Process",
+      "Campus Location",
+      "Explore Facilities Page"
+    ],
+    "navigation": {
+      "label": "Explore Facilities Page",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/facilities/"
+    }
+  },
+  {
+    "id": "contact_location",
+    "category": "contact",
+    "title": "Contact Information, Address & Timings",
+    "keywords": [
+      "contact",
+      "address",
+      "phone",
+      "mobile",
+      "call",
+      "email",
+      "location",
+      "where",
+      "timings",
+      "working hours",
+      "map",
+      "directions",
+      "reach",
+      "helpline"
+    ],
+    "weight": 2.5,
+    "answer": "📍 **Contact Information — NMKRV PU**\n\n• **Campus Address**:\n  Jayanagar, Bengaluru / DPS Bengaluru North Campus, Survey No. 35/1A, Sathnur Village, Bagalur Post, Off Bellary Road, Jalla Hobli, Bengaluru – 562149, Karnataka, India\n• **Phone / Helpline**: 080 69018950\n• **Email**: info.nmkrvpu@rvei.edu.in\n• **Office Working Hours**: Monday – Saturday: 9:00 AM – 5:00 PM\n• **Official Website**: https://www.nmkrvpu.edu.in/new_nmkrvpu/",
+    "quickChips": [
+      "Admission Process",
+      "Take me to Contact Page",
+      "Courses & Combinations"
+    ],
+    "navigation": {
+      "label": "Open Contact Us Page",
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/"
+    }
+  },
+  {
+    "id": "website_navigation",
+    "category": "navigation",
+    "title": "Website Direct Page Navigation",
+    "keywords": [
+      "website",
+      "navigation",
+      "navigate",
+      "link",
+      "portal",
+      "home page",
+      "open",
+      "go to",
+      "take me",
+      "redirect",
+      "visit",
+      "browse"
+    ],
+    "weight": 2,
+    "answer": "🧭 **Direct Navigation Directory for NMKRV PU**:\n\nClick any of the destination links below to jump directly to that section of our website:",
+    "navigationMenu": [
+      {
+        "title": "🏠 Home Page",
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/"
+      },
+      {
+        "title": "📖 About College",
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/about_college/"
+      },
+      {
+        "title": "🎓 Courses & Combinations",
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/our_courses/"
+      },
+      {
+        "title": "📝 Admissions & Criteria",
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/admissions/"
+      },
+      {
+        "title": "🏛️ Campus Facilities",
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/facilities/"
+      },
+      {
+        "title": "📞 Contact & Location",
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/"
+      }
+    ],
+    "quickChips": [
+      "Take me to Admission Page",
+      "Go to Courses Page",
+      "Contact & Location"
+    ]
+  }
+]

@@ -1,0 +1,900 @@
+{
+  "hi": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "hello": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "hey": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "namaste": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "good morning": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "good afternoon": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "good evening": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "start": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "help": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "menu": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "combinations": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "streams": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "subjects": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "pcmb": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "pcmc": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "seba": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "ceba": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "bams": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "bame": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "meba": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "peba": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "science": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "commerce": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "programs": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "study": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "academic": [
+    {
+      "id": "courses_all",
+      "weight": 2
+    }
+  ],
+  "science stream": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "physics": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "chemistry": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "maths": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "mathematics": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "biology": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "computer science": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "neet": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "jee": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "kcet": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "engineering": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "medical": [
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "commerce stream": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "business studies": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "accountancy": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "economics": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "statistics": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "ca": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "cs": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "finance": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "language": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "languages": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "second language": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "kannada": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "hindi": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "sanskrit": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "french": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "english": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "medium": [
+    {
+      "id": "languages",
+      "weight": 2
+    }
+  ],
+  "admission": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "admissions": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "apply": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "application": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "how to apply": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "procedure": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "process": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "enroll": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "seat": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "registration": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "form": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "dates": [
+    {
+      "id": "admissions_process",
+      "weight": 2.5
+    }
+  ],
+  "documents": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "required documents": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "certificates": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "marksheet": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "marks card": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "tc": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "transfer certificate": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "aadhaar": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "caste certificate": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "income certificate": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "photographs": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "eligibility certificate": [
+    {
+      "id": "admissions_documents",
+      "weight": 2.5
+    }
+  ],
+  "eligibility": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "cutoff": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "cut off": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "cut-off": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "percentage": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "marks": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "minimum marks": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "criteria": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "sslc percentage": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "pass marks": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "principal": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "head": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "leadership": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "director": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "president": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "management": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "trust": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "rsst": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "rvei": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "who is principal": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "shyam": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "murthy": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "nagaraj": [
+    {
+      "id": "leadership_principal",
+      "weight": 2
+    }
+  ],
+  "facilities": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "labs": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "laboratory": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "library": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "sports": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "playground": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "auditorium": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "smart class": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "classrooms": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "gym": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "canteen": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "hostel": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "campus": [
+    {
+      "id": "facilities",
+      "weight": 2
+    }
+  ],
+  "contact": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "address": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "phone": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "mobile": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "call": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "email": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "location": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "where": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "timings": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "working hours": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "map": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "directions": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "reach": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "helpline": [
+    {
+      "id": "contact_location",
+      "weight": 2.5
+    }
+  ],
+  "website": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "navigation": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "navigate": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "link": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "portal": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "home page": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "open": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "go to": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "take me": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "redirect": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "visit": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ],
+  "browse": [
+    {
+      "id": "website_navigation",
+      "weight": 2
+    }
+  ]
+}
