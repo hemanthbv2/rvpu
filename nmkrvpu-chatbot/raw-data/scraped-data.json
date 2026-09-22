@@ -1,0 +1,122 @@
+{
+  "institute": {
+    "name": "NMKRV Pre-University College, Jayanagar",
+    "shortName": "NMKRV PU",
+    "website": "https://www.nmkrvpu.edu.in/new_nmkrvpu/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "Jayanagar, Bengaluru / DPS Bengaluru North Campus, Survey No. 35/1A, Sathnur Village, Bagalur Post, Off Bellary Road, Jalla Hobli, Bengaluru – 562149, Karnataka, India",
+    "phone": [
+      "080 69018950"
+    ],
+    "email": "info.nmkrvpu@rvei.edu.in",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM",
+    "mapLink": "https://maps.app.goo.gl/LsSEaJDhjNz64Af49",
+    "social": {
+      "facebook": "https://www.facebook.com/NMKRVPU/",
+      "instagram": "https://www.instagram.com/nmkrvpucollege/"
+    }
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "vice_president_1": "Dr. A.C. Chandrashekar Raju",
+    "vice_president_2": "Dr. C. Vinod Hayagriv",
+    "treasurer": "Mr. P.S. Venkatesh Babu",
+    "principal": {
+      "name": "Mrs. Sheela Prakash S.N.",
+      "designation": "Principal"
+    },
+    "founder": "Sri M.C. Sivananda Sarma (80+ years legacy under RSST)"
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English (Board examinations may be answered in English or Kannada)",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": [
+        "Kannada",
+        "Hindi",
+        "Sanskrit"
+      ]
+    },
+    "combinations": [
+      {
+        "code": "PCMB",
+        "subjects": "Physics, Chemistry, Mathematics, Biology",
+        "stream": "Science"
+      },
+      {
+        "code": "PCMC",
+        "subjects": "Physics, Chemistry, Mathematics, Computer Science",
+        "stream": "Science"
+      },
+      {
+        "code": "BAMS",
+        "subjects": "Business Studies, Accountancy, Basic Mathematics, Statistics",
+        "stream": "Commerce"
+      },
+      {
+        "code": "BAME",
+        "subjects": "Business Studies, Accountancy, Basic Mathematics, Economics",
+        "stream": "Commerce"
+      },
+      {
+        "code": "SEBA",
+        "subjects": "Statistics, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      }
+    ]
+  },
+  "admissions": {
+    "portal": "https://admissions.rvlearninghub.com/",
+    "process": [
+      "Application forms available online via admission portal and at campus office post SSLC/10th results.",
+      "Submit application with 4 passport photographs & attested copy of Class 10 marksheet.",
+      "Cut-off percentages announced based on stream demand and board guidelines.",
+      "Admissions finalized on merit and first-come, first-served basis."
+    ],
+    "required_documents": [
+      "SSLC / 10th Standard Original Marks Card + attested photocopies",
+      "Aadhaar Card (Original + Photocopy)",
+      "Transfer Certificate (TC) from previous school/institution",
+      "Conduct Certificate from previous school/institution",
+      "Provisional Eligibility Certificate (issued by DPUE Bengaluru for foreign/NRI applicants)",
+      "Caste Certificate issued by Tahsildar (SC/ST/Category candidates)",
+      "Income Certificate (if family annual income is below ₹44,500)",
+      "4 Recent Passport-size Photographs"
+    ],
+    "examination_rules": {
+      "i_puc": "Promotional examination conducted at district level by DPUE (Minimum 30% per paper and 35% aggregate to advance).",
+      "ii_puc": "Annual State Board Examination conducted by Karnataka DPUE."
+    }
+  },
+  "facilities": {
+    "items": [
+      "Modern Classrooms equipped with Digital Learning Aids & Projectors",
+      "Comprehensive Library with Textbooks, Reference Books, Journals & E-Resources",
+      "Specialized Physics, Chemistry, and Biology Laboratories",
+      "High-tech Computer Science Laboratory with high-speed internet",
+      "Sports Facilities for Indoor and Outdoor Games (Basketball, Football, Volleyball, Badminton)",
+      "Dedicated Gymnasium and Swimming Pool",
+      "Spacious Auditorium and Seminar Halls"
+    ]
+  },
+  "colors": {
+    "primary": "#EE9B54",
+    "primary_alt": "#F09E53",
+    "secondary": "#1E1E1E",
+    "accent": "#F5C155",
+    "accent_light": "#FCD882",
+    "background": "#F8F6F0",
+    "text_dark": "#222222"
+  },
+  "pages": {
+    "home": "https://www.nmkrvpu.edu.in/new_nmkrvpu/",
+    "about": "https://www.nmkrvpu.edu.in/new_nmkrvpu/about_college/",
+    "board": "https://www.nmkrvpu.edu.in/new_nmkrvpu/board_of_management/",
+    "courses": "https://www.nmkrvpu.edu.in/new_nmkrvpu/our_courses/",
+    "admissions": "https://www.nmkrvpu.edu.in/new_nmkrvpu/admissions/",
+    "facilities": "https://www.nmkrvpu.edu.in/new_nmkrvpu/facilities/",
+    "faculty": "https://www.nmkrvpu.edu.in/new_nmkrvpu/faculty/",
+    "admission_portal": "https://admissions.rvlearninghub.com/"
+  }
+}

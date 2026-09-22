@@ -1,0 +1,152 @@
+{
+  "institute": {
+    "name": "RV Pre-University College Mysuru",
+    "shortName": "RVPU Mysore",
+    "website": "https://mys.rvpucollege.edu.in/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "DPS Mysuru Campus, Survey No. 119/1, Bannur Road, Bugathagalli, Mysuru – 570028, Karnataka, India",
+    "phone": [
+      "+91-9035974182"
+    ],
+    "email": "info.rvpum@rvei.edu.in",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM",
+    "mapLink": "https://maps.app.goo.gl/ro2asUe619ofLg3x9"
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "vice_president_1": "Dr. A.C. Chandrashekar Raju",
+    "vice_president_2": "Dr. C. Vinod Hayagriv",
+    "treasurer": "Mr. P.S. Venkatesh Babu",
+    "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
+    "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
+    "asst_secretary": "Mr. Nikhil A Murthy",
+    "director_rv_learning_hub": "Mr. Mayur Goyal",
+    "principal": {
+      "name": "Mr. Ashwin Raj",
+      "designation": "Principal (In-Charge)"
+    }
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English (Exams can be written in English or Kannada)",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": [
+        "Kannada",
+        "Hindi",
+        "Sanskrit",
+        "French"
+      ]
+    },
+    "combinations": [
+      {
+        "code": "PCMB",
+        "subjects": "Physics, Chemistry, Mathematics, Biology",
+        "stream": "Science"
+      },
+      {
+        "code": "PCMC",
+        "subjects": "Physics, Chemistry, Mathematics, Computer Science",
+        "stream": "Science"
+      },
+      {
+        "code": "BAMS",
+        "subjects": "Business Studies, Accountancy, Basic Mathematics, Statistics",
+        "stream": "Commerce"
+      },
+      {
+        "code": "BAME",
+        "subjects": "Business Studies, Accountancy, Basic Mathematics, Economics",
+        "stream": "Commerce"
+      },
+      {
+        "code": "SEBA",
+        "subjects": "Statistics, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      }
+    ]
+  },
+  "admissions": {
+    "process": [
+      "Obtain application form from campus / admissions office post-SSLC result announcement.",
+      "Submit application with 4 passport-size photographs & attested copy of Class 10 marksheet.",
+      "Cut-off percentage determination & Merit List announcement.",
+      "Enrollment finalized on merit / first-come, first-served basis as per the cutoff list."
+    ],
+    "required_documents": [
+      "SSLC / Class 10 Marks Card (Original + Xerox copies)",
+      "Aadhaar Card copy",
+      "Transfer Certificate (TC) from previous institution",
+      "Conduct Certificate from previous institution",
+      "Provisional Eligibility Certificate (for non-Karnataka/international candidates)",
+      "Caste / Category Certificate (for SC/ST/BCM candidates)",
+      "Income Certificate (if family income below ₹44,500/year)"
+    ],
+    "examination_rules": {
+      "i_puc": "District-level examination at the end of Year 1 (Min. 30% per subject, 35% aggregate to advance).",
+      "ii_puc": "State-level Board Examination conducted by Department of Pre-University Education, Karnataka."
+    }
+  },
+  "faculty": {
+    "teaching_staff": [
+      { "name": "Tiyaza Hazra", "role": "Sr. Lecturer", "subject": "Physics" },
+      { "name": "Karthik Divakaran", "role": "Sr. Lecturer", "subject": "Physics" },
+      { "name": "Renuka Prasad H.M.", "role": "Lecturer", "subject": "Physics" },
+      { "name": "Talakal Varun", "role": "Sr. Lecturer", "subject": "Chemistry" },
+      { "name": "Suhas K.S.", "role": "Lecturer", "subject": "Chemistry" },
+      { "name": "Siddesh Kumar B.B.", "role": "Lecturer", "subject": "Chemistry" },
+      { "name": "Srihari Venkatesh Torgal", "role": "Sr. Lecturer", "subject": "Mathematics" },
+      { "name": "Rajeshwari G.", "role": "Lecturer", "subject": "Basic Mathematics" },
+      { "name": "Rashmi C.", "role": "Sr. Lecturer", "subject": "Biology" },
+      { "name": "Ashwinraj", "role": "Sr. Lecturer", "subject": "Computer Science" },
+      { "name": "Mangala B.", "role": "Lecturer", "subject": "Computer Science" },
+      { "name": "Chitra L.J.", "role": "Lecturer", "subject": "Commerce / Accounts & Business" },
+      { "name": "Yuvaraj N.", "role": "Lecturer", "subject": "Economics & Statistics" },
+      { "name": "Harish S.", "role": "Lecturer", "subject": "Kannada" },
+      { "name": "Apoorva D.", "role": "Lecturer", "subject": "English" },
+      { "name": "Ashalatha", "role": "Lecturer", "subject": "Hindi" }
+    ],
+    "administrative_staff": [
+      { "name": "Rachana H.R.", "role": "Sr. Executive – Administration HR" },
+      { "name": "Akshatha K.S.", "role": "Sr. Executive – Administration Finance" }
+    ]
+  },
+  "facilities": {
+    "items": [
+      "Modern Classrooms at DPS Mysuru Campus",
+      "Physics Laboratory",
+      "Chemistry Laboratory",
+      "Biology Laboratory",
+      "Computer Science Laboratory",
+      "Comprehensive Library & Digital Learning Center",
+      "Basketball Court & Football Field",
+      "Volleyball & Badminton Courts",
+      "Gymnasium & Swimming Pool",
+      "Active Cultural Clubs & College Fests"
+    ]
+  },
+  "colors": {
+    "primary": "#E30613",
+    "primary_alt": "#C00000",
+    "secondary": "#1E1E1E",
+    "accent": "#46B3CA",
+    "accent_light": "#55C3DC",
+    "background": "#F9FAFB",
+    "button_dark": "#1F2430"
+  },
+  "pages": {
+    "home": "https://mys.rvpucollege.edu.in/",
+    "about": "https://mys.rvpucollege.edu.in/about_college/",
+    "board": "https://mys.rvpucollege.edu.in/board_of_management/",
+    "courses": "https://mys.rvpucollege.edu.in/courses/",
+    "admissions": "https://mys.rvpucollege.edu.in/admissions/",
+    "facilities": "https://mys.rvpucollege.edu.in/facilities/",
+    "faculty": "https://mys.rvpucollege.edu.in/faculty/",
+    "events": "https://mys.rvpucollege.edu.in/events/"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=100090425798745",
+    "instagram": "https://www.instagram.com/rv_learning_hub/",
+    "linkedin": "https://www.linkedin.com/company/rv-learning-hub/"
+  }
+}

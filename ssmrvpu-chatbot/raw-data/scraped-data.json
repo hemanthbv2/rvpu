@@ -1,0 +1,124 @@
+{
+  "institute": {
+    "name": "SSMRV Pre-University College, Jayanagar",
+    "shortName": "SSMRV PU",
+    "website": "https://ssmrvpu.edu.in/new_ssmrvpu/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "36th Cross, 4th 'T' Block, Jayanagar, Bengaluru – 560041, Karnataka, India",
+    "phone": [
+      "080-2244 3625",
+      "080-2244 3620"
+    ],
+    "email": "ssmrvpu@gmail.com",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM"
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
+    "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
+    "principal": {
+      "name": "Dr. S. Anil Kumar",
+      "qualifications": "M.Com, M.Phil, Ph.D",
+      "designation": "Principal"
+    }
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": [
+        "Kannada",
+        "Hindi",
+        "Sanskrit",
+        "French"
+      ]
+    },
+    "combinations": [
+      {
+        "code": "PCMB",
+        "subjects": "Physics, Chemistry, Mathematics, Biology",
+        "stream": "Science"
+      },
+      {
+        "code": "PCMC",
+        "subjects": "Physics, Chemistry, Mathematics, Computer Science",
+        "stream": "Science"
+      },
+      {
+        "code": "SEBA",
+        "subjects": "Statistics, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      },
+      {
+        "code": "CEBA",
+        "subjects": "Computer Science, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      },
+      {
+        "code": "MEBA",
+        "subjects": "Basic Mathematics, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      },
+      {
+        "code": "PEBA",
+        "subjects": "Political Science, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      }
+    ],
+    "integrated_coaching": {
+      "science": "Integrated coaching for NEET, JEE Main, JEE Advanced, and KCET",
+      "commerce": "Integrated coaching for CA Foundation and CS Foundation"
+    }
+  },
+  "admissions": {
+    "process": [
+      "Application forms available immediately post-SSLC result announcement.",
+      "Submit application with photocopies of 10th marksheet and passport photos.",
+      "Cut-off percentage announcement and merit ranking list publication.",
+      "Direct counseling and admission confirmation on merit basis."
+    ],
+    "required_documents": [
+      "SSLC / 10th Marks Card (Original & Attested Photocopies)",
+      "Transfer Certificate (TC)",
+      "Conduct Certificate",
+      "Aadhaar Card copy",
+      "Caste & Income Certificate (if applicable)",
+      "Provisional Eligibility Certificate (for non-Karnataka/ICSE/CBSE/International students)",
+      "Recent passport-size color photographs"
+    ],
+    "scholarships": [
+      "Merit-based fee concession for top rankers in 10th Board Examinations",
+      "RSST Trust special sports and cultural scholarships"
+    ]
+  },
+  "facilities": {
+    "items": [
+      "State-of-the-art Physics, Chemistry, and Biology Laboratories",
+      "Air-conditioned Computer Science Lab with high-speed internet",
+      "Comprehensive Digital and Physical Library & Reading Hall",
+      "Modern Multipurpose Seminar Hall & Auditorium",
+      "Indoor Sports Complex and Outdoor Playgrounds",
+      "Active NCC, NSS, and Youth Red Cross units",
+      "Career Guidance and Competitive Exam Cell",
+      "Canteen & Cafeteria serving hygienic food"
+    ]
+  },
+  "colors": {
+    "primary": "#7A0000",
+    "primary_alt": "#990000",
+    "secondary": "#1A1A1A",
+    "accent": "#D4A017",
+    "accent_light": "#F3C043",
+    "background": "#FFFFFF",
+    "card_bg": "#F8F9FA"
+  },
+  "pages": {
+    "home": "https://ssmrvpu.edu.in/new_ssmrvpu/",
+    "about": "https://ssmrvpu.edu.in/new_ssmrvpu/about-us/",
+    "courses": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/",
+    "admissions": "https://ssmrvpu.edu.in/new_ssmrvpu/admissions/",
+    "facilities": "https://ssmrvpu.edu.in/new_ssmrvpu/facilities/",
+    "contact": "https://ssmrvpu.edu.in/new_ssmrvpu/contact-us/"
+  }
+}

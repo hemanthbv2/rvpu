@@ -1,0 +1,146 @@
+{
+  "institute": {
+    "name": "RV Pre-University College Harohalli",
+    "shortName": "RVPU Harohalli",
+    "website": "https://hrh.rvpucollege.edu.in/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "Green Bell High Campus, #134/5, Medmaranahalli, Bade Sab Doddi Road, Harohalli Hobli, Kanakapura Taluk, Ramanagara District – 562109, Karnataka, India",
+    "phone": [
+      "+91-8317346585",
+      "+91-9035974183"
+    ],
+    "email": "info.rvpuh@rvei.edu.in",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM",
+    "logoUrl": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/11/Logo2.png"
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "vice_president_1": "Dr. A.C. Chandrashekar Raju",
+    "vice_president_2": "Dr. C. Vinod Hayagriv",
+    "treasurer": "Mr. P.S. Venkatesh Babu",
+    "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
+    "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
+    "asst_secretary": "Mr. Nikhil A Murthy",
+    "director_rv_learning_hub": "Mr. Mayur Goyal",
+    "principal": {
+      "name": "Mr. Umesh K.N."
+    }
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": [
+        "Kannada",
+        "Hindi",
+        "Sanskrit"
+      ]
+    },
+    "combinations": [
+      {
+        "code": "PCMB",
+        "subjects": "Physics, Chemistry, Mathematics, Biology",
+        "stream": "Science"
+      },
+      {
+        "code": "PCMC",
+        "subjects": "Physics, Chemistry, Mathematics, Computer Science",
+        "stream": "Science"
+      },
+      {
+        "code": "BAMS",
+        "subjects": "Business Studies, Accountancy, Basic Mathematics, Statistics",
+        "stream": "Commerce"
+      },
+      {
+        "code": "BAME",
+        "subjects": "Business Studies, Accountancy, Basic Mathematics, Economics",
+        "stream": "Commerce"
+      },
+      {
+        "code": "SEBA",
+        "subjects": "Statistics, Economics, Business Studies, Accountancy",
+        "stream": "Commerce"
+      }
+    ]
+  },
+  "admissions": {
+    "process": [
+      "Application forms obtainable post-SSLC result announcement.",
+      "Submission of application with passport photographs & 10th marksheet.",
+      "Cut-off percentage determination & Merit List announcement.",
+      "Admission finalized on first-come, first-served basis per merit list."
+    ],
+    "required_documents": [
+      "SSLC / 10th standard original marks card + photocopies",
+      "Aadhaar card (photocopy)",
+      "Transfer Certificate (TC) from previous school/institution",
+      "Conduct Certificate from previous school/institution",
+      "Provisional Eligibility Certificate (issued by Department of Pre-University Education for non-Karnataka / international candidates)",
+      "Caste Certificate (for SC/ST/BCM candidates)",
+      "Income Certificate (if annual family income is below ₹44,500)",
+      "Passport size photographs"
+    ],
+    "examination_rules": {
+      "i_puc": "District-level examination conducted under Karnataka DPUE (Min. 30% per subject, 35% aggregate to pass).",
+      "ii_puc": "State-level Board Examination conducted by Karnataka DPUE."
+    }
+  },
+  "faculty": {
+    "teaching_staff": [
+      { "name": "Shivakumar B.P.", "subject": "Physics" },
+      { "name": "Dr. S. Murali", "subject": "Chemistry" },
+      { "name": "Dhanush B.P.", "subject": "Mathematics" },
+      { "name": "Jagadish S.", "subject": "Mathematics" },
+      { "name": "Mahesh T.C.", "subject": "Mathematics" },
+      { "name": "Suresha O.", "subject": "Biology" },
+      { "name": "Chetankumari N. Naik", "subject": "Computer Science" },
+      { "name": "Sateesha C.", "subject": "Accountancy & Business Studies" },
+      { "name": "Sreelakshmi T.G.", "subject": "Economics" },
+      { "name": "Indumathi B.S.", "subject": "Statistics" },
+      { "name": "Lakshmi Narayana V.", "subject": "Kannada" },
+      { "name": "Ashwini Reddy", "subject": "Hindi" },
+      { "name": "Bhagavan K.", "subject": "English" },
+      { "name": "Swaroop M.S.", "subject": "Physical Education" }
+    ],
+    "administrative_staff": [
+      { "name": "Poornima T.M.", "role": "Finance" },
+      { "name": "Amrutha T.R.", "role": "HR" }
+    ]
+  },
+  "facilities": {
+    "items": [
+      "Eco-friendly Green Campus",
+      "Smart Interactive Classrooms",
+      "Modern Physics, Chemistry & Biology Laboratories",
+      "High-Tech Computer Science Lab",
+      "Expansive Library & Digital Resource Center",
+      "Sports Fields (Football, Basketball, Volleyball, Badminton)",
+      "Gymnasium & Swimming Pool",
+      "Safe Student Transportation",
+      "Hygienic Cafeteria"
+    ]
+  },
+  "colors": {
+    "primary": "#1B365D",
+    "primary_alt": "#D89B27",
+    "secondary": "#1C1C1C",
+    "accent": "#D89B27",
+    "accent_light": "#F4B846",
+    "background": "#F9FAFB",
+    "text_dark": "#101828"
+  },
+  "pages": {
+    "home": "https://hrh.rvpucollege.edu.in/home/",
+    "about": "https://hrh.rvpucollege.edu.in/about-us/about_college/",
+    "board": "https://hrh.rvpucollege.edu.in/about-us/board_of_management/",
+    "courses": "https://hrh.rvpucollege.edu.in/academics/our_courses/",
+    "faculty": "https://hrh.rvpucollege.edu.in/academics/faculty/",
+    "admissions": "https://hrh.rvpucollege.edu.in/admissions/",
+    "facilities": "https://hrh.rvpucollege.edu.in/facilities/",
+    "events": "https://hrh.rvpucollege.edu.in/events/",
+    "contact": "https://hrh.rvpucollege.edu.in/contact_us/",
+    "principal": "https://hrh.rvpucollege.edu.in/mr-umesh-k-n/"
+  }
+}
