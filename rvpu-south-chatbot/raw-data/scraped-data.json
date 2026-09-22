@@ -1,0 +1,111 @@
+{
+  "institute": {
+    "name": "RV Pre-University College South, Bengaluru",
+    "shortName": "RVPU South",
+    "website": "https://south.rvpucollege.edu.in/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "DPS Bengaluru South Campus, 11th KM, Bikaspura Main Road, Kanakapura Road, Konanakunte, Bengaluru – 560062, Karnataka, India",
+    "phone": ["+91-9606924466", "+91-8050178394", "+91-8123032380"],
+    "email": "info.rvpus@rvei.edu.in",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM"
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "vice_president_1": "Dr. A.C. Chandrashekar Raju",
+    "vice_president_2": "Dr. C. Vinod Hayagriv",
+    "treasurer": "Mr. P.S. Venkatesh Babu",
+    "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
+    "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
+    "asst_secretary": "Mr. Nikhil A Murthy",
+    "director_rv_learning_hub": "Mr. Mayur Goyal",
+    "principal": {
+      "name": "Mr. A.S. Venkatesan"
+    }
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": ["Kannada", "Hindi", "Sanskrit", "French"]
+    },
+    "combinations": [
+      { "code": "PCMB", "subjects": "Physics, Chemistry, Mathematics, Biology", "stream": "Science" },
+      { "code": "PCMC", "subjects": "Physics, Chemistry, Mathematics, Computer Science", "stream": "Science" },
+      { "code": "BAMS", "subjects": "Business Studies, Accountancy, Basic Mathematics, Statistics", "stream": "Commerce" },
+      { "code": "BAME", "subjects": "Business Studies, Accountancy, Basic Mathematics, Economics", "stream": "Commerce" },
+      { "code": "SEBA", "subjects": "Statistics, Economics, Business Studies, Accountancy", "stream": "Commerce" }
+    ]
+  },
+  "admissions": {
+    "process": [
+      "Application forms obtainable post-SSLC result announcement.",
+      "Submission of application with 4 passport-size photographs & 10th marksheet.",
+      "Cut-off percentage determination & Merit List announcement.",
+      "Admission finalized on first-come, first-served basis per merit list."
+    ],
+    "required_documents": [
+      "SSLC/10th Marks Card",
+      "Aadhaar Card",
+      "Transfer Certificate",
+      "Conduct Certificate",
+      "Caste Certificate (SC/ST/BCM)",
+      "Income Certificate (if family income < ₹44,500/year)",
+      "Provisional Eligibility Certificate (Foreign/Other board students)"
+    ],
+    "examination_rules": {
+      "i_puc": "District-level exam by DPUE (Min. 30% per subject, 35% aggregate to pass).",
+      "ii_puc": "State-level Board Examination."
+    }
+  },
+  "faculty": {
+    "teaching_staff": "50+ Senior Lecturers and Lecturers across Physics, Chemistry, Mathematics, Biology, Computer Science, Accountancy, Business Studies, Economics, Statistics, English, Kannada, Hindi, Sanskrit, and French",
+    "support_staff": [
+      { "name": "Nagendra H.K.", "role": "Physical Education Lecturer" },
+      { "name": "Sushma S.", "role": "Sr. Executive – Finance" },
+      { "name": "Shashikumar M.S.", "role": "Librarian" },
+      { "name": "Vaishnavi R.", "role": "Trainee – HR" }
+    ]
+  },
+  "facilities": {
+    "items": [
+      "Smart Digital Interactive Classrooms",
+      "Modern Auditorium",
+      "Resource-Rich Library",
+      "Physics Laboratory",
+      "Chemistry Laboratory",
+      "Biology Laboratory",
+      "Computer Science Laboratory",
+      "Basketball Court",
+      "Sports Grounds"
+    ]
+  },
+  "events": {
+    "cultural": "Music, dance, drama, and art competitions",
+    "sports": "Annual sports day, inter-class/inter-college athletic meets",
+    "activities": "Orientation programs, academic seminars, festival celebrations"
+  },
+  "announcements": [
+    "The I PUC Annual Examination 2025–26 results have been announced."
+  ],
+  "colors": {
+    "primary": "#6EC195",
+    "primary_alt": "#72C597",
+    "secondary": "#4E8F67",
+    "secondary_dark": "#3A7550",
+    "alert": "#E00000",
+    "footer": "#2B2B2B",
+    "background": "#F0EFEB"
+  },
+  "pages": {
+    "home": "https://south.rvpucollege.edu.in/",
+    "about": "https://south.rvpucollege.edu.in/about-college/",
+    "board": "https://south.rvpucollege.edu.in/board-of-management/",
+    "courses": "https://south.rvpucollege.edu.in/our-courses/",
+    "faculty": "https://south.rvpucollege.edu.in/faculty/",
+    "admissions": "https://south.rvpucollege.edu.in/admissions/",
+    "facilities": "https://south.rvpucollege.edu.in/facilities/",
+    "events": "https://south.rvpucollege.edu.in/events/",
+    "contact": "https://south.rvpucollege.edu.in/contact-us/"
+  }
+}

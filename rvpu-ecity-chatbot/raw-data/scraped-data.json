@@ -1,0 +1,136 @@
+{
+  "institute": {
+    "name": "RV Pre-University College E-City, Bengaluru",
+    "shortName": "RVPU E-City",
+    "website": "https://ecity.rvpucollege.edu.in/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "DPS E-City Campus, Survey No. 33, Bettadasanapura, Begur Hobli, Bengaluru – 560100, Karnataka, India",
+    "phone": ["+91-90350 29237"],
+    "email": "info.rvpue@rvei.edu.in",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM",
+    "logoUrl": "https://ecity.rvpucollege.edu.in/wp-content/uploads/2025/08/Logo2.png"
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
+    "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
+    "director_rv_learning_hub": "Mr. Mayur Goyal",
+    "principal": {
+      "name": "Mr. Suman G.V."
+    },
+    "board_of_management": [
+      "Dr. (h.c.) A.V.S. Murthy",
+      "Mr. D.P. Nagaraj",
+      "Mr. K.S. Akhilesh Babu",
+      "Mr. R. Anantha Raman",
+      "Mr. M.R. Gurudatt",
+      "Mr. C. Ganesh Narayan",
+      "Mr. C.V. Hayagriv",
+      "Mr. N.P. Karthik",
+      "Mr. N.R. Nandish",
+      "Mr. Naveen K Pasu",
+      "Mr. Nikhil A Murthy",
+      "Mr. A.S. Vishnu Bharath"
+    ]
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": ["Kannada", "Hindi", "Sanskrit", "French"]
+    },
+    "combinations": [
+      { "code": "PCMB", "subjects": "Physics, Chemistry, Mathematics, Biology", "stream": "Science" },
+      { "code": "PCMC", "subjects": "Physics, Chemistry, Mathematics, Computer Science", "stream": "Science" },
+      { "code": "BAMS", "subjects": "Business Studies, Accountancy, Basic Mathematics, Statistics", "stream": "Commerce" },
+      { "code": "BAME", "subjects": "Business Studies, Accountancy, Basic Mathematics, Economics", "stream": "Commerce" },
+      { "code": "SEBA", "subjects": "Statistics, Economics, Business Studies, Accountancy", "stream": "Commerce" }
+    ]
+  },
+  "admissions": {
+    "process": [
+      "Application forms available at the campus immediately after SSLC results declaration.",
+      "Submit completed application with 4 passport-size photographs & attested copy of 10th marksheet.",
+      "Cut-off percentage determination & Merit List announcement.",
+      "Admissions proceed on first-come, first-served basis per merit list."
+    ],
+    "required_documents": [
+      "SSLC / 10th Marks Card (Original & Attested Copies)",
+      "Aadhaar Card (Original + Xerox Copy)",
+      "Transfer Certificate (TC) from previous institution",
+      "Conduct Certificate from previous institution",
+      "Caste Certificate issued by Tahsildar (for SC/ST/BCM candidates)",
+      "Income Certificate (if annual family income is below ₹44,500)",
+      "Provisional Eligibility Certificate (for foreign/other board students)",
+      "4 Passport-size Photographs"
+    ],
+    "examination_rules": {
+      "i_puc": "District-level exam by DPUE (Min. 30% per subject, 35% aggregate to pass).",
+      "ii_puc": "State-level Board Examination conducted by Karnataka DPUE."
+    }
+  },
+  "faculty": {
+    "teaching_staff": [
+      { "name": "Suman G.V.", "role": "Principal" },
+      { "name": "Pujari Sudheer", "role": "Sr. Lecturer", "subject": "Physics" },
+      { "name": "Dr. Maheswar Reddy G.", "role": "Sr. Lecturer", "subject": "Chemistry" },
+      { "name": "Siva Kumar Betha", "role": "Sr. Lecturer", "subject": "Mathematics" },
+      { "name": "Silambarasu C.", "role": "Lecturer", "subject": "Mathematics" },
+      { "name": "Neha V. Mutalik", "role": "Lecturer", "subject": "Biology" },
+      { "name": "Mohan Kumari G.", "role": "Lecturer", "subject": "Computer Science" },
+      { "name": "Victor Antony N.", "role": "Lecturer", "subject": "Accountancy & Business Studies" },
+      { "name": "Venkatesh G.M.", "role": "Lecturer", "subject": "Economics" },
+      { "name": "Kalpana C.", "role": "Lecturer", "subject": "English" },
+      { "name": "Anil Kumar C.", "role": "Lecturer", "subject": "Kannada" },
+      { "name": "Maruthesha K.", "role": "Lecturer", "subject": "Hindi" },
+      { "name": "Sanjeevakumar Naregal", "role": "Lecturer", "subject": "Sanskrit" },
+      { "name": "Vyshnavi D.R.", "role": "Lecturer", "subject": "French" }
+    ]
+  },
+  "facilities": {
+    "items": [
+      "Smart Digital Interactive Classrooms",
+      "Modern Auditorium",
+      "Resource-Rich Library (Print & Digital Resources)",
+      "Physics Laboratory",
+      "Chemistry Laboratory",
+      "Biology Laboratory",
+      "Computer Science Laboratory",
+      "Sports Grounds & Playgrounds",
+      "Indoor Games Facilities",
+      "Multi-Purpose Hall"
+    ]
+  },
+  "events": {
+    "cultural": "Annual cultural fests, talent showcases, music, dance, and drama competitions",
+    "sports": "Inter-college and intra-college sports meets, annual sports day",
+    "activities": "Student leadership initiatives, guest speaker lectures, orientation programs, festival celebrations"
+  },
+  "announcements": [
+    "The I PUC Annual Examination 2025–26 results have been announced.",
+    "Results PDF: https://ecity.rvpucollege.edu.in/wp-content/uploads/2026/03/Ecity-pu-results.pdf"
+  ],
+  "colors": {
+    "primary": "#1B3C2D",
+    "primary_alt": "#2D5A3F",
+    "secondary": "#F5A623",
+    "accent": "#FFFFFF",
+    "header_bg": "#1B3C2D",
+    "background": "#F5F5F5",
+    "footer": "#1B3C2D"
+  },
+  "pages": {
+    "home": "https://ecity.rvpucollege.edu.in/",
+    "about": "https://ecity.rvpucollege.edu.in/about_college/",
+    "board": "https://ecity.rvpucollege.edu.in/board_of_management/",
+    "courses": "https://ecity.rvpucollege.edu.in/our_courses/",
+    "faculty": "https://ecity.rvpucollege.edu.in/faculty/",
+    "admissions": "https://ecity.rvpucollege.edu.in/admissions/",
+    "facilities": "https://ecity.rvpucollege.edu.in/facilities/",
+    "events": "https://ecity.rvpucollege.edu.in/events/",
+    "contact": "https://ecity.rvpucollege.edu.in/contact_us/",
+    "campuses": "https://rvpucollege.com/",
+    "donate": "https://www.rvinstitutions.com/donate/"
+  }
+}

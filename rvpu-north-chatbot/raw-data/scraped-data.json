@@ -1,0 +1,76 @@
+{
+  "institute": {
+    "name": "RV Pre-University College North, Bengaluru",
+    "shortName": "RVPU North",
+    "website": "https://north.rvpucollege.edu.in/",
+    "trust": "Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)",
+    "address": "DPS Bengaluru North Campus, Survey No. 35/1A, Sathnur Village, Bagalur Post, Off Bellary Road, Jalla Hobli, Bengaluru – 562149, Karnataka, India",
+    "phone": "+91-8073318582",
+    "email": "info.rvpun@rvei.edu.in",
+    "mapLink": "https://maps.app.goo.gl/vvznHaGmEgWWDrVP8",
+    "timings": "Monday – Saturday: 9:00 AM – 5:00 PM"
+  },
+  "leadership": {
+    "president_rvei": "Dr. M.P. Shyam",
+    "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
+    "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
+    "director_rv_learning_hub": "Mr. Mayur Goyal",
+    "principal": {
+      "name": "Mr. Kumar S.",
+      "message": "It is with immense pride and enthusiasm that I welcome you to RVPU North – a space where learning transforms into purpose, and young minds grow into leaders of tomorrow."
+    }
+  },
+  "courses": {
+    "duration": "2 Academic Years (I PUC & II PUC)",
+    "medium": "English (Students may choose to answer in English or Kannada in public examinations)",
+    "languages": {
+      "compulsory": "English",
+      "second_language_options": ["Kannada", "Hindi", "Sanskrit", "French"]
+    },
+    "combinations": [
+      { "code": "PCMB", "subjects": "Physics, Chemistry, Mathematics, Biology", "stream": "Science" },
+      { "code": "PCMC", "subjects": "Physics, Chemistry, Mathematics, Computer Science", "stream": "Science" },
+      { "code": "BAMS", "subjects": "Business Studies, Accountancy, Basic Mathematics, Statistics", "stream": "Commerce" },
+      { "code": "BAME", "subjects": "Business Studies, Accountancy, Basic Mathematics, Economics", "stream": "Commerce" },
+      { "code": "SEBA", "subjects": "Statistics, Economics, Business Studies, Accountancy", "stream": "Commerce" }
+    ]
+  },
+  "admissions": {
+    "process": [
+      "Obtain application form from the college or admissions office after SSLC result declaration.",
+      "Submit completed application with 4 passport-size photographs and an attested copy of 10th marksheet.",
+      "Cut-off percentage identification and merit list announcement.",
+      "Admissions are conducted on a first-come, first-served basis based on the merit list."
+    ],
+    "required_documents": [
+      "SSLC / 10th standard original marks card + photocopies",
+      "Aadhaar card (photocopy)",
+      "Transfer Certificate (TC) from previous school/institution",
+      "Conduct Certificate from previous school/institution",
+      "Provisional Eligibility Certificate (issued by Department of Pre-University Education for non-Karnataka / international candidates)",
+      "Caste Certificate (for SC/ST/BCM candidates)",
+      "Income Certificate (if annual family income is below ₹44,500)"
+    ],
+    "examination_rules": {
+      "i_puc": "Promotional exam conducted at the district level. Candidate must score at least 30% marks in each subject and 35% overall aggregate to get promoted to II PUC.",
+      "ii_puc": "Final state-level examination conducted by the Karnataka Department of Pre-University Education."
+    }
+  },
+  "colors": {
+    "primary": "#E30613",
+    "primary_alt": "#FF0000",
+    "secondary": "#1E1E1E",
+    "accent": "#46B3CA",
+    "accent_light": "#55C3DC",
+    "background": "#F4F4F4",
+    "button_dark": "#1F2430"
+  },
+  "pages": {
+    "home": "https://north.rvpucollege.edu.in/",
+    "about": "https://north.rvpucollege.edu.in/about-college/",
+    "courses": "https://north.rvpucollege.edu.in/our-courses/",
+    "admissions": "https://north.rvpucollege.edu.in/admissions/",
+    "facilities": "https://north.rvpucollege.edu.in/facilities/",
+    "contact": "https://north.rvpucollege.edu.in/contact-us/"
+  }
+}

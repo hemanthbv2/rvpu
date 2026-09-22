@@ -1,0 +1,18 @@
+{
+  "name": "rvpu-chatbots",
+  "version": "1.0.0",
+  "description": "7 RVPU Institute Chatbot System - Scraper & Build Tools",
+  "scripts": {
+    "scrape:north": "node rvpu-north-chatbot/scraper/scrape-all.js",
+    "scrape:south": "node rvpu-south-chatbot/scraper/scrape-all.js",
+    "scrape:ecity": "node rvpu-ecity-chatbot/scraper/scrape-all.js",
+    "scrape:harohalli": "node rvpu-harohalli-chatbot/scraper/scrape-all.js",
+    "scrape:mysore": "node rvpu-mysore-chatbot/scraper/scrape-all.js",
+    "scrape:ssmrvpu": "node ssmrvpu-chatbot/scraper/scrape-all.js",
+    "scrape:nmkrvpu": "node nmkrvpu-chatbot/scraper/scrape-all.js",
+    "scrape:all": "node scrape-all-institutes.js"
+  },
+  "dependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}
