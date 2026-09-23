@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2026-09-23T06:34:05.188Z",
+    "data": {
+      "query": "What is the cutoff for PCMC?",
+      "intent": "courses_science",
+      "score": 19.2,
+      "status": "Answered"
+    }
+  },
+  {
+    "timestamp": "2026-09-23T06:29:35.188Z",
+    "data": {
+      "query": "take me to admission page",
+      "intent": "navigation_redirect",
+      "score": 10,
+      "status": "Navigated"
+    }
+  },
+  {
+    "timestamp": "2026-09-23T06:22:05.188Z",
+    "data": {
+      "query": "What documents are required for admission?",
+      "intent": "admissions_documents",
+      "score": 14,
+      "status": "Answered"
+    }
+  },
+  {
+    "timestamp": "2026-09-23T06:12:05.188Z",
+    "data": {
+      "query": "who is the principal",
+      "intent": "leadership_principal",
+      "score": 9.6,
+      "status": "Answered"
+    }
+  }
+]

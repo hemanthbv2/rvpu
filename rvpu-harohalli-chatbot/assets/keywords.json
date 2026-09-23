@@ -59,34 +59,196 @@
       "weight": 1
     }
   ],
+  "about us": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "about": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "about college": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "who are you": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "tell me about college": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "college info": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "overview": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "history": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "principal": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "who is principal": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "head": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "leadership": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "director": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "president": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "management": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "trust": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "rsst": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "rvei": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "principal message": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "who runs this college": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "shyam": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "murthy": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "nagaraj": [
+    {
+      "id": "about_us",
+      "weight": 3.5
+    }
+  ],
+  "our courses": [
+    {
+      "id": "courses_all",
+      "weight": 3.5
+    }
+  ],
   "courses": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
+    }
+  ],
+  "course": [
+    {
+      "id": "courses_all",
+      "weight": 3.5
     }
   ],
   "combinations": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
+    }
+  ],
+  "combination": [
+    {
+      "id": "courses_all",
+      "weight": 3.5
     }
   ],
   "streams": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
+    }
+  ],
+  "stream": [
+    {
+      "id": "courses_all",
+      "weight": 3.5
     }
   ],
   "subjects": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "pcmb": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_science",
@@ -96,7 +258,7 @@
   "pcmc": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_science",
@@ -106,7 +268,7 @@
   "seba": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
@@ -116,7 +278,7 @@
   "ceba": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
@@ -126,7 +288,7 @@
   "bams": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
@@ -136,7 +298,7 @@
   "bame": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
@@ -146,7 +308,7 @@
   "meba": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
@@ -156,7 +318,7 @@
   "peba": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
@@ -166,7 +328,7 @@
   "science": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_science",
@@ -176,29 +338,35 @@
   "commerce": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     },
     {
       "id": "courses_commerce",
       "weight": 2.5
     }
   ],
+  "arts": [
+    {
+      "id": "courses_all",
+      "weight": 3.5
+    }
+  ],
   "programs": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "study": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "academic": [
     {
       "id": "courses_all",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "science stream": [
@@ -579,250 +747,316 @@
       "weight": 2.5
     }
   ],
-  "principal": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "head": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "leadership": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "director": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "president": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "management": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "trust": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "rsst": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "rvei": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "who is principal": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "shyam": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "murthy": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
-  "nagaraj": [
-    {
-      "id": "leadership_principal",
-      "weight": 2
-    }
-  ],
   "facilities": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
+    }
+  ],
+  "facility": [
+    {
+      "id": "facilities",
+      "weight": 3.5
     }
   ],
   "infrastructure": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "labs": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "laboratory": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "library": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "sports": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "playground": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "auditorium": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "smart class": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "classrooms": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "gym": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "canteen": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "hostel": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "campus": [
     {
       "id": "facilities",
-      "weight": 2
+      "weight": 3.5
+    }
+  ],
+  "amenities": [
+    {
+      "id": "facilities",
+      "weight": 3.5
+    }
+  ],
+  "contact us": [
+    {
+      "id": "contact_location",
+      "weight": 3.5
     }
   ],
   "contact": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
+    }
+  ],
+  "contacts": [
+    {
+      "id": "contact_location",
+      "weight": 3.5
     }
   ],
   "address": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "phone": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
+    }
+  ],
+  "telephone": [
+    {
+      "id": "contact_location",
+      "weight": 3.5
     }
   ],
   "mobile": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "call": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "email": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "location": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "where": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "timings": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
+    }
+  ],
+  "hours": [
+    {
+      "id": "contact_location",
+      "weight": 3.5
     }
   ],
   "working hours": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "map": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "directions": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "reach": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
     }
   ],
   "helpline": [
     {
       "id": "contact_location",
-      "weight": 2.5
+      "weight": 3.5
+    }
+  ],
+  "office": [
+    {
+      "id": "contact_location",
+      "weight": 3.5
+    }
+  ],
+  "events": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "event": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "activities": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "activity": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "cultural": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "cultural fest": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "fest": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "fests": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "annual day": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "sports day": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "functions": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "celebrations": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "seminars": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "workshops": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "calendar": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "competitions": [
+    {
+      "id": "events",
+      "weight": 3.5
+    }
+  ],
+  "youth festival": [
+    {
+      "id": "events",
+      "weight": 3.5
     }
   ],
   "website": [

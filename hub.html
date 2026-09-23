@@ -815,15 +815,15 @@
       </div>
 
       <div class="sandbox-chips">
-        <span style="font-size: 0.8rem; color: #64748b; margin-right: 0.5rem; align-self: center;">Try Asking:</span>
-        <button class="chip-btn" onclick="setQuery('What are the science combinations?')">Science Combinations</button>
-        <button class="chip-btn" onclick="setQuery('Tell me about admissions and eligibility')">Admissions & Eligibility</button>
-        <button class="chip-btn" onclick="setQuery('Who is the principal and faculty?')">Principal & Faculty</button>
-        <button class="chip-btn" onclick="setQuery('Are scholarships available?')">Scholarships</button>
-        <button class="chip-btn" onclick="setQuery('What is the contact number and address?')">Contact & Address</button>
+        <span style="font-size: 0.8rem; color: #64748b; margin-right: 0.5rem; align-self: center;">Quick Action Buttons:</span>
+        <button class="chip-btn" onclick="setQuery('About Us')">About Us</button>
+        <button class="chip-btn" onclick="setQuery('Our Courses')">Our Courses</button>
+        <button class="chip-btn" onclick="setQuery('Facilities')">Facilities</button>
+        <button class="chip-btn" onclick="setQuery('Contact Us')">Contact Us</button>
+        <button class="chip-btn" onclick="setQuery('Events')">Events</button>
       </div>
 
-      <div class="response-box" id="responseBox">Select an institute and click "Run Query" to preview instant algorithmic matching...</div>
+      <div class="response-box" id="responseBox">Select an institute and click "Run Query" or any button above to preview instant algorithmic matching...</div>
       <div class="response-meta" id="responseMeta">
         <span>Intent: <b id="metaIntent">—</b></span>
         <span>Score: <b id="metaScore">—</b></span>
@@ -873,7 +873,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       checkAllPorts();
       // Auto run initial query
-      setTimeout(testQuery, 400);
+      setTimeout(() => setQuery('About Us'), 400);
     });
 
     function setQuery(text) {
@@ -923,39 +923,36 @@
 
     // Client-side lightweight matcher mimicking chatbot-engine.js
     function matchQuery(rawQuery, kb, kw) {
-      const q = rawQuery.toLowerCase();
-      let bestIntent = null;
+      const q = rawQuery.toLowerCase().trim();
+      let bestItem = null;
       let maxScore = 0;
 
-      // Exact intent keywords
-      for (const intent in kw.intent_keywords) {
+      // Check each KB item with RVCE scoring algorithm
+      kb.forEach(item => {
         let score = 0;
-        const keywords = kw.intent_keywords[intent];
-        for (const word of keywords) {
-          if (q.includes(word.toLowerCase())) {
-            score += word.includes(' ') ? 4 : 2;
+        for (const word of item.keywords) {
+          const w = word.toLowerCase();
+          if (q === w) {
+            score += item.weight * 5.0;
+          } else if (q.includes(w)) {
+            score += item.weight * 2.5;
           }
         }
         if (score > maxScore) {
           maxScore = score;
-          bestIntent = intent;
+          bestItem = item;
         }
-      }
+      });
 
-      if (bestIntent && maxScore > 0 && kb.intents[bestIntent]) {
+      if (bestItem && maxScore > 0) {
+        let fullAnswer = bestItem.answer;
+        if (bestItem.navigation) {
+          fullAnswer += '\n\n🧭 [Open Official Website Page](' + bestItem.navigation.url + ')';
+        }
         return {
-          intent: bestIntent,
+          intent: bestItem.id,
           score: maxScore,
-          answer: kb.intents[bestIntent].answer
-        };
-      }
-
-      // Check greetings
-      if (/^(hi|hello|hey|namaste|good morning)/i.test(q)) {
-        return {
-          intent: 'greeting',
-          score: 10,
-          answer: kb.general ? `Welcome to ${kb.general.name}! How can I help you today?` : 'Hello! How can I assist you with RV PU College information?'
+          answer: fullAnswer
         };
       }
 
@@ -963,9 +960,7 @@
       return {
         intent: 'fallback',
         score: 0,
-        answer: kb.intents && kb.intents.admissions ? 
-          `For detailed inquiries regarding ${kb.general?.name || 'our college'}, please explore our admissions, courses, or contact our office directly.` :
-          "I'm here to assist you with all admissions, courses, facilities, and campus details."
+        answer: "I'm here to assist you with all admissions, courses, facilities, events, and college details."
       };
     }
   </script>

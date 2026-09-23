@@ -38,13 +38,31 @@ function buildKnowledgeBase(data, inst) {
   // Facilities
   const facilitiesList = (data.facilities && data.facilities.items) ? data.facilities.items.map(f => `• ${f}`).join('\n') : '';
 
-  // Pages
+  // Pages & Respective Website URLs
   const pages = data.pages || {};
   const coursesPage = pages.courses || pages.home || website;
   const admissionsPage = pages.admissions || pages.admission_portal || website;
   const contactPage = pages.contact || pages.home || website;
   const facilitiesPage = pages.facilities || pages.home || website;
   const aboutPage = pages.about || pages.home || website;
+  const eventsPage = pages.events || pages.home || website;
+
+  // Events & Activities
+  let eventsDetails = '';
+  if (data.events) {
+    if (data.events.cultural && (data.events.cultural.name || data.events.cultural.title)) {
+      eventsDetails += `• **Cultural Fest**: **${data.events.cultural.name || data.events.cultural.title}** — ${data.events.cultural.description || 'Grand celebration of student talent in music, dance, theatre, and creative arts.'}\n`;
+    }
+    if (data.events.sports && (data.events.sports.name || data.events.sports.title)) {
+      eventsDetails += `• **Sports Meet**: **${data.events.sports.name || data.events.sports.title}** — ${data.events.sports.description || 'Inter-house athletic meets, tournaments, and team sports championships.'}\n`;
+    }
+    if (Array.isArray(data.events.highlights)) {
+      data.events.highlights.forEach(h => { eventsDetails += `• ${h}\n`; });
+    }
+  }
+  if (!eventsDetails) {
+    eventsDetails = `• **Annual Cultural Fest & Talent Day**: High-energy celebrations featuring music, classical & modern dance, drama, and fine arts competitions.\n• **Annual Athletic Meet & Sports Day**: Inter-house track and field events, cricket, volleyball, basketball, and indoor tournaments.\n• **Science Seminars & Tech Exhibitions**: Hands-on laboratory project displays, model making, and interactive sessions with eminent academicians.\n• **National Celebrations**: Patriotic celebrations of Independence Day, Republic Day, and Kannada Rajyotsava.\n• **Student Enrichment & Leadership Activities**: Career counseling, personality development workshops, and active student club initiatives.`;
+  }
 
   return [
     {
@@ -53,18 +71,28 @@ function buildKnowledgeBase(data, inst) {
       title: 'Greetings & Welcome',
       keywords: ['hi', 'hello', 'hey', 'namaste', 'good morning', 'good afternoon', 'good evening', 'start', 'help', 'menu'],
       weight: 1.0,
-      answer: `👋 Welcome to **${fullName}** Official AI Assistant!\n\nI can help you with admissions, course combinations, eligibility, campus facilities, contact information, and direct website navigation.\n\nWhat would you like to explore today?`,
-      quickChips: ['Courses & Combinations', 'Admission Process', 'Required Documents', 'Campus Facilities', 'Contact & Location', 'Navigate Website']
+      answer: `👋 Welcome to **${fullName}** Official AI Assistant!\n\nI can help you with college information, courses, admissions, campus facilities, events, and official contact details.\n\nClick any topic below or type your question:`,
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
+    },
+    {
+      id: 'about_us',
+      category: 'about',
+      title: 'About Us & Principal',
+      keywords: ['about us', 'about', 'about college', 'who are you', 'tell me about college', 'college info', 'overview', 'history', 'principal', 'who is principal', 'head', 'leadership', 'director', 'president', 'management', 'trust', 'rsst', 'rvei', 'principal message', 'who runs this college', 'shyam', 'murthy', 'nagaraj'],
+      weight: 3.5,
+      answer: `🏛️ **About ${fullName}**:\n\n${shortName} is a premier Pre-University institution managed by the renowned Rashtreeya Sikshana Samithi Trust (RSST), upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board exam results, integrated competitive coaching, state-of-the-art laboratory training, and holistic student character development.\n\n👨‍🏫 **Principal & Leadership**:\n• **Principal**: **${principalName}**\n• **Management Trust**: Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI)\n• **RSST Leadership**: Dr. M.P. Shyam (President), Dr. (h.c.) A.V.S. Murthy (Hon. Secretary), Mr. D.P. Nagaraj (Hon. Joint Secretary)\n• **Vision**: Fostering academic distinction, scientific temperament, and ethical leadership in every student.`,
+      quickChips: ['Our Courses', 'Facilities', 'Contact Us', 'Events'],
+      navigation: { label: 'Visit Official About Us Page', url: aboutPage }
     },
     {
       id: 'courses_all',
       category: 'academics',
-      title: 'Courses and Combinations Offered',
-      keywords: ['courses', 'combinations', 'streams', 'subjects', 'pcmb', 'pcmc', 'seba', 'ceba', 'bams', 'bame', 'meba', 'peba', 'science', 'commerce', 'programs', 'study', 'academic'],
-      weight: 2.0,
-      answer: `🎓 **Courses & Combinations at ${shortName}**\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Public exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n**📊 Commerce Stream**:\n${commerceCombos || '• SEBA: Statistics, Economics, Business Studies, Accountancy\n• BAMS/BAME: Business, Accountancy, Maths, Stats/Economics'}\n\n**Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}`,
-      quickChips: ['Admission Process', 'Science Stream', 'Commerce Stream', 'Required Documents', 'Go to Courses Page'],
-      navigation: { label: 'Visit Courses Page', url: coursesPage }
+      title: 'Our Courses and Combinations Offered',
+      keywords: ['our courses', 'courses', 'course', 'combinations', 'combination', 'streams', 'stream', 'subjects', 'pcmb', 'pcmc', 'seba', 'ceba', 'bams', 'bame', 'meba', 'peba', 'science', 'commerce', 'arts', 'programs', 'study', 'academic'],
+      weight: 3.5,
+      answer: `🎓 **Our Courses & Combinations at ${shortName}**:\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Public exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n${commerceCombos ? `**📊 Commerce Stream**:\n${commerceCombos}\n\n` : ''}**🗣️ Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}`,
+      quickChips: ['About Us', 'Facilities', 'Contact Us', 'Events'],
+      navigation: { label: 'Explore Our Courses Page', url: coursesPage }
     },
     {
       id: 'courses_science',
@@ -73,7 +101,7 @@ function buildKnowledgeBase(data, inst) {
       keywords: ['science', 'science stream', 'pcmb', 'pcmc', 'physics', 'chemistry', 'maths', 'mathematics', 'biology', 'computer science', 'neet', 'jee', 'kcet', 'engineering', 'medical'],
       weight: 2.5,
       answer: `🔬 **Science Stream Combinations at ${shortName}**:\n\n${scienceCombos}\n\n• **PCMB**: Ideal for Medical (NEET), Biotechnology, Pure Sciences, and Engineering.\n• **PCMC**: Ideal for Engineering (JEE/KCET), Computer Science, and IT careers.\n\nAll science programs feature intensive laboratory practicals and competitive exam preparatory orientation.`,
-      quickChips: ['Commerce Stream', 'Admission Process', 'Science Labs', 'Contact Admissions'],
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events'],
       navigation: { label: 'Explore Science Courses', url: coursesPage }
     },
     {
@@ -83,7 +111,7 @@ function buildKnowledgeBase(data, inst) {
       keywords: ['commerce', 'commerce stream', 'bams', 'bame', 'seba', 'ceba', 'meba', 'peba', 'business studies', 'accountancy', 'economics', 'statistics', 'ca', 'cs', 'finance'],
       weight: 2.5,
       answer: `📊 **Commerce Stream Combinations at ${shortName}**:\n\n${commerceCombos}\n\nThese combinations build a solid foundation for careers in Chartered Accountancy (CA), Company Secretary (CS), Business Administration (BBA/MBA), Financial Analysis, and Economics.`,
-      quickChips: ['Science Stream', 'Admission Process', 'Required Documents', 'Contact Admissions'],
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events'],
       navigation: { label: 'Explore Commerce Courses', url: coursesPage }
     },
     {
@@ -93,7 +121,7 @@ function buildKnowledgeBase(data, inst) {
       keywords: ['language', 'languages', 'second language', 'kannada', 'hindi', 'sanskrit', 'french', 'english', 'medium'],
       weight: 2.0,
       answer: `🗣️ **Language Options at ${shortName}**:\n\n• **Part I (Compulsory)**: ${compulsoryLang}\n• **Part II (Second Language Choice)**: ${secondLangs}\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada as per DPUE regulations.`,
-      quickChips: ['Courses & Combinations', 'Admission Process', 'Campus Facilities']
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
     },
     {
       id: 'admissions_process',
@@ -102,7 +130,7 @@ function buildKnowledgeBase(data, inst) {
       keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'procedure', 'process', 'enroll', 'seat', 'registration', 'form', 'dates'],
       weight: 2.5,
       answer: `📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n💡 **Tips**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.`,
-      quickChips: ['Required Documents', 'Eligibility & Cutoffs', 'Contact Admissions', 'Take me to Admission Page'],
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events'],
       navigation: { label: 'Open Admission Portal', url: admissionsPage }
     },
     {
@@ -112,7 +140,7 @@ function buildKnowledgeBase(data, inst) {
       keywords: ['documents', 'required documents', 'certificates', 'marksheet', 'marks card', 'tc', 'transfer certificate', 'aadhaar', 'caste certificate', 'income certificate', 'photographs', 'eligibility certificate'],
       weight: 2.5,
       answer: `📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.`,
-      quickChips: ['Admission Process', 'Eligibility & Cutoffs', 'Contact & Location']
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
     },
     {
       id: 'eligibility_cutoff',
@@ -121,37 +149,37 @@ function buildKnowledgeBase(data, inst) {
       keywords: ['eligibility', 'cutoff', 'cut off', 'cut-off', 'percentage', 'marks', 'minimum marks', 'criteria', 'sslc percentage', 'pass marks'],
       weight: 2.5,
       answer: `🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.`,
-      quickChips: ['Admission Process', 'Required Documents', 'Courses & Combinations']
-    },
-    {
-      id: 'leadership_principal',
-      category: 'about',
-      title: 'Principal & Leadership Team',
-      keywords: ['principal', 'head', 'leadership', 'director', 'president', 'management', 'trust', 'rsst', 'rvei', 'who is principal', 'shyam', 'murthy', 'nagaraj'],
-      weight: 2.0,
-      answer: `🏛️ **Leadership at ${shortName}**:\n\n• **Principal**: **${principalName}**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Trust**: Rashtreeya Sikshana Samithi Trust (RSST) / RV Educational Institutions (RVEI), delivering over 80+ years of educational excellence.`,
-      quickChips: ['About College', 'Courses & Combinations', 'Contact & Location'],
-      navigation: { label: 'View Management Details', url: aboutPage }
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
     },
     {
       id: 'facilities',
       category: 'campus',
       title: 'Campus Facilities & Infrastructure',
-      keywords: ['facilities', 'infrastructure', 'labs', 'laboratory', 'library', 'sports', 'playground', 'auditorium', 'smart class', 'classrooms', 'gym', 'canteen', 'hostel', 'campus'],
-      weight: 2.0,
+      keywords: ['facilities', 'facility', 'infrastructure', 'labs', 'laboratory', 'library', 'sports', 'playground', 'auditorium', 'smart class', 'classrooms', 'gym', 'canteen', 'hostel', 'campus', 'amenities'],
+      weight: 3.5,
       answer: `🏫 **Campus Facilities at ${shortName}**:\n\n${facilitiesList}\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.`,
-      quickChips: ['Courses & Combinations', 'Admission Process', 'Campus Location', 'Explore Facilities Page'],
+      quickChips: ['About Us', 'Our Courses', 'Contact Us', 'Events'],
       navigation: { label: 'Explore Facilities Page', url: facilitiesPage }
     },
     {
       id: 'contact_location',
       category: 'contact',
-      title: 'Contact Information, Address & Timings',
-      keywords: ['contact', 'address', 'phone', 'mobile', 'call', 'email', 'location', 'where', 'timings', 'working hours', 'map', 'directions', 'reach', 'helpline'],
-      weight: 2.5,
-      answer: `📍 **Contact Information — ${shortName}**\n\n• **Campus Address**:\n  ${address}\n• **Phone / Helpline**: ${phones}\n• **Email**: ${email}\n• **Office Working Hours**: ${timings}\n• **Official Website**: ${website}`,
-      quickChips: ['Admission Process', 'Take me to Contact Page', 'Courses & Combinations'],
+      title: 'Contact Us & Campus Location',
+      keywords: ['contact us', 'contact', 'contacts', 'address', 'phone', 'telephone', 'mobile', 'call', 'email', 'location', 'where', 'timings', 'hours', 'working hours', 'map', 'directions', 'reach', 'helpline', 'office'],
+      weight: 3.5,
+      answer: `📍 **Contact Us — ${shortName}**\n\n• **Campus Address**:\n  ${address}\n• **Phone / Helpline**: ${phones}\n• **Email**: ${email}\n• **Office Working Hours**: ${timings}\n• **Official Website**: ${website}`,
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Events'],
       navigation: { label: 'Open Contact Us Page', url: contactPage }
+    },
+    {
+      id: 'events',
+      category: 'campus',
+      title: 'College Events & Student Activities',
+      keywords: ['events', 'event', 'activities', 'activity', 'cultural', 'cultural fest', 'fest', 'fests', 'annual day', 'sports day', 'functions', 'celebrations', 'seminars', 'workshops', 'calendar', 'competitions', 'youth festival'],
+      weight: 3.5,
+      answer: `🎉 **College Events & Activities at ${shortName}**:\n\n${eventsDetails}\n\nWe provide a vibrant platform for students to participate in inter-collegiate competitions, sports tournaments, and intellectual seminars.`,
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us'],
+      navigation: { label: 'View College Events Page', url: eventsPage }
     },
     {
       id: 'website_navigation',
@@ -162,13 +190,13 @@ function buildKnowledgeBase(data, inst) {
       answer: `🧭 **Direct Navigation Directory for ${shortName}**:\n\nClick any of the destination links below to jump directly to that section of our website:`,
       navigationMenu: [
         { title: '🏠 Home Page', url: pages.home || website },
-        { title: '📖 About College', url: pages.about || website },
-        { title: '🎓 Courses & Combinations', url: pages.courses || website },
-        { title: '📝 Admissions & Criteria', url: pages.admissions || pages.admission_portal || website },
-        { title: '🏛️ Campus Facilities', url: pages.facilities || website },
-        { title: '📞 Contact & Location', url: pages.contact || website }
+        { title: '📖 About Us', url: aboutPage },
+        { title: '🎓 Our Courses', url: coursesPage },
+        { title: '🏛️ Facilities', url: facilitiesPage },
+        { title: '🎉 Events', url: eventsPage },
+        { title: '📞 Contact Us', url: contactPage }
       ],
-      quickChips: ['Take me to Admission Page', 'Go to Courses Page', 'Contact & Location']
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
     }
   ];
 }
@@ -312,17 +340,18 @@ function generateEngineCode(inst, data) {
         category: 'fallback',
         score: 0,
         answer: \`I'm sorry, I couldn't find exact details for "\${userQuery}".\\n\\nHere are some popular topics you can explore at **\${INST_SHORT}**:\`,
-        quickChips: ['Courses & Combinations', 'Admission Process', 'Required Documents', 'Campus Facilities', 'Contact & Location', 'Navigate Website']
+        quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
       };
     }
 
     detectNavigationIntent(raw) {
       const navTriggers = {
-        admission: ['take me to admission', 'open admission', 'go to admission', 'admission page', 'apply online', 'portal'],
-        courses: ['take me to courses', 'open courses', 'go to courses', 'courses page', 'syllabus page'],
-        facilities: ['take me to facilities', 'open facilities', 'go to facilities', 'facilities page', 'campus tour'],
-        contact: ['take me to contact', 'open contact', 'go to contact', 'contact page', 'reach us'],
-        about: ['take me to about', 'about page', 'who we are']
+        admissions: ['take me to admission', 'open admission portal', 'go to admission page', 'admission portal link'],
+        courses: ['take me to courses', 'open courses page', 'go to courses page'],
+        facilities: ['take me to facilities', 'open facilities page', 'go to facilities page'],
+        contact: ['take me to contact', 'open contact page', 'go to contact page'],
+        about: ['take me to about', 'open about page', 'go to about page'],
+        events: ['take me to events', 'open events page', 'go to events page']
       };
 
       for (const [key, triggers] of Object.entries(navTriggers)) {
@@ -335,7 +364,7 @@ function generateEngineCode(inst, data) {
                 category: 'navigation',
                 score: 10.0,
                 answer: \`🧭 Taking you directly to **\${item.navigation.label}**:\\n\\n[\${item.navigation.label}](\${item.navigation.url})\\n\\nClick the button below or link above to proceed.\`,
-                quickChips: ['Courses & Combinations', 'Admission Process', 'Campus Facilities'],
+                quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events'],
                 navigation: item.navigation
               };
             }

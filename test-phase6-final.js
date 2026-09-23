@@ -74,11 +74,19 @@ const queryBattery = [
   { q: 'eligibility criteria for PUC', expectIntent: 'eligibility_cutoff' },
   { q: 'SSLC percentage required?', expectIntent: 'eligibility_cutoff' },
 
-  // Leadership & Principal
-  { q: 'who is the principal?', expectIntent: 'leadership_principal' },
-  { q: 'tell me about the management', expectIntent: 'leadership_principal' },
-  { q: 'who runs this college?', expectIntent: 'leadership_principal' },
-  { q: 'RSST trust information', expectIntent: 'leadership_principal' },
+  // About Us & Principal
+  { q: 'About Us', expectIntent: 'about_us' },
+  { q: 'who is the principal?', expectIntent: 'about_us' },
+  { q: 'tell me about the management', expectIntent: 'about_us' },
+  { q: 'who runs this college?', expectIntent: 'about_us' },
+  { q: 'RSST trust information', expectIntent: 'about_us' },
+
+  // Core Requested Action Buttons
+  { q: 'Our Courses', expectIntent: 'courses_all' },
+  { q: 'Facilities', expectIntent: 'facilities' },
+  { q: 'Contact Us', expectIntent: 'contact_location' },
+  { q: 'Events', expectIntent: 'events' },
+  { q: 'what events and activities happen?', expectIntent: 'events' },
 
   // Facilities
   { q: 'what facilities does the campus have?', expectIntent: 'facilities' },

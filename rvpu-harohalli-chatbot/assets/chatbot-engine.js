@@ -114,17 +114,18 @@
         category: 'fallback',
         score: 0,
         answer: `I'm sorry, I couldn't find exact details for "${userQuery}".\n\nHere are some popular topics you can explore at **${INST_SHORT}**:`,
-        quickChips: ['Courses & Combinations', 'Admission Process', 'Required Documents', 'Campus Facilities', 'Contact & Location', 'Navigate Website']
+        quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
       };
     }
 
     detectNavigationIntent(raw) {
       const navTriggers = {
-        admission: ['take me to admission', 'open admission', 'go to admission', 'admission page', 'apply online', 'portal'],
-        courses: ['take me to courses', 'open courses', 'go to courses', 'courses page', 'syllabus page'],
-        facilities: ['take me to facilities', 'open facilities', 'go to facilities', 'facilities page', 'campus tour'],
-        contact: ['take me to contact', 'open contact', 'go to contact', 'contact page', 'reach us'],
-        about: ['take me to about', 'about page', 'who we are']
+        admissions: ['take me to admission', 'open admission portal', 'go to admission page', 'admission portal link'],
+        courses: ['take me to courses', 'open courses page', 'go to courses page'],
+        facilities: ['take me to facilities', 'open facilities page', 'go to facilities page'],
+        contact: ['take me to contact', 'open contact page', 'go to contact page'],
+        about: ['take me to about', 'open about page', 'go to about page'],
+        events: ['take me to events', 'open events page', 'go to events page']
       };
 
       for (const [key, triggers] of Object.entries(navTriggers)) {
@@ -137,7 +138,7 @@
                 category: 'navigation',
                 score: 10.0,
                 answer: `🧭 Taking you directly to **${item.navigation.label}**:\n\n[${item.navigation.label}](${item.navigation.url})\n\nClick the button below or link above to proceed.`,
-                quickChips: ['Courses & Combinations', 'Admission Process', 'Campus Facilities'],
+                quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events'],
                 navigation: item.navigation
               };
             }

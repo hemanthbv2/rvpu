@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2026-09-23T03:37:05.205Z",
+    "data": {
+      "name": "Aarav Sharma",
+      "phone": "+91 98450 12345",
+      "email": "aarav.sharma@gmail.com",
+      "stream": "Science (PCMC)",
+      "status": "Verified"
+    }
+  },
+  {
+    "timestamp": "2026-09-22T22:37:05.206Z",
+    "data": {
+      "name": "Diya Patel",
+      "phone": "+91 98860 67890",
+      "email": "diya.p@outlook.com",
+      "stream": "Commerce (SEBA)",
+      "status": "Counseling Scheduled"
+    }
+  },
+  {
+    "timestamp": "2026-09-22T12:37:05.206Z",
+    "data": {
+      "name": "Rohan Deshmukh",
+      "phone": "+91 97410 99881",
+      "email": "rohan.d@gmail.com",
+      "stream": "Science (PCMB)",
+      "status": "New Inquiry"
+    }
+  }
+]

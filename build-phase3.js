@@ -488,7 +488,7 @@ function generateWidgetJS(inst, data) {
   function showWelcome() {
     const defaultResp = engine ? engine.getDefaultResponse() : {
       answer: "👋 Welcome to **" + INST_NAME + "** Official AI Assistant! How may I assist you today?",
-      quickChips: ['Courses & Combinations', 'Admission Process', 'Required Documents', 'Campus Facilities', 'Contact & Location']
+      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
     };
     appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu);
   }
