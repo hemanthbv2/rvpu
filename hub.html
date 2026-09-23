@@ -485,7 +485,60 @@
       .metrics-bar { grid-template-columns: 1fr 1fr; }
       .institutes-grid { grid-template-columns: 1fr; }
     }
-  </style>
+  
+    /* Enterprise 5-Page Dashboard Mini-Tabs */
+    .dash-pages-bar {
+      display: flex;
+      gap: 0.35rem;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 0.35rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .dash-page-link {
+      flex: 1;
+      min-width: 52px;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #94a3b8;
+      text-decoration: none;
+      padding: 0.25rem 0.35rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .dash-page-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-1px);
+    }
+    .master-banner {
+      max-width: 1200px;
+      margin: 0 auto 2.5rem;
+      padding: 0 1.5rem;
+    }
+    .master-banner-inner {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(227, 6, 19, 0.12) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+    @media (max-width: 768px) {
+      .master-banner-inner { flex-direction: column; text-align: center; }
+    }
+
+</style>
 </head>
 <body>
 
@@ -512,6 +565,26 @@
     <div class="metric-card">
       <div class="metric-num">770/770</div>
       <div class="metric-label">E2E Tests Passed</div>
+    </div>
+  </div>
+
+  
+  <!-- Master Central Command Center Banner -->
+  <div class="master-banner">
+    <div class="master-banner-inner">
+      <div>
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem;">
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981; box-shadow:0 0 10px #10b981;"></span>
+          <span style="font-size:0.8rem; font-weight:700; color:#818cf8; text-transform:uppercase; letter-spacing:0.08em;">Unified Multi-Tenant System</span>
+        </div>
+        <h2 style="font-family:'Outfit', sans-serif; font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:0.25rem;">Enterprise Command Center (D:\hemanth bv\Dashboard)</h2>
+        <p style="font-size:0.9rem; color:#94a3b8; max-width:680px;">Centralized MongoDB Atlas management portal across all 7 RVPU campuses with lead management, interaction heatmaps, intent analytics, and live session tracking.</p>
+      </div>
+      <div style="display:flex; gap:0.75rem; flex-shrink:0;">
+        <a href="http://localhost:3000" target="_blank" class="btn btn-primary" style="background:#6366f1; border-color:#818cf8; font-size:0.9rem; padding:0.75rem 1.4rem;">
+          🚀 Open Master Portal
+        </a>
+      </div>
     </div>
   </div>
 
@@ -560,6 +633,13 @@
           <a href="rvpu-north-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
           <a href="http://localhost:3001" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
         </div>
+        <div class="dash-pages-bar" title="5-Page Enterprise Dashboard Suite">
+          <a href="http://localhost:3001/index.html" target="_blank" class="dash-page-link" title="Live Overview & Metrics">📊 Overview</a>
+          <a href="http://localhost:3001/analytics.html" target="_blank" class="dash-page-link" title="Funnel & Intent Analytics">📈 Analytics</a>
+          <a href="http://localhost:3001/interactions.html" target="_blank" class="dash-page-link" title="Conversation Logs Explorer">💬 Logs</a>
+          <a href="http://localhost:3001/leads.html" target="_blank" class="dash-page-link" title="Student Lead Management">👥 Leads</a>
+          <a href="http://localhost:3001/sessions.html" target="_blank" class="dash-page-link" title="Session Duration & Engagement">⏱️ Sessions</a>
+        </div>
         <div class="secondary-links">
           <a href="rvpu-north-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
           <a href="https://north.rvpucollege.edu.in/north_new/" target="_blank">🌐 Official Website ↗</a>
@@ -598,6 +678,13 @@
           <a href="rvpu-south-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
           <a href="http://localhost:3002" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
         </div>
+        <div class="dash-pages-bar" title="5-Page Enterprise Dashboard Suite">
+          <a href="http://localhost:3002/index.html" target="_blank" class="dash-page-link" title="Live Overview & Metrics">📊 Overview</a>
+          <a href="http://localhost:3002/analytics.html" target="_blank" class="dash-page-link" title="Funnel & Intent Analytics">📈 Analytics</a>
+          <a href="http://localhost:3002/interactions.html" target="_blank" class="dash-page-link" title="Conversation Logs Explorer">💬 Logs</a>
+          <a href="http://localhost:3002/leads.html" target="_blank" class="dash-page-link" title="Student Lead Management">👥 Leads</a>
+          <a href="http://localhost:3002/sessions.html" target="_blank" class="dash-page-link" title="Session Duration & Engagement">⏱️ Sessions</a>
+        </div>
         <div class="secondary-links">
           <a href="rvpu-south-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
           <a href="https://rvpucollege.edu.in/rvsouth/" target="_blank">🌐 Official Website ↗</a>
@@ -635,6 +722,13 @@
           <a href="rvpu-ecity-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
           <a href="http://localhost:3003" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
         </div>
+        <div class="dash-pages-bar" title="5-Page Enterprise Dashboard Suite">
+          <a href="http://localhost:3003/index.html" target="_blank" class="dash-page-link" title="Live Overview & Metrics">📊 Overview</a>
+          <a href="http://localhost:3003/analytics.html" target="_blank" class="dash-page-link" title="Funnel & Intent Analytics">📈 Analytics</a>
+          <a href="http://localhost:3003/interactions.html" target="_blank" class="dash-page-link" title="Conversation Logs Explorer">💬 Logs</a>
+          <a href="http://localhost:3003/leads.html" target="_blank" class="dash-page-link" title="Student Lead Management">👥 Leads</a>
+          <a href="http://localhost:3003/sessions.html" target="_blank" class="dash-page-link" title="Session Duration & Engagement">⏱️ Sessions</a>
+        </div>
         <div class="secondary-links">
           <a href="rvpu-ecity-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
           <a href="https://ecity.rvpucollege.edu.in/" target="_blank">🌐 Official Website ↗</a>
@@ -671,6 +765,13 @@
         <div class="card-actions">
           <a href="rvpu-harohalli-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
           <a href="http://localhost:3004" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="dash-pages-bar" title="5-Page Enterprise Dashboard Suite">
+          <a href="http://localhost:3004/index.html" target="_blank" class="dash-page-link" title="Live Overview & Metrics">📊 Overview</a>
+          <a href="http://localhost:3004/analytics.html" target="_blank" class="dash-page-link" title="Funnel & Intent Analytics">📈 Analytics</a>
+          <a href="http://localhost:3004/interactions.html" target="_blank" class="dash-page-link" title="Conversation Logs Explorer">💬 Logs</a>
+          <a href="http://localhost:3004/leads.html" target="_blank" class="dash-page-link" title="Student Lead Management">👥 Leads</a>
+          <a href="http://localhost:3004/sessions.html" target="_blank" class="dash-page-link" title="Session Duration & Engagement">⏱️ Sessions</a>
         </div>
         <div class="secondary-links">
           <a href="rvpu-harohalli-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
@@ -746,6 +847,13 @@
           <a href="rvpu-mysore-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
           <a href="http://localhost:3006" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
         </div>
+        <div class="dash-pages-bar" title="5-Page Enterprise Dashboard Suite">
+          <a href="http://localhost:3006/index.html" target="_blank" class="dash-page-link" title="Live Overview & Metrics">📊 Overview</a>
+          <a href="http://localhost:3006/analytics.html" target="_blank" class="dash-page-link" title="Funnel & Intent Analytics">📈 Analytics</a>
+          <a href="http://localhost:3006/interactions.html" target="_blank" class="dash-page-link" title="Conversation Logs Explorer">💬 Logs</a>
+          <a href="http://localhost:3006/leads.html" target="_blank" class="dash-page-link" title="Student Lead Management">👥 Leads</a>
+          <a href="http://localhost:3006/sessions.html" target="_blank" class="dash-page-link" title="Session Duration & Engagement">⏱️ Sessions</a>
+        </div>
         <div class="secondary-links">
           <a href="rvpu-mysore-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
           <a href="https://mysore.rvpucollege.edu.in/" target="_blank">🌐 Official Website ↗</a>
@@ -782,6 +890,13 @@
         <div class="card-actions">
           <a href="nmkrvpu-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
           <a href="http://localhost:3007" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="dash-pages-bar" title="5-Page Enterprise Dashboard Suite">
+          <a href="http://localhost:3007/index.html" target="_blank" class="dash-page-link" title="Live Overview & Metrics">📊 Overview</a>
+          <a href="http://localhost:3007/analytics.html" target="_blank" class="dash-page-link" title="Funnel & Intent Analytics">📈 Analytics</a>
+          <a href="http://localhost:3007/interactions.html" target="_blank" class="dash-page-link" title="Conversation Logs Explorer">💬 Logs</a>
+          <a href="http://localhost:3007/leads.html" target="_blank" class="dash-page-link" title="Student Lead Management">👥 Leads</a>
+          <a href="http://localhost:3007/sessions.html" target="_blank" class="dash-page-link" title="Session Duration & Engagement">⏱️ Sessions</a>
         </div>
         <div class="secondary-links">
           <a href="nmkrvpu-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>

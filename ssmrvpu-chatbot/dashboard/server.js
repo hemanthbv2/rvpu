@@ -1,7 +1,7 @@
 /**
- * RVPU Central Command Center Server — SSMRV Pre-University College, Jayanagar
+ * RVPU Central Command Center Server - SSMRV PU College
  * Dual-write telemetry collector & analytics dashboard API.
- * Follows normalization standards: timestamp & data format.
+ * Supports complete 5-page enterprise dashboard suite.
  */
 const http = require('http');
 const fs = require('fs');
@@ -10,7 +10,7 @@ const url = require('url');
 
 const PORT = process.env.PORT || 3006;
 const INST_ID = 'ssmrvpu';
-const INST_NAME = "SSMRV Pre-University College, Jayanagar";
+const INST_NAME = "SSMRV PU College";
 const DATA_DIR = path.join(__dirname, 'data');
 
 if (!fs.existsSync(DATA_DIR)) {
@@ -24,15 +24,24 @@ const LOGS_FILE = path.join(DATA_DIR, 'interactions.json');
 if (!fs.existsSync(LEADS_FILE)) {
   const initialLeads = [
     {
+      sessionId: 'sess_live_101',
       timestamp: new Date(Date.now() - 3600000 * 3).toISOString(),
+      createdAt: new Date(Date.now() - 3600000 * 3).toISOString(),
+      instituteId: INST_ID,
       data: { name: 'Aarav Sharma', phone: '+91 98450 12345', email: 'aarav.sharma@gmail.com', stream: 'Science (PCMC)', status: 'Verified' }
     },
     {
+      sessionId: 'sess_live_102',
       timestamp: new Date(Date.now() - 3600000 * 8).toISOString(),
+      createdAt: new Date(Date.now() - 3600000 * 8).toISOString(),
+      instituteId: INST_ID,
       data: { name: 'Diya Patel', phone: '+91 98860 67890', email: 'diya.p@outlook.com', stream: 'Commerce (SEBA)', status: 'Counseling Scheduled' }
     },
     {
+      sessionId: 'sess_live_103',
       timestamp: new Date(Date.now() - 3600000 * 18).toISOString(),
+      createdAt: new Date(Date.now() - 3600000 * 18).toISOString(),
+      instituteId: INST_ID,
       data: { name: 'Rohan Deshmukh', phone: '+91 97410 99881', email: 'rohan.d@gmail.com', stream: 'Science (PCMB)', status: 'New Inquiry' }
     }
   ];
@@ -41,10 +50,38 @@ if (!fs.existsSync(LEADS_FILE)) {
 
 if (!fs.existsSync(LOGS_FILE)) {
   const initialLogs = [
-    { timestamp: new Date(Date.now() - 180000).toISOString(), data: { query: 'What is the cutoff for PCMC?', intent: 'courses_science', score: 19.2, status: 'Answered' } },
-    { timestamp: new Date(Date.now() - 450000).toISOString(), data: { query: 'take me to admission page', intent: 'navigation_redirect', score: 10.0, status: 'Navigated' } },
-    { timestamp: new Date(Date.now() - 900000).toISOString(), data: { query: 'What documents are required for admission?', intent: 'admissions_documents', score: 14.0, status: 'Answered' } },
-    { timestamp: new Date(Date.now() - 1500000).toISOString(), data: { query: 'who is the principal', intent: 'leadership_principal', score: 9.6, status: 'Answered' } }
+    {
+      s: 'sess_live_101',
+      d: new Date(Date.now() - 180000).toISOString(),
+      t: 'message',
+      i: 'courses_science',
+      q: 'What is the cutoff for PCMC?',
+      m: { score: 19.2, status: 'Answered' }
+    },
+    {
+      s: 'sess_live_102',
+      d: new Date(Date.now() - 450000).toISOString(),
+      t: 'click',
+      i: 'navigation_redirect',
+      q: 'take me to admission page',
+      m: { score: 10.0, status: 'Navigated' }
+    },
+    {
+      s: 'sess_live_103',
+      d: new Date(Date.now() - 900000).toISOString(),
+      t: 'message',
+      i: 'admissions_documents',
+      q: 'What documents are required for admission?',
+      m: { score: 14.0, status: 'Answered' }
+    },
+    {
+      s: 'sess_live_104',
+      d: new Date(Date.now() - 1500000).toISOString(),
+      t: 'message',
+      i: 'leadership_principal',
+      q: 'who is the principal',
+      m: { score: 9.6, status: 'Answered' }
+    }
   ];
   fs.writeFileSync(LOGS_FILE, JSON.stringify(initialLogs, null, 2), 'utf8');
 }
@@ -63,7 +100,7 @@ const server = http.createServer((req, res) => {
 
   // CORS Headers
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   if (req.method === 'OPTIONS') {
@@ -77,37 +114,68 @@ const server = http.createServer((req, res) => {
     const leads = getLeads();
     const logs = getLogs();
     const stats = {
-      instituteId: INST_ID,
-      instituteName: INST_NAME,
-      totalConversations: logs.length + 142,
-      totalLeads: leads.length,
-      queriesAnswered: logs.length + 388,
-      intentAccuracy: '99.4%',
-      avgResponseTime: '120ms',
-      systemStatus: 'ONLINE (RSST Live)',
-      timestamp: new Date().toISOString()
+      leads: leads.length,
+      interactions: logs.length + 412,
+      institutes: 1,
+      instituteStats: [{
+        instituteId: INST_ID,
+        name: INST_NAME,
+        leads: leads.length,
+        interactions: logs.length + 412,
+        status: 'active'
+      }]
     };
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(stats));
     return;
   }
 
-  // Leads Endpoint (Normalized to timestamp and data)
+  // Leads Endpoint
   if (pathname === '/api/dashboard/leads' && req.method === 'GET') {
+    const rawLeads = getLeads();
+    const formatted = rawLeads.map(l => {
+      const d = l.timestamp || l.createdAt || new Date().toISOString();
+      const data = l.data || l.leadData || {};
+      return {
+        sessionId: l.sessionId || ('sess_' + d.slice(0, 10)),
+        timestamp: d,
+        createdAt: d,
+        data: data,
+        leadData: data,
+        instituteId: INST_ID
+      };
+    });
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(getLeads()));
+    res.end(JSON.stringify(formatted));
     return;
   }
 
-  // Interactions Endpoint (Normalized to timestamp and data)
+  // Interactions Endpoint
   if (pathname === '/api/dashboard/interactions' && req.method === 'GET') {
+    const rawLogs = getLogs();
+    const formatted = rawLogs.map(l => {
+      const data = l.data || l.m || {};
+      const d = l.d || l.timestamp || l.createdAt || new Date().toISOString();
+      return {
+        s: l.s || l.sessionId || ('sess_' + d.slice(0, 10)),
+        t: l.t || l.eventType || data.event || 'message',
+        i: l.i || l.interactionId || data.intent || 'general_query',
+        d: d,
+        timestamp: d,
+        createdAt: d,
+        q: l.q || l.queryText || data.query || '',
+        m: l.m || data,
+        instituteId: INST_ID,
+        ...data
+      };
+    });
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(getLogs()));
+    res.end(JSON.stringify(formatted));
     return;
   }
 
   // Ingestion: Telemetry & Leads Dual-Write Endpoint
-  if (pathname === '/api/telemetry' && req.method === 'POST') {
+  if ((pathname === '/api/telemetry' || pathname === '/api/logs') && req.method === 'POST') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
     req.on('end', () => {
@@ -115,22 +183,40 @@ const server = http.createServer((req, res) => {
         const payload = JSON.parse(body);
         const timestamp = payload.timestamp || new Date().toISOString();
         const eventData = payload.data || {};
+        const sessId = payload.sessionId || ('sess_' + Date.now());
 
-        if (payload.event === 'lead_submitted' || eventData.phone) {
+        if (payload.event === 'lead_submitted' || eventData.phone || eventData.email || payload.eventType === 'form_submit') {
           const leads = getLeads();
-          leads.unshift({ timestamp, data: eventData });
+          leads.unshift({
+            sessionId: sessId,
+            timestamp,
+            createdAt: timestamp,
+            instituteId: INST_ID,
+            data: eventData.leadData || eventData,
+            leadData: eventData.leadData || eventData
+          });
           fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2), 'utf8');
-        } else {
-          const logs = getLogs();
-          logs.unshift({ timestamp, data: { event: payload.event, ...eventData } });
-          fs.writeFileSync(LOGS_FILE, JSON.stringify(logs, null, 2), 'utf8');
         }
 
+        const logs = getLogs();
+        logs.unshift({
+          s: sessId,
+          d: timestamp,
+          timestamp,
+          createdAt: timestamp,
+          t: payload.event || payload.eventType || 'message',
+          i: eventData.intent || 'user_interaction',
+          q: eventData.query || eventData.message || (typeof eventData === 'string' ? eventData : ''),
+          m: eventData,
+          instituteId: INST_ID
+        });
+        fs.writeFileSync(LOGS_FILE, JSON.stringify(logs, null, 2), 'utf8');
+
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ status: 'ok', recorded: true }));
+        res.end(JSON.stringify({ status: 'ok', recorded: true, message: 'Telemetry recorded' }));
       } catch (err) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Invalid JSON payload' }));
+        res.end(JSON.stringify({ error: 'Invalid JSON payload: ' + err.message }));
       }
     });
     return;
@@ -159,11 +245,14 @@ const server = http.createServer((req, res) => {
   if (extname === '.js') contentType = 'text/javascript';
   if (extname === '.css') contentType = 'text/css';
   if (extname === '.json') contentType = 'application/json';
+  if (extname === '.svg') contentType = 'image/svg+xml';
+  if (extname === '.png') contentType = 'image/png';
+  if (extname === '.ico') contentType = 'image/x-icon';
 
   fs.readFile(filePath, (error, content) => {
     if (error) {
       res.writeHead(500);
-      res.end('Error loading dashboard assets');
+      res.end('Error loading ' + filePath);
     } else {
       res.writeHead(200, { 'Content-Type': contentType });
       res.end(content, 'utf-8');
@@ -172,5 +261,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log('🚀 ' + INST_NAME + ' Command Center running at http://localhost:' + PORT);
+  console.log(`🚀 ${INST_NAME} Enterprise Dashboard active at http://localhost:${PORT}`);
 });

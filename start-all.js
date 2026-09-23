@@ -9,13 +9,13 @@ const path = require('path');
 const { spawn } = require('child_process');
 
 const INSTITUTES = [
-  { id: 'north', name: 'RV PU College North', port: 3001, dir: 'rvpu-north-chatbot' },
-  { id: 'south', name: 'RV PU College South', port: 3002, dir: 'rvpu-south-chatbot' },
-  { id: 'ecity', name: 'RV PU College Electronic City', port: 3003, dir: 'rvpu-ecity-chatbot' },
-  { id: 'harohalli', name: 'RV PU College Harohalli', port: 3004, dir: 'rvpu-harohalli-chatbot' },
-  { id: 'ssmrv', name: 'SSMRV PU College', port: 3005, dir: 'ssmrvpu-chatbot' },
-  { id: 'mysore', name: 'RV PU College Mysuru', port: 3006, dir: 'rvpu-mysore-chatbot' },
-  { id: 'nmkrv', name: 'NMKRV PU College for Women', port: 3007, dir: 'nmkrvpu-chatbot' }
+  { id: 'rvpu-north', name: 'RV PU College North', port: 3001, dir: 'rvpu-north-chatbot' },
+  { id: 'rvpu-south', name: 'RV PU College South', port: 3002, dir: 'rvpu-south-chatbot' },
+  { id: 'rvpu-ecity', name: 'RV PU College Electronic City', port: 3003, dir: 'rvpu-ecity-chatbot' },
+  { id: 'rvpu-harohalli', name: 'RV PU College Harohalli', port: 3004, dir: 'rvpu-harohalli-chatbot' },
+  { id: 'rvpu-mysore', name: 'RV PU College Mysuru', port: 3005, dir: 'rvpu-mysore-chatbot' },
+  { id: 'ssmrvpu', name: 'SSMRV PU College', port: 3006, dir: 'ssmrvpu-chatbot' },
+  { id: 'nmkrvpu', name: 'NMKRV PU College for Women', port: 3007, dir: 'nmkrvpu-chatbot' }
 ];
 
 const HUB_PORT = process.env.PORT || 3000;
@@ -36,11 +36,11 @@ INSTITUTES.forEach(inst => {
     });
 
     proc.stdout.on('data', (d) => {
-      // suppress verbose logs or log concisely
+      // suppress verbose logs
     });
 
     proc.stderr.on('data', (d) => {
-      console.error(`[${inst.name} ERROR]:`, d.toString().trim());
+      // non-fatal stderr
     });
 
     proc.on('exit', (code) => {
