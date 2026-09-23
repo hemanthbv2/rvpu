@@ -234,7 +234,7 @@ function buildInstituteKnowledgeBase(data, inst) {
         principalName.toLowerCase(), principalName.toLowerCase().replace(/^(mr\.|mrs\.|dr\.)\s*/, '')
       ],
       weight: 4.5,
-      answer: `👨‍🏫 **Principal of ${fullName}**:\n\nOur college is headed by **${principalName}**.\n\nUnder visionary academic leadership, ${shortName} emphasizes disciplined academic rigor, integrated entrance coaching (NEET, JEE, KCET, CA Foundation), personal mentoring, and holistic student growth.\n\nWould you like to read the Principal's message, view faculty details, or explore our academic courses?`,
+      answer: `Certainly! Let me introduce our college leadership.\n\n👨‍🏫 **Principal of ${fullName}**:\nOur college is headed by our respected Principal, **${principalName}**.\n\nUnder visionary academic leadership, ${shortName} emphasizes disciplined academic rigor, integrated entrance coaching (NEET, JEE, KCET, CA Foundation), personal mentoring, and holistic student growth.\n\nWould you like to read the Principal's message, view faculty details, or explore our academic courses?`,
       quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us'],
       navigation: { label: "View Principal's Profile", url: pages.principal || pages.about || website }
     },
@@ -244,7 +244,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: 'About Us & Management Trust',
       keywords: ['about us', 'about', 'about college', 'who are you', 'tell me about college', 'college info', 'overview', 'history', 'management', 'trust', 'rsst', 'rvei', 'shyam', 'murthy', 'nagaraj'],
       weight: 3.5,
-      answer: `🏛️ **About ${fullName}**:\n\n${shortName} is a premier Pre-University institution managed by the renowned **Rashtreeya Sikshana Samithi Trust (RSST)**, upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board results, integrated entrance coaching, and state-of-the-art facilities.\n\n👨‍🏫 **Key Leadership**:\n• **Principal**: **${principalName}**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary (RSST)**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Director, RV Learning Hub**: Mr. Mayur Goyal`,
+      answer: `I'd be delighted to tell you about our rich heritage!\n\n🏛️ **About ${fullName}**:\n${shortName} is a premier Pre-University institution managed by the renowned **Rashtreeya Sikshana Samithi Trust (RSST)**, upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board results, integrated entrance coaching, and state-of-the-art facilities.\n\n👨‍🏫 **Key Leadership**:\n• **Principal**: **${principalName}**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary (RSST)**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Director, RV Learning Hub**: Mr. Mayur Goyal`,
       quickChips: ['Principal', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us'],
       navigation: { label: 'Visit Official About Us Page', url: pages.about || website }
     },
@@ -258,7 +258,7 @@ function buildInstituteKnowledgeBase(data, inst) {
         'list of campuses', 'all rv colleges', 'where are your campuses', 'show campuses'
       ],
       weight: 4.5,
-      answer: `🏛️ **RV Educational Institutions — 7 Pre-University Campuses**:\n\nUnder the prestigious Rashtreeya Sikshana Samithi Trust (RSST), RV operates 7 premier Pre-University campuses across Karnataka. Swipe through the cards below to explore each campus:`,
+      answer: `I'd love to introduce you to our wider educational family! 🏛️\n\nUnder the prestigious Rashtreeya Sikshana Samithi Trust (RSST), RV operates 7 premier Pre-University campuses across Karnataka. Swipe through the cards below to explore each campus:`,
       cardsType: 'campus_list',
       campusCards: sharedCampusCards,
       quickChips: ['Our Courses', 'Facilities', 'Admissions', 'Contact Us']
@@ -269,7 +269,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: 'Our Courses and Combinations Offered',
       keywords: ['our courses', 'courses', 'course', 'combinations', 'combination', 'streams', 'stream', 'subjects', 'academic programs', 'programs offered', 'what courses'],
       weight: 3.5,
-      answer: `🎓 **Academic Courses & Combinations at ${shortName}**:\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n${commerceCombos ? `**📊 Commerce Stream**:\n${commerceCombos}\n\n` : ''}**🗣️ Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}\n\n---\n\n🚀 **RV Learning Hub (RVLH) Integrated Programmes**:\n• **JEE Advanced (Main + KCET Decoded) + PU Board**\n• **JEE (Main + KCET Decoded) + PU Board**\n• **NEET UG + KCET + PU Board**\n• **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**`,
+      answer: `We offer a comprehensive selection of Pre-University programs! Here is the complete breakdown of our streams, subjects, and integrated entrance tracks:\n\n🎓 **Academic Courses & Combinations at ${shortName}**:\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n${commerceCombos ? `**📊 Commerce Stream**:\n${commerceCombos}\n\n` : ''}**🗣️ Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}\n\n---\n\n🚀 **RV Learning Hub (RVLH) Integrated Programmes**:\n• **JEE Advanced (Main + KCET Decoded) + PU Board**\n• **JEE (Main + KCET Decoded) + PU Board**\n• **NEET UG + KCET + PU Board**\n• **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**`,
       quickChips: combinations.map(c => c.code).concat(['JEE Advanced', 'JEE Main', 'NEET UG', 'Commerce Decoded', 'Our Campuses']),
       navigation: { label: 'Explore Our Courses Page', url: pages.courses || website }
     }
@@ -291,7 +291,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: spec.title,
       keywords: spec.keywords,
       weight: 4.5,
-      answer: `🎓 **${code} (${combo.stream} Stream) at ${shortName}**:\n\n• **Core Subjects**: ${combo.subjects}\n• **Compulsory Language**: ${compulsoryLang} | **Second Language**: ${secondLangs}\n• **Career Avenues**: ${spec.career}\n• **Integrated Competitive Prep**: ${spec.prep}`,
+      answer: `That's a wonderful academic choice! Here is what you need to know about this combination:\n\n🎓 **${code} (${combo.stream} Stream) at ${shortName}**:\n\n• **Core Subjects**: ${combo.subjects}\n• **Compulsory Language**: ${compulsoryLang} | **Second Language**: ${secondLangs}\n• **Career Avenues**: ${spec.career}\n• **Integrated Competitive Prep**: ${spec.prep}`,
       quickChips: ['Our Courses', 'Our Campuses', 'Admissions', 'Contact Us'],
       navigation: { label: `Explore ${combo.stream} Combinations`, url: pages.courses || website }
     });
@@ -300,13 +300,22 @@ function buildInstituteKnowledgeBase(data, inst) {
   // Add RVLH Integrated Decoded Tracks
   rvlhTracks.forEach(track => {
     const campusBullets = track.campuses.map(c => `• ${c}`).join('\n');
+    let introPhrase = "I'd be glad to share the details on this engineering track! 🚀";
+    if (track.id.includes('neet')) {
+      introPhrase = "Great ambition! Becoming a doctor requires dedicated focus, and this program is built specifically for that journey. Here are the details:";
+    } else if (track.id.includes('commerce')) {
+      introPhrase = "I'm delighted you asked! Commerce Decoded is an exceptional stepping stone for finance, chartered accountancy, and corporate law. Here are the program highlights:";
+    } else if (track.id.includes('jee_main')) {
+      introPhrase = "Certainly! This is one of our most popular integrated engineering pathways, perfectly synchronized with PU Board studies. Here are the full details:";
+    }
+
     kb.push({
       id: track.id,
       category: 'academics',
       title: track.title,
       keywords: track.keywords,
       weight: track.weight,
-      answer: `🎯 **${track.title}**:\n\n${track.summary}\n\n📍 **Course available at**:\n${campusBullets}`,
+      answer: `${introPhrase}\n\n🎯 **${track.title}**:\n\n${track.summary}\n\n📍 **Course available at**:\n${campusBullets}`,
       quickChips: ['Our Courses', 'Our Campuses', 'Admissions', 'Contact Us'],
       navigation: { label: 'Explore Academic Programmes', url: pages.courses || website }
     });
@@ -319,7 +328,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Science Stream Overview',
     keywords: ['science', 'science stream', 'physics', 'chemistry', 'maths', 'mathematics', 'neet', 'jee', 'kcet', 'engineering', 'medical'],
     weight: 2.5,
-    answer: `🔬 **Science Stream Combinations at ${shortName}**:\n\n${scienceCombos}\n\nAll science programs feature intensive laboratory practicals and integrated competitive exam coaching (NEET / JEE / KCET).`,
+    answer: `Great question! Science at ${shortName} opens diverse doors in engineering, medicine, pure research, and technology:\n\n🔬 **Science Stream Combinations at ${shortName}**:\n\n${scienceCombos}\n\nAll science programs feature intensive laboratory practicals and integrated competitive exam coaching (NEET / JEE / KCET).`,
     quickChips: ['PCMB', 'PCMC', 'Our Courses', 'Our Campuses', 'Facilities'],
     navigation: { label: 'Explore Science Courses', url: pages.courses || website }
   });
@@ -332,7 +341,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: 'Commerce Stream Overview',
       keywords: ['commerce', 'commerce stream', 'business studies', 'accountancy', 'economics', 'statistics', 'ca', 'cs', 'finance', 'cma'],
       weight: 2.5,
-      answer: `📊 **Commerce Stream Combinations at ${shortName}**:\n\n${commerceCombos}\n\nThese combinations build an exceptional foundation for CA Foundation, Company Secretaryship (CS), BBA/MBA, and corporate finance.`,
+      answer: `Certainly! Our Commerce department is renowned for creating future business leaders and finance professionals:\n\n📊 **Commerce Stream Combinations at ${shortName}**:\n\n${commerceCombos}\n\nThese combinations build an exceptional foundation for CA Foundation, Company Secretaryship (CS), BBA/MBA, and corporate finance.`,
       quickChips: combinations.filter(c => c.stream === 'Commerce').map(c => c.code).concat(['Our Campuses']),
       navigation: { label: 'Explore Commerce Courses', url: pages.courses || website }
     });
@@ -345,7 +354,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Language Options',
     keywords: ['language', 'languages', 'second language', 'kannada', 'hindi', 'sanskrit', 'french', 'english', 'medium'],
     weight: 2.0,
-    answer: `🗣️ **Language Options at ${shortName}**:\n\n• **Part I (Compulsory)**: ${compulsoryLang}\n• **Part II (Second Language Choice)**: ${secondLangs}\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada per DPUE regulations.`,
+    answer: `Here are the language choices offered at our campus:\n\n🗣️ **Language Options at ${shortName}**:\n\n• **Part I (Compulsory)**: ${compulsoryLang}\n• **Part II (Second Language Choice)**: ${secondLangs}\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada per DPUE regulations.`,
     quickChips: ['Our Courses', 'Our Campuses', 'Facilities', 'Contact Us']
   });
 
@@ -358,7 +367,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: 'Faculty & Teaching Staff',
       keywords: ['faculty', 'teachers', 'lecturers', 'staff', 'teaching staff', 'professors', 'who teaches', 'mentors', 'lecturer'],
       weight: 4.0,
-      answer: `👨‍🏫 **Distinguished Faculty at ${shortName}**:\n\nOur expert educators bring deep academic and competitive coaching expertise:\n\n${facultyList}`,
+      answer: `Our experienced educators are the backbone of student success! Here is our teaching team:\n\n👨‍🏫 **Distinguished Faculty at ${shortName}**:\n\n${facultyList}`,
       quickChips: ['Principal', 'Our Courses', 'Our Campuses', 'Contact Us'],
       navigation: { label: 'View Faculty Directory', url: pages.faculty || website }
     });
@@ -371,7 +380,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Admission Procedure & Steps',
     keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'procedure', 'process', 'enroll', 'seat', 'registration', 'form', 'dates'],
     weight: 2.5,
-    answer: `📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n💡 **Tips**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.`,
+    answer: `We would love to welcome you to our college family! Here is how our admission process works:\n\n📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n💡 **Helpful Tip**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.`,
     quickChips: ['Required Documents', 'Eligibility Cutoff', 'Our Courses', 'Our Campuses'],
     navigation: { label: 'Open Admission Portal', url: pages.admissions || website }
   });
@@ -382,7 +391,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Required Documents for Admission',
     keywords: ['documents', 'required documents', 'certificates', 'marksheet', 'marks card', 'tc', 'transfer certificate', 'aadhaar', 'caste certificate', 'income certificate', 'photographs', 'eligibility certificate'],
     weight: 2.5,
-    answer: `📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.`,
+    answer: `To make your admission verification seamless, please keep these documents ready:\n\n📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.`,
     quickChips: ['Admission Process', 'Eligibility Cutoff', 'Our Courses', 'Our Campuses']
   });
 
@@ -392,7 +401,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Eligibility & Cutoff Criteria',
     keywords: ['eligibility', 'cutoff', 'cut off', 'cut-off', 'percentage', 'marks', 'minimum marks', 'criteria', 'sslc percentage', 'pass marks'],
     weight: 2.5,
-    answer: `🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.`,
+    answer: `Here is the eligibility and passing criteria you should know:\n\n🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.`,
     quickChips: ['Admission Process', 'Our Courses', 'Our Campuses', 'Contact Us']
   });
 
@@ -403,7 +412,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Campus Facilities & Infrastructure',
     keywords: ['facilities', 'facility', 'infrastructure', 'labs', 'laboratory', 'library', 'sports', 'playground', 'auditorium', 'smart class', 'classrooms', 'gym', 'canteen', 'amenities'],
     weight: 3.5,
-    answer: `🏫 **Campus Facilities at ${shortName}**:\n\n${facilitiesList}\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.`,
+    answer: `I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at ${shortName}**:\n\n${facilitiesList}\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.`,
     quickChips: ['Our Courses', 'Our Campuses', 'Contact Us', 'Events'],
     navigation: { label: 'Explore Facilities Page', url: pages.facilities || website }
   });
@@ -415,7 +424,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Contact Us & Campus Location',
     keywords: ['contact us', 'contact', 'contacts', 'address', 'phone', 'telephone', 'mobile', 'call', 'email', 'location', 'where', 'timings', 'hours', 'working hours', 'map', 'directions', 'reach', 'helpline', 'office'],
     weight: 3.5,
-    answer: `📍 **Contact Us — ${shortName}**\n\n• **Campus Address**:\n  ${address}\n• **Phone / Helpline**: ${phones}\n• **Email**: ${email}\n• **Office Working Hours**: ${timings}\n• **Official Website**: ${website}`,
+    answer: `We are always happy to connect with students and parents! You can reach us or visit our admissions office here:\n\n📍 **Contact Us — ${shortName}**\n\n• **Campus Address**:\n  ${address}\n• **Phone / Helpline**: ${phones}\n• **Email**: ${email}\n• **Office Working Hours**: ${timings}\n• **Official Website**: ${website}`,
     quickChips: ['Our Campuses', 'Our Courses', 'Facilities', 'Events'],
     navigation: { label: 'Open Contact Us Page', url: pages.contact || website }
   });
@@ -427,7 +436,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'College Events & Student Activities',
     keywords: ['events', 'event', 'activities', 'activity', 'cultural', 'cultural fest', 'fest', 'fests', 'annual day', 'sports day', 'functions', 'celebrations', 'seminars', 'workshops', 'calendar', 'competitions', 'youth festival'],
     weight: 3.5,
-    answer: `🎉 **College Events & Activities at ${shortName}**:\n\n• **Annual Cultural Fest & Talent Day**: Grand celebration of student talent in music, dance, theatre, and creative arts.\n• **Annual Athletic Meet & Sports Day**: Inter-house track and field events, cricket, volleyball, basketball, and indoor tournaments.\n• **Science Seminars & Tech Exhibitions**: Hands-on laboratory project displays, model making, and interactive sessions with eminent academicians.\n• **National Celebrations**: Patriotic celebrations of Independence Day, Republic Day, and Kannada Rajyotsava.\n• **Student Enrichment & Leadership Activities**: Career counseling, personality development workshops, and active student club initiatives.`,
+    answer: `Life at ${shortName} is filled with energy, talent, and excitement! Here are some of our major annual events and activities:\n\n🎉 **College Events & Activities at ${shortName}**:\n\n• **Annual Cultural Fest & Talent Day**: Grand celebration of student talent in music, dance, theatre, and creative arts.\n• **Annual Athletic Meet & Sports Day**: Inter-house track and field events, cricket, volleyball, basketball, and indoor tournaments.\n• **Science Seminars & Tech Exhibitions**: Hands-on laboratory project displays, model making, and interactive sessions with eminent academicians.\n• **National Celebrations**: Patriotic celebrations of Independence Day, Republic Day, and Kannada Rajyotsava.\n• **Student Enrichment & Leadership Activities**: Career counseling, personality development workshops, and active student club initiatives.`,
     quickChips: ['Our Courses', 'Our Campuses', 'Facilities', 'Contact Us'],
     navigation: { label: 'View College Events Page', url: pages.events || website }
   });
