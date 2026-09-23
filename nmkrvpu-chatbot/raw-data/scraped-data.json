@@ -100,6 +100,11 @@
       "Spacious Auditorium and Seminar Halls"
     ]
   },
+  "faculty": {
+    "principal": { "name": "Mrs. Sheela Prakash S.N.", "role": "Principal", "department": "Administration" },
+    "teaching_staff": "Faculty details are managed internally. The college has experienced Senior Lecturers and Lecturers across Physics, Chemistry, Mathematics, Biology, Computer Science, Accountancy, Business Studies, Economics, Statistics, English, Kannada, Hindi, and Sanskrit departments.",
+    "note": "Individual faculty listings are not currently published on the website (department tabs are placeholder-only as of scraping date)."
+  },
   "colors": {
     "primary": "#EE9B54",
     "primary_alt": "#F09E53",
@@ -120,3 +125,4 @@
     "admission_portal": "https://admissions.rvlearninghub.com/"
   }
 }
+

@@ -56,6 +56,44 @@
       "ii_puc": "Final state-level examination conducted by the Karnataka Department of Pre-University Education."
     }
   },
+  "faculty": {
+    "teaching_staff": [
+      { "name": "Rajai Mithil Kanaiyalal", "role": "Sr. Lecturer & HoD – Physics", "department": "Physics" },
+      { "name": "Maruti Kosuru", "role": "Sr. Lecturer – Physics", "department": "Physics" },
+      { "name": "Chiranjeevee Sinha", "role": "Sr. Lecturer – Physics", "department": "Physics" },
+      { "name": "Anusha Mugadam", "role": "Lecturer – Physics", "department": "Physics" },
+      { "name": "R. Purandara Saibaba", "role": "Sr. Lecturer – Chemistry", "department": "Chemistry" },
+      { "name": "Neha Shubham Thakre", "role": "Sr. Lecturer – Chemistry", "department": "Chemistry" },
+      { "name": "Anil Kumar T.", "role": "Sr. Lecturer – Chemistry", "department": "Chemistry" },
+      { "name": "Suresh Yaddala", "role": "Sr. Lecturer – Chemistry", "department": "Chemistry" },
+      { "name": "Yashaswini N.K.", "role": "Lecturer – Chemistry", "department": "Chemistry" },
+      { "name": "Anil Kumar M.R.", "role": "Sr. Lecturer – Mathematics", "department": "Mathematics" },
+      { "name": "Veluru Karunakara Babu", "role": "Sr. Lecturer – Mathematics", "department": "Mathematics" },
+      { "name": "Sinchana M.B.", "role": "Lecturer – Mathematics", "department": "Mathematics" },
+      { "name": "Savitha M.", "role": "Sr. Lecturer & HoD – Biology", "department": "Biology" },
+      { "name": "Ruchita D. Naidu", "role": "Lecturer – Biology", "department": "Biology" },
+      { "name": "Shivashankar N.V.", "role": "Lecturer & HoD – Computer Science", "department": "Computer Science" }
+    ]
+  },
+  "facilities": {
+    "items": [
+      "Smart Digital Interactive Classrooms with Projectors",
+      "Advanced Library with Textbooks, Reference Books & E-Resources",
+      "State-of-the-art Physics Laboratory",
+      "Chemistry Laboratory",
+      "Biology Laboratory",
+      "High-tech Computer Science Laboratory with high-speed internet",
+      "Multipurpose Auditorium & Seminar Hall",
+      "Sports Facilities – Basketball, Football, Volleyball, Badminton",
+      "Outdoor Sports Grounds & Athletic Track"
+    ]
+  },
+  "events": {
+    "cultural": "Cultural Events – Music, dance, drama, and art competitions",
+    "sports": "Annual Sports Day and inter-class/inter-college athletic meets",
+    "cultural_url": "https://north.rvpucollege.edu.in/cultural-events/",
+    "sports_url": "https://north.rvpucollege.edu.in/sports-events/"
+  },
   "colors": {
     "primary": "#E30613",
     "primary_alt": "#FF0000",
@@ -67,10 +105,12 @@
   },
   "pages": {
     "home": "https://north.rvpucollege.edu.in/",
-    "about": "https://north.rvpucollege.edu.in/about-college/",
-    "courses": "https://north.rvpucollege.edu.in/our-courses/",
-    "admissions": "https://north.rvpucollege.edu.in/admissions/",
-    "facilities": "https://north.rvpucollege.edu.in/facilities/",
+    "about": "https://north.rvpucollege.edu.in/north_new/about-college/",
+    "courses": "https://north.rvpucollege.edu.in/north_new/our-courses/",
+    "admissions": "https://north.rvpucollege.edu.in/north_new/admissions/",
+    "faculty": "https://north.rvpucollege.edu.in/north_new/faculty/",
+    "facilities": "https://north.rvpucollege.edu.in/north_new/facilities/",
+    "events": "https://north.rvpucollege.edu.in/north_new/events/",
     "contact": "https://north.rvpucollege.edu.in/contact-us/"
   }
 }

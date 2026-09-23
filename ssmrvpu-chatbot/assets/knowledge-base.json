@@ -60,7 +60,7 @@
     ],
     "navigation": {
       "label": "Visit Courses Page",
-      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/our_courses/"
     }
   },
   {
@@ -94,7 +94,7 @@
     ],
     "navigation": {
       "label": "Explore Science Courses",
-      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/our_courses/"
     }
   },
   {
@@ -128,7 +128,7 @@
     ],
     "navigation": {
       "label": "Explore Commerce Courses",
-      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/our_courses/"
     }
   },
   {
@@ -263,7 +263,7 @@
     ],
     "navigation": {
       "label": "View Management Details",
-      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/about-us/"
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/about_college/"
     }
   },
   {
@@ -358,11 +358,11 @@
       },
       {
         "title": "📖 About College",
-        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/about-us/"
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/about_college/"
       },
       {
         "title": "🎓 Courses & Combinations",
-        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/"
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/our_courses/"
       },
       {
         "title": "📝 Admissions & Criteria",

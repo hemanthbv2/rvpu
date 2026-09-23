@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV Pre-University College North, Bengaluru — Command Center</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="command-container">
+    <!-- Top Bar -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <div class="brand-logo-badge" style="background: #E30613;">RV</div>
+        <div class="brand-info">
+          <h2>RV Pre-University College North, Bengaluru</h2>
+          <p class="subtitle">AI Admissions Command Center & Telemetry Hub</p>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="system-status-indicator">
+          <span class="pulse-dot"></span>
+          <span class="status-text">SYSTEM ONLINE (DUAL-WRITE ACTIVE)</span>
+        </div>
+        <button class="btn-refresh" onclick="fetchDashboardData()">↻ Refresh</button>
+      </div>
+    </header>
+
+    <!-- KPI Metrics Grid -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">TOTAL CONVERSATIONS</span>
+          <span class="kpi-icon">💬</span>
+        </div>
+        <div class="kpi-value" id="kpi-conversations">142</div>
+        <div class="kpi-trend positive">↑ 18% from last week</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">STUDENT LEADS CAPTURED</span>
+          <span class="kpi-icon">🎯</span>
+        </div>
+        <div class="kpi-value" id="kpi-leads">24</div>
+        <div class="kpi-trend positive">↑ High-intent applicants</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">INTENT ACCURACY</span>
+          <span class="kpi-icon">⚡</span>
+        </div>
+        <div class="kpi-value" id="kpi-accuracy">99.4%</div>
+        <div class="kpi-trend neutral">Zero unhandled queries</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">AVG RESPONSE TIME</span>
+          <span class="kpi-icon">⏱️</span>
+        </div>
+        <div class="kpi-value" id="kpi-speed">120ms</div>
+        <div class="kpi-trend positive">Instant Edge NLP</div>
+      </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <div class="content-grid">
+      <!-- Left Column: Student Leads -->
+      <div class="panel card-leads">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <h3>🎓 Prospective Student Leads</h3>
+            <span class="badge-count" id="leads-count">3 Leads</span>
+          </div>
+          <button class="btn-export" onclick="exportLeads()">Export CSV</button>
+        </div>
+        <div class="table-responsive">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Stream</th>
+                <th>Status</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="leads-tbody">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right Column: Real-time Live Queries -->
+      <div class="panel card-logs">
+        <div class="panel-header">
+          <h3>⚡ Live Chat Interactions & Telemetry</h3>
+          <span class="live-pill">LIVE SINK</span>
+        </div>
+        <div class="interactions-feed" id="interactions-feed">
+          <!-- Dynamically rendered -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Information -->
+    <footer class="dashboard-footer">
+      <p>RSST / RV Educational Institutions &bull; Dual-Write Sink: WordPress REST (MySQL) + Node.js (MongoDB) &bull; Port 3001</p>
+    </footer>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

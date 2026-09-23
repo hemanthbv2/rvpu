@@ -1,0 +1,40 @@
+[
+  {
+    "timestamp": "2026-09-23T05:42:38.430Z",
+    "data": {
+      "name": "Pooja Hegde",
+      "phone": "+91 99001 22334",
+      "stream": "Science (PCMB)"
+    }
+  },
+  {
+    "timestamp": "2026-09-23T02:42:37.275Z",
+    "data": {
+      "name": "Aarav Sharma",
+      "phone": "+91 98450 12345",
+      "email": "aarav.sharma@gmail.com",
+      "stream": "Science (PCMC)",
+      "status": "Verified"
+    }
+  },
+  {
+    "timestamp": "2026-09-22T21:42:37.276Z",
+    "data": {
+      "name": "Diya Patel",
+      "phone": "+91 98860 67890",
+      "email": "diya.p@outlook.com",
+      "stream": "Commerce (SEBA)",
+      "status": "Counseling Scheduled"
+    }
+  },
+  {
+    "timestamp": "2026-09-22T11:42:37.276Z",
+    "data": {
+      "name": "Rohan Deshmukh",
+      "phone": "+91 97410 99881",
+      "email": "rohan.d@gmail.com",
+      "stream": "Science (PCMB)",
+      "status": "New Inquiry"
+    }
+  }
+]

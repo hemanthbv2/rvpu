@@ -104,6 +104,37 @@
       "Canteen & Cafeteria serving hygienic food"
     ]
   },
+  "faculty": {
+    "principal": { "name": "Sunitha Acharya", "role": "Principal" },
+    "teaching_staff": [
+      { "name": "Vani G.", "role": "Sr. Lecturer", "department": "Physics" },
+      { "name": "Prashanth S.V.", "role": "Sr. Lecturer", "department": "Physics" },
+      { "name": "Bhavya S.", "role": "Sr. Lecturer", "department": "Physics" },
+      { "name": "Tarunya N.", "role": "Lecturer", "department": "Physics" },
+      { "name": "Madhurima Das", "role": "Lecturer", "department": "Physics" },
+      { "name": "Jayashree R.", "role": "Sr. Lecturer", "department": "Physics" },
+      { "name": "Muralidhar L.", "role": "Sr. Lecturer", "department": "Chemistry" },
+      { "name": "Uppara Lakshmana", "role": "Sr. Lecturer", "department": "Chemistry" },
+      { "name": "Sharathkumar H.S.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Ranjitha B.S.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Aishwarya D.R.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Ramya G.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Vijaya Kumar Uppu", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Aparna V.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Shobha Padmaprasad D.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Manju M.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Ashwini B.S.", "role": "Faculty", "department": "Teaching Staff" },
+      { "name": "Vishwajeet Aigal", "role": "Faculty", "department": "Teaching Staff" }
+    ]
+  },
+  "events": {
+    "cultural": "Cultural Events – Music, dance, drama, and art competitions",
+    "sports": "Sports Events – Annual sports day, inter-class & inter-college meets",
+    "college": "College Events – Orientation programs, academic seminars, festival celebrations"
+  },
+  "announcements": [
+    "College Terms & Conditions document available at: https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/04/Terms-conditions-3.pdf"
+  ],
   "colors": {
     "primary": "#7A0000",
     "primary_alt": "#990000",
@@ -115,9 +146,12 @@
   },
   "pages": {
     "home": "https://ssmrvpu.edu.in/new_ssmrvpu/",
-    "about": "https://ssmrvpu.edu.in/new_ssmrvpu/about-us/",
-    "courses": "https://ssmrvpu.edu.in/new_ssmrvpu/courses/",
+    "about": "https://ssmrvpu.edu.in/new_ssmrvpu/about_college/",
+    "board": "https://ssmrvpu.edu.in/new_ssmrvpu/board_of_management/",
+    "courses": "https://ssmrvpu.edu.in/new_ssmrvpu/our_courses/",
+    "faculty": "https://ssmrvpu.edu.in/new_ssmrvpu/faculty/",
     "admissions": "https://ssmrvpu.edu.in/new_ssmrvpu/admissions/",
+    "events": "https://ssmrvpu.edu.in/new_ssmrvpu/events/",
     "facilities": "https://ssmrvpu.edu.in/new_ssmrvpu/facilities/",
     "contact": "https://ssmrvpu.edu.in/new_ssmrvpu/contact-us/"
   }
