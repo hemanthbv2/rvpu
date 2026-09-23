@@ -390,16 +390,25 @@ function generateWidgetJS(inst, data) {
   const WP_REST_URL = '${data.institute.website}wp-json/rvpu/v1/telemetry';
   const VERCEL_URL = 'http://localhost:3000/api/telemetry'; // Local or deployed Node dashboard
 
-  let engine = null;
+  let engine = (typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID] && window.RVPUChatbot[INST_ID].engine)
+    ? window.RVPUChatbot[INST_ID].engine
+    : null;
   let kb = null;
   let kw = null;
 
   function loadDependencies(callback) {
-    if (window.RVPUChatbot && window.RVPUChatbot[INST_ID]) {
+    if (!engine && typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID]) {
+      if (window.RVPUChatbot[INST_ID].engine) {
+        engine = window.RVPUChatbot[INST_ID].engine;
+      } else if (window.RVPUChatbot[INST_ID].ChatbotEngine) {
+        engine = new window.RVPUChatbot[INST_ID].ChatbotEngine();
+      }
+    }
+    if (engine) {
       callback();
       return;
     }
-    // Load local json/engine
+    // Fallback: Load local json if served over HTTP
     Promise.all([
       fetch('assets/knowledge-base.json').then(r => r.json()),
       fetch('assets/keywords.json').then(r => r.json())
@@ -411,7 +420,8 @@ function generateWidgetJS(inst, data) {
       }
       callback();
     }).catch(err => {
-      console.error('Error initializing RVPU Chatbot:', err);
+      console.warn('Local file fallback:', err);
+      callback();
     });
   }
 
@@ -504,6 +514,9 @@ function generateWidgetJS(inst, data) {
     sendTelemetry('query_sent', { query: text });
 
     setTimeout(() => {
+      if (!engine && typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID]) {
+        engine = window.RVPUChatbot[INST_ID].engine || (window.RVPUChatbot[INST_ID].ChatbotEngine ? new window.RVPUChatbot[INST_ID].ChatbotEngine() : null);
+      }
       if (engine) {
         const res = engine.match(text);
         appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu);
@@ -511,7 +524,7 @@ function generateWidgetJS(inst, data) {
       } else {
         appendMessage('bot', 'Connecting to admissions database...');
       }
-    }, 300);
+    }, 200);
   }
 
   function appendMessage(sender, text, chips, navigation, navMenu) {

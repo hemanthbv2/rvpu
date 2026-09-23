@@ -215,7 +215,7 @@ function buildKeywordsTable(knowledgeBase) {
   return keywordMap;
 }
 
-function generateEngineCode(inst, data) {
+function generateEngineCode(inst, data, kb, keywords) {
   const brandColors = data.colors || {
     primary: '#E30613',
     primary_alt: '#C00000',
@@ -223,6 +223,9 @@ function generateEngineCode(inst, data) {
     accent: '#46B3CA',
     background: '#FFFFFF'
   };
+
+  const embeddedKB = JSON.stringify(kb);
+  const embeddedKW = JSON.stringify(keywords);
 
   return `/**
  * RVPU Intelligent Chatbot Engine — ${data.institute.name}
@@ -235,6 +238,8 @@ function generateEngineCode(inst, data) {
   const INST_NAME = ${JSON.stringify(data.institute.name)};
   const INST_SHORT = ${JSON.stringify(data.institute.shortName || data.institute.name)};
   const BRAND_COLORS = ${JSON.stringify(brandColors)};
+  const DEFAULT_KB = ${embeddedKB};
+  const DEFAULT_KW = ${embeddedKW};
 
   // Common stop words to filter
   const STOP_WORDS = new Set([
@@ -249,8 +254,8 @@ function generateEngineCode(inst, data) {
 
   class ChatbotEngine {
     constructor(knowledgeBase, keywordMap) {
-      this.kb = knowledgeBase;
-      this.keywordMap = keywordMap;
+      this.kb = knowledgeBase || DEFAULT_KB;
+      this.keywordMap = keywordMap || DEFAULT_KW;
       this.history = [];
     }
 
@@ -386,12 +391,25 @@ function generateEngineCode(inst, data) {
     }
   }
 
-  // Export to window or module
+  const defaultEngine = new ChatbotEngine(DEFAULT_KB, DEFAULT_KW);
+
+  // Export to module
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { ChatbotEngine, INST_ID, INST_NAME, INST_SHORT, BRAND_COLORS };
-  } else {
+    module.exports = { ChatbotEngine, defaultEngine, INST_ID, INST_NAME, INST_SHORT, BRAND_COLORS, DEFAULT_KB, DEFAULT_KW };
+  }
+  // Export to browser window
+  if (typeof window !== 'undefined') {
     window.RVPUChatbot = window.RVPUChatbot || {};
-    window.RVPUChatbot[INST_ID] = { ChatbotEngine, INST_ID, INST_NAME, INST_SHORT, BRAND_COLORS };
+    window.RVPUChatbot[INST_ID] = {
+      ChatbotEngine,
+      engine: defaultEngine,
+      INST_ID,
+      INST_NAME,
+      INST_SHORT,
+      BRAND_COLORS,
+      kb: DEFAULT_KB,
+      kw: DEFAULT_KW
+    };
   }
 })(typeof window !== 'undefined' ? window : global);
 `;
@@ -410,7 +428,7 @@ function run() {
     const rawData = JSON.parse(fs.readFileSync(rawDataPath, 'utf8'));
     const kb = buildKnowledgeBase(rawData, inst);
     const keywords = buildKeywordsTable(kb);
-    const engineCode = generateEngineCode(inst, rawData);
+    const engineCode = generateEngineCode(inst, rawData, kb, keywords);
 
     const assetsDir = path.join(__dirname, inst.dir, 'assets');
     if (!fs.existsSync(assetsDir)) {
