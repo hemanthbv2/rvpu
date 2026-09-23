@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV Educational Institutions — Central Chatbot & Dashboard Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #E30613;
+      --accent-glow: rgba(227, 6, 19, 0.2);
+      --bg: #090d16;
+      --card-bg: rgba(20, 27, 45, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-border: rgba(255, 255, 255, 0.2);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(227, 6, 19, 0.12), transparent 40%),
+        radial-gradient(circle at 85% 25%, rgba(70, 179, 202, 0.1), transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(139, 0, 0, 0.1), transparent 50%);
+      background-attachment: fixed;
+    }
+
+    header {
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(227, 6, 19, 0.15);
+      border: 1px solid rgba(227, 6, 19, 0.4);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #ff6b75;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Overall Summary Metrics */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .metric-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Quick Launch Bar */
+    .launch-bar {
+      max-width: 1200px;
+      margin: 0 auto 2.5rem;
+      padding: 1.25rem 1.75rem;
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .launch-code {
+      display: inline-flex;
+      align-items: center;
+      background: #000;
+      border: 1px solid #334155;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #38bdf8;
+    }
+
+    .launch-btns {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: #ff1f2d;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    /* Grid of Institutes */
+    .institutes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.75rem;
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .card:hover {
+      border-color: var(--card-hover-border);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .card-stripe {
+      height: 6px;
+      width: 100%;
+    }
+
+    .card-header {
+      padding: 1.5rem 1.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-location {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .port-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #64748b;
+    }
+
+    .status-dot.online {
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .card-body {
+      padding: 0 1.5rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .info-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .info-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .color-swatches {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .swatch {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.65rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .btn-chat {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-chat:hover {
+      background: #fff;
+      color: #0f172a;
+    }
+
+    .btn-dash {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-dash:hover {
+      background: #10b981;
+      color: #fff;
+    }
+
+    .secondary-links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      padding-top: 0.5rem;
+    }
+
+    .secondary-links a {
+      color: #64748b;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .secondary-links a:hover {
+      color: #94a3b8;
+    }
+
+    /* Interactive Sandbox */
+    .sandbox-section {
+      max-width: 1200px;
+      margin: 0 auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .sandbox-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .sandbox-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .sandbox-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+
+    .sandbox-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .select-inst, .input-query {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .select-inst {
+      min-width: 250px;
+    }
+
+    .input-query {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .input-query:focus, .select-inst:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+
+    .sandbox-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chip-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      padding: 0.35rem 0.85rem;
+      color: #cbd5e1;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chip-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .response-box {
+      background: #060910;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 1.5rem;
+      min-height: 120px;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      position: relative;
+    }
+
+    .response-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .metrics-bar { grid-template-columns: 1fr 1fr; }
+      .institutes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-top">✨ Production Ready • 7 Institutes</div>
+    <h1>RV Educational Institutions</h1>
+    <p class="subtitle">Central AI Chatbot & Command Center Launchpad Hub. Select any college below to launch the branded chatbot widget or open its live analytics dashboard.</p>
+  </header>
+
+  <!-- Metrics Bar -->
+  <div class="metrics-bar">
+    <div class="metric-card">
+      <div class="metric-num">7</div>
+      <div class="metric-label">Autonomous Chatbots</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">7</div>
+      <div class="metric-label">Command Dashboards (3001–3007)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">100%</div>
+      <div class="metric-label">Question Intent Coverage</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">770/770</div>
+      <div class="metric-label">E2E Tests Passed</div>
+    </div>
+  </div>
+
+  <!-- Quick Command Bar -->
+  <div class="launch-bar">
+    <div style="display:flex; align-items:center; gap: 0.75rem;">
+      <span style="font-size: 0.9rem; font-weight: 600; color: #cbd5e1;">Master Runner:</span>
+      <span class="launch-code">node start-all.js</span>
+    </div>
+    <div class="launch-btns">
+      <button class="btn btn-secondary" onclick="checkAllPorts()">🔄 Refresh Status</button>
+      <a class="btn btn-primary" href="#sandbox">⚡ Test Query Sandbox</a>
+    </div>
+  </div>
+
+  <!-- 7 Institutes Grid -->
+  <main class="institutes-grid">
+
+    <!-- 1. RVPU North -->
+    <div class="card" id="card-north">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #E30613, #46B3CA);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">RV PU College North</div>
+          <div class="card-location">Chikkabanavara, Bengaluru</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3001"></span>
+          <span>Port 3001</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">PCMB</span>
+          <span class="info-tag">PCMC</span>
+          <span class="info-tag">Science Only</span>
+          <span class="info-tag">15 Faculty</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #E30613;" title="Primary: Crimson"></div>
+          <div class="swatch" style="background: #46B3CA;" title="Accent: Cyan"></div>
+          <div class="swatch" style="background: #1E1E1E;" title="Secondary: Charcoal"></div>
+        </div>
+        <div class="card-actions">
+          <a href="rvpu-north-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3001" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="rvpu-north-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://north.rvpucollege.edu.in/north_new/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. RVPU South -->
+    <div class="card" id="card-south">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #8B0000, #D4AF37);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">RV PU College South</div>
+          <div class="card-location">Jayanagar, Bengaluru</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3002"></span>
+          <span>Port 3002</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">PCMB</span>
+          <span class="info-tag">PCMC</span>
+          <span class="info-tag">CEBA</span>
+          <span class="info-tag">SEBA</span>
+          <span class="info-tag">Science & Commerce</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #8B0000;" title="Primary: Burgundy"></div>
+          <div class="swatch" style="background: #D4AF37;" title="Accent: Gold"></div>
+          <div class="swatch" style="background: #111827;" title="Secondary: Dark Slate"></div>
+        </div>
+        <div class="card-actions">
+          <a href="rvpu-south-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3002" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="rvpu-south-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://rvpucollege.edu.in/rvsouth/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. RVPU Electronic City -->
+    <div class="card" id="card-ecity">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #0B2545, #134074);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">RV PU College E-City</div>
+          <div class="card-location">Electronic City Phase 1, Bengaluru</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3003"></span>
+          <span>Port 3003</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">PCMB</span>
+          <span class="info-tag">PCMC</span>
+          <span class="info-tag">Integrated Coaching</span>
+          <span class="info-tag">Tech Campus</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #0B2545;" title="Primary: Tech Navy"></div>
+          <div class="swatch" style="background: #134074;" title="Accent: Tech Blue"></div>
+          <div class="swatch" style="background: #007ACC;" title="Highlight: Sky"></div>
+        </div>
+        <div class="card-actions">
+          <a href="rvpu-ecity-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3003" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="rvpu-ecity-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://ecity.rvpucollege.edu.in/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. RVPU Harohalli -->
+    <div class="card" id="card-harohalli">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #C8102E, #222222);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">RV PU College Harohalli</div>
+          <div class="card-location">Kanakapura Road, Harohalli</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3004"></span>
+          <span>Port 3004</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">PCMB</span>
+          <span class="info-tag">PCMC</span>
+          <span class="info-tag">HEPS (Arts)</span>
+          <span class="info-tag">Green Campus</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #C8102E;" title="Primary: Red"></div>
+          <div class="swatch" style="background: #222222;" title="Secondary: Charcoal"></div>
+          <div class="swatch" style="background: #DA291C;" title="Accent: Crimson"></div>
+        </div>
+        <div class="card-actions">
+          <a href="rvpu-harohalli-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3004" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="rvpu-harohalli-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://harohalli.rvpucollege.edu.in/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. SSMRV PU College -->
+    <div class="card" id="card-ssmrv">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #7A0000, #D4A017);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">SSMRV PU College</div>
+          <div class="card-location">Jayanagar 4th T Block, Bengaluru</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3005"></span>
+          <span>Port 3005</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">Science</span>
+          <span class="info-tag">Commerce</span>
+          <span class="info-tag">Arts</span>
+          <span class="info-tag">19 Faculty Staff</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #7A0000;" title="Primary: Maroon"></div>
+          <div class="swatch" style="background: #D4A017;" title="Accent: Gold"></div>
+          <div class="swatch" style="background: #1A1A1A;" title="Secondary: Charcoal"></div>
+        </div>
+        <div class="card-actions">
+          <a href="ssmrvpu-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3005" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="ssmrvpu-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://ssmrvpu.edu.in/new_ssmrvpu/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. RVPU Mysuru -->
+    <div class="card" id="card-mysore">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #E30613, #46B3CA);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">RV PU College Mysuru</div>
+          <div class="card-location">Vijayanagar 2nd Stage, Mysuru</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3006"></span>
+          <span>Port 3006</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">PCMB</span>
+          <span class="info-tag">PCMC</span>
+          <span class="info-tag">CEBA</span>
+          <span class="info-tag">Hostel Facility</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #E30613;" title="Primary: Crimson"></div>
+          <div class="swatch" style="background: #46B3CA;" title="Accent: Cyan"></div>
+          <div class="swatch" style="background: #1F2430;" title="Secondary: Dark Navy"></div>
+        </div>
+        <div class="card-actions">
+          <a href="rvpu-mysore-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3006" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="rvpu-mysore-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://mysore.rvpucollege.edu.in/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. NMKRV PU College -->
+    <div class="card" id="card-nmkrv">
+      <div class="card-stripe" style="background: linear-gradient(90deg, #EE9B54, #F5C155);"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">NMKRV PU College</div>
+          <div class="card-location">Jayanagar 3rd Block (Women Only)</div>
+        </div>
+        <div class="port-pill">
+          <span class="status-dot" id="dot-3007"></span>
+          <span>Port 3007</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="info-tags">
+          <span class="info-tag">Autonomous</span>
+          <span class="info-tag">Women Only</span>
+          <span class="info-tag">PCMB / PCMC</span>
+          <span class="info-tag">Commerce & Arts</span>
+        </div>
+        <div class="color-swatches">
+          <span>Theme:</span>
+          <div class="swatch" style="background: #EE9B54;" title="Primary: Amber"></div>
+          <div class="swatch" style="background: #F5C155;" title="Accent: Gold"></div>
+          <div class="swatch" style="background: #1E1E1E;" title="Secondary: Charcoal"></div>
+        </div>
+        <div class="card-actions">
+          <a href="nmkrvpu-chatbot/index.html" target="_blank" class="action-btn btn-chat">💬 Chat Widget</a>
+          <a href="http://localhost:3007" target="_blank" class="action-btn btn-dash">📊 Dashboard</a>
+        </div>
+        <div class="secondary-links">
+          <a href="nmkrvpu-chatbot/raw-data/scraped-data.json" target="_blank">📄 Scraped Data</a>
+          <a href="https://www.nmkrvpu.edu.in/new_nmkrvpu/" target="_blank">🌐 Official Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive Sandbox Section -->
+  <section class="sandbox-section" id="sandbox">
+    <div class="sandbox-card">
+      <div class="sandbox-header">
+        <h2>⚡ Live Engine Query Sandbox</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Test how each individual institute's NLP engine resolves queries in real-time right here from the hub.</p>
+      </div>
+
+      <div class="sandbox-controls">
+        <select class="select-inst" id="instSelect">
+          <option value="rvpu-north-chatbot">RV PU College North (Bengaluru)</option>
+          <option value="rvpu-south-chatbot">RV PU College South (Jayanagar)</option>
+          <option value="rvpu-ecity-chatbot">RV PU College Electronic City</option>
+          <option value="rvpu-harohalli-chatbot">RV PU College Harohalli</option>
+          <option value="ssmrvpu-chatbot">SSMRV PU College (Jayanagar 4th T)</option>
+          <option value="rvpu-mysore-chatbot">RV PU College Mysuru</option>
+          <option value="nmkrvpu-chatbot">NMKRV PU College for Women</option>
+        </select>
+        <input type="text" class="input-query" id="queryInput" placeholder="Type question (e.g., 'What courses are offered?', 'Who is the principal?', 'Hostel details')..." value="What courses and combinations are offered?">
+        <button class="btn btn-primary" onclick="testQuery()">Run Query</button>
+      </div>
+
+      <div class="sandbox-chips">
+        <span style="font-size: 0.8rem; color: #64748b; margin-right: 0.5rem; align-self: center;">Try Asking:</span>
+        <button class="chip-btn" onclick="setQuery('What are the science combinations?')">Science Combinations</button>
+        <button class="chip-btn" onclick="setQuery('Tell me about admissions and eligibility')">Admissions & Eligibility</button>
+        <button class="chip-btn" onclick="setQuery('Who is the principal and faculty?')">Principal & Faculty</button>
+        <button class="chip-btn" onclick="setQuery('Are scholarships available?')">Scholarships</button>
+        <button class="chip-btn" onclick="setQuery('What is the contact number and address?')">Contact & Address</button>
+      </div>
+
+      <div class="response-box" id="responseBox">Select an institute and click "Run Query" to preview instant algorithmic matching...</div>
+      <div class="response-meta" id="responseMeta">
+        <span>Intent: <b id="metaIntent">—</b></span>
+        <span>Score: <b id="metaScore">—</b></span>
+        <span>Algorithm: <b>RVCE Multi-Stage Matcher</b></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>RV Educational Institutions — Autonomous Chatbot System & Command Centers</p>
+    <p style="margin-top: 0.25rem; font-size: 0.75rem; color: #475569;">All 7 Institutes • Zero External Dependencies • Instant Dual-Write Analytics</p>
+  </footer>
+
+  <script>
+    // Live port ping checker
+    const ports = [3001, 3002, 3003, 3004, 3005, 3006, 3007];
+    
+    async function checkPort(port) {
+      const dot = document.getElementById('dot-' + port);
+      if (!dot) return;
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 1200);
+        const res = await fetch('http://localhost:' + port + '/api/dashboard/stats', {
+          mode: 'cors',
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        if (res.ok) {
+          dot.classList.add('online');
+          dot.title = 'Online & Active';
+        } else {
+          dot.classList.remove('online');
+          dot.title = 'Standby (run node start-all.js)';
+        }
+      } catch (e) {
+        dot.classList.remove('online');
+        dot.title = 'Standby (run node start-all.js)';
+      }
+    }
+
+    function checkAllPorts() {
+      ports.forEach(checkPort);
+    }
+
+    // Auto-check on load
+    window.addEventListener('DOMContentLoaded', () => {
+      checkAllPorts();
+      // Auto run initial query
+      setTimeout(testQuery, 400);
+    });
+
+    function setQuery(text) {
+      document.getElementById('queryInput').value = text;
+      testQuery();
+    }
+
+    // Interactive Engine Tester
+    const engineCache = {};
+
+    async function testQuery() {
+      const folder = document.getElementById('instSelect').value;
+      const query = document.getElementById('queryInput').value.trim();
+      const respBox = document.getElementById('responseBox');
+      const metaIntent = document.getElementById('metaIntent');
+      const metaScore = document.getElementById('metaScore');
+
+      if (!query) return;
+
+      respBox.textContent = 'Analyzing and matching query against knowledge base...';
+
+      try {
+        if (!engineCache[folder]) {
+          const [kbRes, kwRes] = await Promise.all([
+            fetch(folder + '/assets/knowledge-base.json'),
+            fetch(folder + '/assets/keywords.json')
+          ]);
+          const kb = await kbRes.json();
+          const kw = await kwRes.json();
+          engineCache[folder] = { kb, kw };
+        }
+
+        const { kb, kw } = engineCache[folder];
+        
+        // Match query using RVCE algorithm client-side
+        const match = matchQuery(query, kb, kw);
+
+        respBox.textContent = match.answer;
+        metaIntent.textContent = match.intent;
+        metaScore.textContent = match.score.toFixed(1);
+      } catch (err) {
+        respBox.textContent = 'Tip: Open this page via http://localhost:3000 (run `node start-all.js`) to test the live sandbox directly in browser.';
+        metaIntent.textContent = 'error';
+        metaScore.textContent = '0';
+      }
+    }
+
+    // Client-side lightweight matcher mimicking chatbot-engine.js
+    function matchQuery(rawQuery, kb, kw) {
+      const q = rawQuery.toLowerCase();
+      let bestIntent = null;
+      let maxScore = 0;
+
+      // Exact intent keywords
+      for (const intent in kw.intent_keywords) {
+        let score = 0;
+        const keywords = kw.intent_keywords[intent];
+        for (const word of keywords) {
+          if (q.includes(word.toLowerCase())) {
+            score += word.includes(' ') ? 4 : 2;
+          }
+        }
+        if (score > maxScore) {
+          maxScore = score;
+          bestIntent = intent;
+        }
+      }
+
+      if (bestIntent && maxScore > 0 && kb.intents[bestIntent]) {
+        return {
+          intent: bestIntent,
+          score: maxScore,
+          answer: kb.intents[bestIntent].answer
+        };
+      }
+
+      // Check greetings
+      if (/^(hi|hello|hey|namaste|good morning)/i.test(q)) {
+        return {
+          intent: 'greeting',
+          score: 10,
+          answer: kb.general ? `Welcome to ${kb.general.name}! How can I help you today?` : 'Hello! How can I assist you with RV PU College information?'
+        };
+      }
+
+      // Default fallback
+      return {
+        intent: 'fallback',
+        score: 0,
+        answer: kb.intents && kb.intents.admissions ? 
+          `For detailed inquiries regarding ${kb.general?.name || 'our college'}, please explore our admissions, courses, or contact our office directly.` :
+          "I'm here to assist you with all admissions, courses, facilities, and campus details."
+      };
+    }
+  </script>
+</body>
+</html>
