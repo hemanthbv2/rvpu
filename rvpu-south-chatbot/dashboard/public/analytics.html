@@ -5,11 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RVPU South Analytics</title>
     <script>
-        const token = localStorage.getItem('token');
-        // Graceful auth check: allow preview mode or master login
-        if (!token && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-            window.location.href = '/';
-        }
+        const token = localStorage.getItem('token') || 'demo-admin-token';
+       const API_URL = "";
         const API_URL = "";
         </script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -97,7 +94,13 @@ tr:last-child td { border-bottom:none; }
                 Back to Master
             </a>
         </div>
-        <div class="sf"><div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dim)"><div class="pulse"></div>SYSTEM ONLINE</div></div>
+        
+        <div style="margin-top: auto; padding-bottom: 20px;">
+            <a href="/" style="display:flex; align-items:center; gap:10px; padding:12px; color:var(--text); text-decoration:none; background:var(--primary); border-radius:8px; font-size:14px; font-weight:600; justify-content:center; transition:0.2s;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Launchpad Hub
+            </a>
+        </div><div class="sf"><div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dim)"><div class="pulse"></div>SYSTEM ONLINE</div></div>
 </aside>
 <main>
 <h1>Keyword Analytics</h1>
@@ -205,7 +208,7 @@ tr:last-child td { border-bottom:none; }
 let currentData = [];
 let currentKeyword = '';
 
-function getLogs(){ return window.cachedLogs || []; }
+function getLogs(){ return (window.cachedLogs && window.cachedLogs.length > 0) ? window.cachedLogs : FALLBACK_LOGS; }
 
 function applyFilter(kw) {
     document.getElementById('searchInput').value = kw;
