@@ -1,7 +1,7 @@
 /**
  * RVPU Front-End Chatbot Widget Component
  * Campus: RV Pre-University College North, Bengaluru
- * Features: Branded UI, Keyword Chips, Deep Website Navigation, Dual-Write Telemetry.
+ * Features: Branded UI, Keyword Chips, Horizontal Campus Cards, Deep Navigation, Dual-Write Telemetry.
  */
 (function() {
   'use strict';
@@ -9,8 +9,8 @@
   const INST_ID = 'north';
   const INST_NAME = "RV Pre-University College North, Bengaluru";
   const INST_SHORT = "RVPU North";
-  const WP_REST_URL = 'https://north.rvpucollege.edu.in/wp-json/rvpu/v1/telemetry';
-  const VERCEL_URL = 'http://localhost:3000/api/telemetry'; // Local or deployed Node dashboard
+  const WP_REST_URL = "https://north.rvpucollege.edu.in/wp-json/rvpu/v1/telemetry";
+  const VERCEL_URL = "http://localhost:3000/api/telemetry";
 
   let engine = (typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID] && window.RVPUChatbot[INST_ID].engine)
     ? window.RVPUChatbot[INST_ID].engine
@@ -30,7 +30,6 @@
       callback();
       return;
     }
-    // Fallback: Load local json if served over HTTP
     Promise.all([
       fetch('assets/knowledge-base.json').then(r => r.json()),
       fetch('assets/keywords.json').then(r => r.json())
@@ -120,9 +119,9 @@
   function showWelcome() {
     const defaultResp = engine ? engine.getDefaultResponse() : {
       answer: "👋 Welcome to **" + INST_NAME + "** Official AI Assistant! How may I assist you today?",
-      quickChips: ['About Us', 'Our Courses', 'Facilities', 'Contact Us', 'Events']
+      quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us', 'Events']
     };
-    appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu);
+    appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu, defaultResp.campusCards);
   }
 
   function handleUserSend() {
@@ -141,7 +140,7 @@
       }
       if (engine) {
         const res = engine.match(text);
-        appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu);
+        appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards);
         sendTelemetry('bot_response', { intent: res.intent, score: res.score });
       } else {
         appendMessage('bot', 'Connecting to admissions database...');
@@ -149,24 +148,23 @@
     }, 200);
   }
 
-  function appendMessage(sender, text, chips, navigation, navMenu) {
+  function appendMessage(sender, text, chips, navigation, navMenu, campusCards) {
     const container = document.getElementById('rv-messages');
     const msgEl = document.createElement('div');
     msgEl.className = 'rv-message rv-' + sender;
 
     let formattedText = text.replace(/\n/g, '<br/>')
                             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                            .replace(/•/g, '&bull;');
+                            .replace(/•/g, '&bull;')
+                            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" style="color: var(--rv-primary); font-weight: 600; text-decoration: underline;">$1 ↗</a>');
 
     let html = '<div class="rv-msg-bubble">' + formattedText;
 
-    // Direct Website Navigation button
     if (navigation) {
       html += '<br/><a href="' + navigation.url + '" target="_blank" class="rv-nav-action-btn">🧭 ' + navigation.label + ' →</a>';
     }
 
-    // Direct Navigation Menu Links
-    if (navMenu && Array.isArray(navMenu)) {
+    if (navMenu && Array.isArray(navMenu) && (!campusCards || campusCards.length === 0)) {
       html += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">';
       navMenu.forEach(item => {
         html += '<a href="' + item.url + '" target="_blank" style="color: var(--rv-primary); font-size: 12.5px; font-weight: 600; text-decoration: none;">' + item.title + ' ↗</a>';
@@ -176,7 +174,6 @@
 
     html += '</div>';
 
-    // Interactive Keyword Buttons
     if (chips && chips.length > 0) {
       html += '<div class="rv-chips-container">';
       chips.forEach(chip => {
@@ -186,10 +183,72 @@
     }
 
     msgEl.innerHTML = html;
-    container.appendChild(msgEl);
-    container.scrollTop = container.scrollHeight;
 
-    // Attach click listener for chips
+    if (campusCards && Array.isArray(campusCards) && campusCards.length > 0) {
+      const bubble = msgEl.querySelector('.rv-msg-bubble');
+      const carouselWrapper = document.createElement('div');
+      carouselWrapper.className = 'rv-carousel-wrapper';
+
+      const scrollContainer = document.createElement('div');
+      scrollContainer.className = 'rv-cards-scroll';
+
+      campusCards.forEach(card => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'rv-campus-card';
+        const tagsHtml = (card.streams || []).map(s => `<span class="rv-tag">${s}</span>`).join('');
+
+        cardEl.innerHTML = `
+          <div class="rv-card-top">
+            <div class="rv-campus-card-title">${card.title}</div>
+            <div class="rv-campus-card-loc">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>${card.location}</span>
+            </div>
+          </div>
+          <div class="rv-card-tags">
+            ${tagsHtml}
+          </div>
+          <a href="${card.url}" target="_blank" class="rv-campus-btn">
+            <span>Explore Campus</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        `;
+        scrollContainer.appendChild(cardEl);
+      });
+
+      carouselWrapper.appendChild(scrollContainer);
+
+      const controls = document.createElement('div');
+      controls.className = 'rv-carousel-controls';
+      controls.innerHTML = `
+        <button type="button" class="rv-carousel-arrow prev" title="Scroll left">‹</button>
+        <span class="rv-carousel-counter">${campusCards.length} Campuses Available</span>
+        <button type="button" class="rv-carousel-arrow next" title="Scroll right">›</button>
+      `;
+      controls.querySelector('.prev').addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollContainer.scrollBy({ left: -240, behavior: 'smooth' });
+      });
+      controls.querySelector('.next').addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollContainer.scrollBy({ left: 240, behavior: 'smooth' });
+      });
+      carouselWrapper.appendChild(controls);
+
+      bubble.appendChild(carouselWrapper);
+    }
+
+    container.appendChild(msgEl);
+
+    if (sender === 'bot') {
+      setTimeout(() => {
+        const targetScroll = Math.max(0, msgEl.offsetTop - container.offsetTop - 8);
+        container.scrollTo({ top: targetScroll, behavior: 'smooth' });
+      }, 50);
+    } else {
+      container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+    }
+
     msgEl.querySelectorAll('.rv-chip-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         const chipText = this.getAttribute('data-chip');
@@ -207,8 +266,6 @@
       data: eventData || {},
       timestamp: new Date().toISOString()
     };
-
-    // Dual-write: Send to Node/MongoDB backend
     try {
       fetch(VERCEL_URL, {
         method: 'POST',
@@ -218,7 +275,6 @@
     } catch(e) {}
   }
 
-  // Self init on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     loadDependencies(() => {
       renderWidget();

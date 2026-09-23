@@ -77,6 +77,12 @@ Every single institute folder now possesses:
   - **Phase 5**: Built `build-phase5.js` generating standalone `dashboard/server.js` + Command Center UIs (HTML/CSS/JS) for all 7 institutes on ports 3001-3007.
   - **Phase 6**: Created `test-phase6-final.js` — 770/770 production readiness checks passed (100.00% pass rate).
   - Enriched scraped data: Added faculty data for RVPU North (15 staff), SSMRV PU (19 staff + principal), and NMKRV PU. Updated page URLs.
+- **[Commit 5 - Universal Slang, Course-Specific Breakdown & RVLH Campus Cards Carousel]**:
+  - Implemented slang & title recognition (`princi`, `principal`, `head`, `boss`, specific principal name) across all 7 institutes, returning verified Principal profiles.
+  - Built dedicated combination intents for every course (`PCMB`, `PCMC`, `BAMS`, `BAME`, `SEBA`, `CEBA`, `MEBA`, `PEBA`) with subjects, career avenues, and entrance exams.
+  - Deployed RVLH-style horizontal scrolling campus card carousel (`scroll-snap-type: x mandatory`, zero-retro scrollbars, ‹/› controls) with direct `Explore Campus ›` links across all 7 campuses.
+  - Fixed scroll viewport alignment so bot responses smoothly align to the top of the message bubble.
+  - Automated test suite `test-universal-all.js` verified 35/35 tests passed (100.0% pass rate).
 
 ---
 

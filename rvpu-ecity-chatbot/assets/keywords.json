@@ -59,6 +59,96 @@
       "weight": 1
     }
   ],
+  "vanakkam": [
+    {
+      "id": "greeting",
+      "weight": 1
+    }
+  ],
+  "princi": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "principal": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "who is principal": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "principal sir": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "principal mam": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "principal name": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "head of college": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "headmaster": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "head of the institution": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "who heads": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "who leads": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "leadership team": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "mr. suman g.v.": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
+  "suman g.v.": [
+    {
+      "id": "principal",
+      "weight": 4.5
+    }
+  ],
   "about us": [
     {
       "id": "about_us",
@@ -107,42 +197,6 @@
       "weight": 3.5
     }
   ],
-  "principal": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
-  "who is principal": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
-  "head": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
-  "leadership": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
-  "director": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
-  "president": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
   "management": [
     {
       "id": "about_us",
@@ -167,18 +221,6 @@
       "weight": 3.5
     }
   ],
-  "principal message": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
-  "who runs this college": [
-    {
-      "id": "about_us",
-      "weight": 3.5
-    }
-  ],
   "shyam": [
     {
       "id": "about_us",
@@ -195,6 +237,102 @@
     {
       "id": "about_us",
       "weight": 3.5
+    }
+  ],
+  "our campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "campus": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "all campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "other campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "sister campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "other colleges": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "branches": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "locations": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "rv colleges": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "rv campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "sister institutions": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "list of campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "all rv colleges": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "where are your campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
+    }
+  ],
+  "show campuses": [
+    {
+      "id": "all_campuses",
+      "weight": 4.5
     }
   ],
   "our courses": [
@@ -245,128 +383,202 @@
       "weight": 3.5
     }
   ],
-  "pcmb": [
+  "academic programs": [
     {
       "id": "courses_all",
       "weight": 3.5
-    },
+    }
+  ],
+  "programs offered": [
     {
-      "id": "courses_science",
-      "weight": 2.5
+      "id": "courses_all",
+      "weight": 3.5
+    }
+  ],
+  "what courses": [
+    {
+      "id": "courses_all",
+      "weight": 3.5
+    }
+  ],
+  "pcmb": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "physics chemistry maths biology": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "biology combination": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "medical stream": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "neet course": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "neet batch": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "neet coaching": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "doctor course": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "biology": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
     }
   ],
   "pcmc": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
-    {
-      "id": "courses_science",
-      "weight": 2.5
+      "id": "course_pcmc",
+      "weight": 4.5
     }
   ],
-  "seba": [
+  "physics chemistry maths computer science": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
-    {
-      "id": "courses_commerce",
-      "weight": 2.5
+      "id": "course_pcmc",
+      "weight": 4.5
     }
   ],
-  "ceba": [
+  "computer science combination": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "cs stream": [
     {
-      "id": "courses_commerce",
-      "weight": 2.5
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "coding stream": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "engineering combination": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "jee course": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "computer science": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
     }
   ],
   "bams": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
+      "id": "course_bams",
+      "weight": 4.5
+    }
+  ],
+  "basic maths statistics": [
     {
-      "id": "courses_commerce",
-      "weight": 2.5
+      "id": "course_bams",
+      "weight": 4.5
+    }
+  ],
+  "business accountancy basic maths statistics": [
+    {
+      "id": "course_bams",
+      "weight": 4.5
+    }
+  ],
+  "bams combination": [
+    {
+      "id": "course_bams",
+      "weight": 4.5
     }
   ],
   "bame": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
-    {
-      "id": "courses_commerce",
-      "weight": 2.5
+      "id": "course_bame",
+      "weight": 4.5
     }
   ],
-  "meba": [
+  "basic maths economics": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
-    {
-      "id": "courses_commerce",
-      "weight": 2.5
+      "id": "course_bame",
+      "weight": 4.5
     }
   ],
-  "peba": [
+  "business accountancy basic maths economics": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
+      "id": "course_bame",
+      "weight": 4.5
+    }
+  ],
+  "bame combination": [
     {
-      "id": "courses_commerce",
-      "weight": 2.5
+      "id": "course_bame",
+      "weight": 4.5
+    }
+  ],
+  "seba": [
+    {
+      "id": "course_seba",
+      "weight": 4.5
+    }
+  ],
+  "statistics economics business accountancy": [
+    {
+      "id": "course_seba",
+      "weight": 4.5
+    }
+  ],
+  "seba combination": [
+    {
+      "id": "course_seba",
+      "weight": 4.5
+    }
+  ],
+  "commerce without maths": [
+    {
+      "id": "course_seba",
+      "weight": 4.5
     }
   ],
   "science": [
     {
-      "id": "courses_all",
-      "weight": 3.5
-    },
-    {
       "id": "courses_science",
       "weight": 2.5
-    }
-  ],
-  "commerce": [
-    {
-      "id": "courses_all",
-      "weight": 3.5
-    },
-    {
-      "id": "courses_commerce",
-      "weight": 2.5
-    }
-  ],
-  "arts": [
-    {
-      "id": "courses_all",
-      "weight": 3.5
-    }
-  ],
-  "programs": [
-    {
-      "id": "courses_all",
-      "weight": 3.5
-    }
-  ],
-  "study": [
-    {
-      "id": "courses_all",
-      "weight": 3.5
-    }
-  ],
-  "academic": [
-    {
-      "id": "courses_all",
-      "weight": 3.5
     }
   ],
   "science stream": [
@@ -399,18 +611,6 @@
       "weight": 2.5
     }
   ],
-  "biology": [
-    {
-      "id": "courses_science",
-      "weight": 2.5
-    }
-  ],
-  "computer science": [
-    {
-      "id": "courses_science",
-      "weight": 2.5
-    }
-  ],
   "neet": [
     {
       "id": "courses_science",
@@ -438,6 +638,12 @@
   "medical": [
     {
       "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "commerce": [
+    {
+      "id": "courses_commerce",
       "weight": 2.5
     }
   ],
@@ -484,6 +690,12 @@
     }
   ],
   "finance": [
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "cma": [
     {
       "id": "courses_commerce",
       "weight": 2.5
@@ -541,6 +753,60 @@
     {
       "id": "languages",
       "weight": 2
+    }
+  ],
+  "faculty": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "teachers": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "lecturers": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "staff": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "teaching staff": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "professors": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "who teaches": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "mentors": [
+    {
+      "id": "faculty",
+      "weight": 4
+    }
+  ],
+  "lecturer": [
+    {
+      "id": "faculty",
+      "weight": 4
     }
   ],
   "admission": [
@@ -820,18 +1086,6 @@
     }
   ],
   "canteen": [
-    {
-      "id": "facilities",
-      "weight": 3.5
-    }
-  ],
-  "hostel": [
-    {
-      "id": "facilities",
-      "weight": 3.5
-    }
-  ],
-  "campus": [
     {
       "id": "facilities",
       "weight": 3.5
