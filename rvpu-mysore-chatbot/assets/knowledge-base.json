@@ -218,13 +218,17 @@
       "what courses"
     ],
     "weight": 3.5,
-    "answer": "🎓 **Academic Courses & Combinations at RVPU Mysore**:\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n**📊 Commerce Stream**:\n• **BAMS**: Business Studies, Accountancy, Basic Mathematics, Statistics\n• **BAME**: Business Studies, Accountancy, Basic Mathematics, Economics\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n\n**🗣️ Languages**:\n• Compulsory: English\n• Second Language Options: Kannada, Hindi, Sanskrit, French",
+    "answer": "🎓 **Academic Courses & Combinations at RVPU Mysore**:\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n**📊 Commerce Stream**:\n• **BAMS**: Business Studies, Accountancy, Basic Mathematics, Statistics\n• **BAME**: Business Studies, Accountancy, Basic Mathematics, Economics\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n\n**🗣️ Languages**:\n• Compulsory: English\n• Second Language Options: Kannada, Hindi, Sanskrit, French\n\n---\n\n🚀 **RV Learning Hub (RVLH) Integrated Programmes**:\n• **JEE Advanced (Main + KCET Decoded) + PU Board**\n• **JEE (Main + KCET Decoded) + PU Board**\n• **NEET UG + KCET + PU Board**\n• **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**",
     "quickChips": [
       "PCMB",
       "PCMC",
       "BAMS",
       "BAME",
       "SEBA",
+      "JEE Advanced",
+      "JEE Main",
+      "NEET UG",
+      "Commerce Decoded",
       "Our Campuses"
     ],
     "navigation": {
@@ -353,6 +357,116 @@
     ],
     "navigation": {
       "label": "Explore Commerce Combinations",
+      "url": "https://mys.rvpucollege.edu.in/courses/"
+    }
+  },
+  {
+    "id": "course_jee_adv",
+    "category": "academics",
+    "title": "JEE Advanced (Main + KCET Decoded) + PU Board",
+    "keywords": [
+      "jee advanced",
+      "jee adv",
+      "iit jee",
+      "jee advanced decoded",
+      "iit coaching",
+      "jee advanced main kcet decoded pu board",
+      "jee advanced course"
+    ],
+    "weight": 4.8,
+    "answer": "🎯 **JEE Advanced (Main + KCET Decoded) + PU Board**:\n\nA high-intensity national preparatory track engineered to secure top ranks in JEE Advanced for premier IITs, along with top scores in JEE Main and KCET for RV College of Engineering (RVCE).\n\n📍 **Course available at**:\n• RV PU North, Bengaluru\n• RV PU South, Bengaluru\n• RV PU College, Mysuru\n• RV PU College, Electronic City\n• NMKRV PU College, Bengaluru",
+    "quickChips": [
+      "Our Courses",
+      "Our Campuses",
+      "Admissions",
+      "Contact Us"
+    ],
+    "navigation": {
+      "label": "Explore Academic Programmes",
+      "url": "https://mys.rvpucollege.edu.in/courses/"
+    }
+  },
+  {
+    "id": "course_jee_main",
+    "category": "academics",
+    "title": "JEE (Main + KCET Decoded) + PU Board",
+    "keywords": [
+      "jee main",
+      "jee",
+      "kcet decoded",
+      "jee kcet",
+      "engineering entrance",
+      "jee coaching",
+      "jee main kcet decoded pu board",
+      "jee main course"
+    ],
+    "weight": 4.8,
+    "answer": "🎯 **JEE (Main + KCET Decoded) + PU Board**:\n\nDual-focus curriculum balancing 98%+ distinction in Karnataka PU Board exams with a 99+ percentile in JEE Main for premier NITs/IIITs and top ranks in KCET.\n\n📍 **Course available at**:\n• NMKRV PU College, Bengaluru\n• SSMRV PU College, Bengaluru\n• RV PU College North, Bengaluru\n• RV PU College South, Bengaluru\n• RV PU College, Electronic City\n• RV PU College, Harohalli\n• RV PU College, Mysuru\n• VVN PU College, Bengaluru",
+    "quickChips": [
+      "Our Courses",
+      "Our Campuses",
+      "Admissions",
+      "Contact Us"
+    ],
+    "navigation": {
+      "label": "Explore Academic Programmes",
+      "url": "https://mys.rvpucollege.edu.in/courses/"
+    }
+  },
+  {
+    "id": "course_neet_ug",
+    "category": "academics",
+    "title": "NEET UG + KCET + PU Board",
+    "keywords": [
+      "neet",
+      "neet ug",
+      "neet coaching",
+      "medical entrance",
+      "doctor entrance",
+      "neet kcet pu board",
+      "neet decoded",
+      "mbbs coaching",
+      "neet ug kcet pu board"
+    ],
+    "weight": 4.8,
+    "answer": "🎯 **NEET UG + KCET + PU Board**:\n\nMedical entrance mastery focusing on 100% NCERT line-by-line dissection for Biology, Chemistry, and Physics, paired with weekly OMR simulation drills for top government medical colleges (AIIMS, JIPMER, BMCRI).\n\n📍 **Course available at**:\n• RV PU North, Bengaluru\n• RV PU South, Bengaluru\n• SSMRV PU College, Bengaluru\n• NMKRV PU College, Bengaluru\n• RV PU College, Harohalli\n• RV PU College, Electronic City\n• RV PU College, Mysuru\n• VVN PU College, Bengaluru",
+    "quickChips": [
+      "Our Courses",
+      "Our Campuses",
+      "Admissions",
+      "Contact Us"
+    ],
+    "navigation": {
+      "label": "Explore Academic Programmes",
+      "url": "https://mys.rvpucollege.edu.in/courses/"
+    }
+  },
+  {
+    "id": "course_commerce_decoded",
+    "category": "academics",
+    "title": "Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)",
+    "keywords": [
+      "commerce decoded",
+      "commerce decoded programme",
+      "ca",
+      "clat",
+      "commerce ca clat pu board",
+      "ca foundation",
+      "clat coaching",
+      "ca coaching",
+      "law entrance",
+      "commerce ca clat"
+    ],
+    "weight": 4.8,
+    "answer": "🎯 **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**:\n\nKarnataka premier integrated commerce track uniting Karnataka PU Board with direct CA Foundation (ICAI), Common Law Admission Test (CLAT), and CUET mastery led by practicing Chartered Accountants and legal veterans.\n\n📍 **Course available at**:\n• RV PU North, Bengaluru\n• RV PU South, Bengaluru\n• SSMRV PU College, Bengaluru\n• NMKRV PU College, Bengaluru\n• RV PU College, Harohalli\n• RV PU College, Electronic City\n• RV PU College, Mysuru",
+    "quickChips": [
+      "Our Courses",
+      "Our Campuses",
+      "Admissions",
+      "Contact Us"
+    ],
+    "navigation": {
+      "label": "Explore Academic Programmes",
       "url": "https://mys.rvpucollege.edu.in/courses/"
     }
   },

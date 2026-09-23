@@ -114,6 +114,85 @@ const courseSpecs = {
   }
 };
 
+const rvlhTracks = [
+  {
+    id: 'course_jee_adv',
+    title: 'JEE Advanced (Main + KCET Decoded) + PU Board',
+    keywords: [
+      'jee advanced', 'jee adv', 'iit jee', 'jee advanced decoded', 'iit coaching',
+      'jee advanced main kcet decoded pu board', 'jee advanced course'
+    ],
+    weight: 4.8,
+    summary: 'A high-intensity national preparatory track engineered to secure top ranks in JEE Advanced for premier IITs, along with top scores in JEE Main and KCET for RV College of Engineering (RVCE).',
+    campuses: [
+      'RV PU North, Bengaluru',
+      'RV PU South, Bengaluru',
+      'RV PU College, Mysuru',
+      'RV PU College, Electronic City',
+      'NMKRV PU College, Bengaluru'
+    ]
+  },
+  {
+    id: 'course_jee_main',
+    title: 'JEE (Main + KCET Decoded) + PU Board',
+    keywords: [
+      'jee main', 'jee', 'kcet decoded', 'jee kcet', 'engineering entrance',
+      'jee coaching', 'jee main kcet decoded pu board', 'jee main course'
+    ],
+    weight: 4.8,
+    summary: 'Dual-focus curriculum balancing 98%+ distinction in Karnataka PU Board exams with a 99+ percentile in JEE Main for premier NITs/IIITs and top ranks in KCET.',
+    campuses: [
+      'NMKRV PU College, Bengaluru',
+      'SSMRV PU College, Bengaluru',
+      'RV PU College North, Bengaluru',
+      'RV PU College South, Bengaluru',
+      'RV PU College, Electronic City',
+      'RV PU College, Harohalli',
+      'RV PU College, Mysuru',
+      'VVN PU College, Bengaluru'
+    ]
+  },
+  {
+    id: 'course_neet_ug',
+    title: 'NEET UG + KCET + PU Board',
+    keywords: [
+      'neet', 'neet ug', 'neet coaching', 'medical entrance', 'doctor entrance',
+      'neet kcet pu board', 'neet decoded', 'mbbs coaching', 'neet ug kcet pu board'
+    ],
+    weight: 4.8,
+    summary: 'Medical entrance mastery focusing on 100% NCERT line-by-line dissection for Biology, Chemistry, and Physics, paired with weekly OMR simulation drills for top government medical colleges (AIIMS, JIPMER, BMCRI).',
+    campuses: [
+      'RV PU North, Bengaluru',
+      'RV PU South, Bengaluru',
+      'SSMRV PU College, Bengaluru',
+      'NMKRV PU College, Bengaluru',
+      'RV PU College, Harohalli',
+      'RV PU College, Electronic City',
+      'RV PU College, Mysuru',
+      'VVN PU College, Bengaluru'
+    ]
+  },
+  {
+    id: 'course_commerce_decoded',
+    title: 'Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)',
+    keywords: [
+      'commerce decoded', 'commerce decoded programme', 'ca', 'clat', 'commerce ca clat pu board',
+      'ca foundation', 'clat coaching', 'ca coaching', 'law entrance', 'commerce ca clat'
+    ],
+    weight: 4.8,
+    summary: 'Karnataka premier integrated commerce track uniting Karnataka PU Board with direct CA Foundation (ICAI), Common Law Admission Test (CLAT), and CUET mastery led by practicing Chartered Accountants and legal veterans.',
+    campuses: [
+      'RV PU North, Bengaluru',
+      'RV PU South, Bengaluru',
+      'SSMRV PU College, Bengaluru',
+      'NMKRV PU College, Bengaluru',
+      'RV PU College, Harohalli',
+      'RV PU College, Electronic City',
+      'RV PU College, Mysuru'
+    ]
+  }
+];
+
 function buildInstituteKnowledgeBase(data, inst) {
   const shortName = data.institute.shortName || data.institute.name;
   const fullName = data.institute.name;
@@ -190,8 +269,8 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: 'Our Courses and Combinations Offered',
       keywords: ['our courses', 'courses', 'course', 'combinations', 'combination', 'streams', 'stream', 'subjects', 'academic programs', 'programs offered', 'what courses'],
       weight: 3.5,
-      answer: `🎓 **Academic Courses & Combinations at ${shortName}**:\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n${commerceCombos ? `**📊 Commerce Stream**:\n${commerceCombos}\n\n` : ''}**🗣️ Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}`,
-      quickChips: combinations.map(c => c.code).concat(['Our Campuses']),
+      answer: `🎓 **Academic Courses & Combinations at ${shortName}**:\n\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n${commerceCombos ? `**📊 Commerce Stream**:\n${commerceCombos}\n\n` : ''}**🗣️ Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}\n\n---\n\n🚀 **RV Learning Hub (RVLH) Integrated Programmes**:\n• **JEE Advanced (Main + KCET Decoded) + PU Board**\n• **JEE (Main + KCET Decoded) + PU Board**\n• **NEET UG + KCET + PU Board**\n• **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**`,
+      quickChips: combinations.map(c => c.code).concat(['JEE Advanced', 'JEE Main', 'NEET UG', 'Commerce Decoded', 'Our Campuses']),
       navigation: { label: 'Explore Our Courses Page', url: pages.courses || website }
     }
   ];
@@ -215,6 +294,21 @@ function buildInstituteKnowledgeBase(data, inst) {
       answer: `🎓 **${code} (${combo.stream} Stream) at ${shortName}**:\n\n• **Core Subjects**: ${combo.subjects}\n• **Compulsory Language**: ${compulsoryLang} | **Second Language**: ${secondLangs}\n• **Career Avenues**: ${spec.career}\n• **Integrated Competitive Prep**: ${spec.prep}`,
       quickChips: ['Our Courses', 'Our Campuses', 'Admissions', 'Contact Us'],
       navigation: { label: `Explore ${combo.stream} Combinations`, url: pages.courses || website }
+    });
+  });
+
+  // Add RVLH Integrated Decoded Tracks
+  rvlhTracks.forEach(track => {
+    const campusBullets = track.campuses.map(c => `• ${c}`).join('\n');
+    kb.push({
+      id: track.id,
+      category: 'academics',
+      title: track.title,
+      keywords: track.keywords,
+      weight: track.weight,
+      answer: `🎯 **${track.title}**:\n\n${track.summary}\n\n📍 **Course available at**:\n${campusBullets}`,
+      quickChips: ['Our Courses', 'Our Campuses', 'Admissions', 'Contact Us'],
+      navigation: { label: 'Explore Academic Programmes', url: pages.courses || website }
     });
   });
 

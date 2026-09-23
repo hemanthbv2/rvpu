@@ -441,6 +441,10 @@
     {
       "id": "course_pcmb",
       "weight": 4.5
+    },
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
     }
   ],
   "doctor course": [
@@ -587,6 +591,216 @@
       "weight": 4.5
     }
   ],
+  "jee advanced": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "jee adv": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "iit jee": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "jee advanced decoded": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "iit coaching": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "jee advanced main kcet decoded pu board": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "jee advanced course": [
+    {
+      "id": "course_jee_adv",
+      "weight": 4.8
+    }
+  ],
+  "jee main": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "jee": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    },
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "kcet decoded": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "jee kcet": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "engineering entrance": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "jee coaching": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "jee main kcet decoded pu board": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "jee main course": [
+    {
+      "id": "course_jee_main",
+      "weight": 4.8
+    }
+  ],
+  "neet": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    },
+    {
+      "id": "courses_science",
+      "weight": 2.5
+    }
+  ],
+  "neet ug": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "medical entrance": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "doctor entrance": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "neet kcet pu board": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "neet decoded": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "mbbs coaching": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "neet ug kcet pu board": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "commerce decoded": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "commerce decoded programme": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "ca": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    },
+    {
+      "id": "courses_commerce",
+      "weight": 2.5
+    }
+  ],
+  "clat": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "commerce ca clat pu board": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "ca foundation": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "clat coaching": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "ca coaching": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "law entrance": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "commerce ca clat": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
   "science": [
     {
       "id": "courses_science",
@@ -618,18 +832,6 @@
     }
   ],
   "mathematics": [
-    {
-      "id": "courses_science",
-      "weight": 2.5
-    }
-  ],
-  "neet": [
-    {
-      "id": "courses_science",
-      "weight": 2.5
-    }
-  ],
-  "jee": [
     {
       "id": "courses_science",
       "weight": 2.5
@@ -684,12 +886,6 @@
     }
   ],
   "statistics": [
-    {
-      "id": "courses_commerce",
-      "weight": 2.5
-    }
-  ],
-  "ca": [
     {
       "id": "courses_commerce",
       "weight": 2.5

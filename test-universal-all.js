@@ -60,6 +60,34 @@ institutes.forEach(inst => {
   if (sebaOk) passedTests++;
   console.log(`  ${sebaOk ? '✅' : '❌'} 'seba' -> [${sebaRes.intent}]`);
 
+  // Test 6: JEE Advanced query
+  totalTests++;
+  const jeeAdvRes = bot.match('jee advanced');
+  const jeeAdvOk = jeeAdvRes.intent === 'course_jee_adv' && jeeAdvRes.answer.includes('RV PU North, Bengaluru');
+  if (jeeAdvOk) passedTests++;
+  console.log(`  ${jeeAdvOk ? '✅' : '❌'} 'jee advanced' -> [${jeeAdvRes.intent}]`);
+
+  // Test 7: JEE Main query
+  totalTests++;
+  const jeeMainRes = bot.match('jee main');
+  const jeeMainOk = jeeMainRes.intent === 'course_jee_main' && jeeMainRes.answer.includes('VVN PU College, Bengaluru');
+  if (jeeMainOk) passedTests++;
+  console.log(`  ${jeeMainOk ? '✅' : '❌'} 'jee main' -> [${jeeMainRes.intent}]`);
+
+  // Test 8: NEET query
+  totalTests++;
+  const neetRes = bot.match('neet ug');
+  const neetOk = neetRes.intent === 'course_neet_ug' && neetRes.answer.includes('RV PU College, Harohalli');
+  if (neetOk) passedTests++;
+  console.log(`  ${neetOk ? '✅' : '❌'} 'neet ug' -> [${neetRes.intent}]`);
+
+  // Test 9: Commerce Decoded query
+  totalTests++;
+  const commDecodedRes = bot.match('commerce decoded');
+  const commDecodedOk = commDecodedRes.intent === 'course_commerce_decoded' && commDecodedRes.answer.includes('CA + CLAT');
+  if (commDecodedOk) passedTests++;
+  console.log(`  ${commDecodedOk ? '✅' : '❌'} 'commerce decoded' -> [${commDecodedRes.intent}]`);
+
   console.log('');
 });
 
