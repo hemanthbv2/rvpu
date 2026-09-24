@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const institutes = [
-  { id: 'north', dir: 'rvpu-north-chatbot', name: 'RV PU College North' },
-  { id: 'south', dir: 'rvpu-south-chatbot', name: 'RV PU College South' },
-  { id: 'ecity', dir: 'rvpu-ecity-chatbot', name: 'RV PU College Electronic City' },
-  { id: 'harohalli', dir: 'rvpu-harohalli-chatbot', name: 'RV PU College Harohalli' },
-  { id: 'ssmrvpu', dir: 'ssmrvpu-chatbot', name: 'SSMRV PU College' },
-  { id: 'nmkrvpu', dir: 'nmkrvpu-chatbot', name: 'NMKRV PU College for Women' },
-  { id: 'mysore', dir: 'rvpu-mysore-chatbot', name: 'RV PU College Mysuru' }
+  { id: 'north', name: 'RV PU College North', dir: 'rvpu-north-chatbot', port: 3001 },
+  { id: 'south', name: 'RV PU College South', dir: 'rvpu-south-chatbot', port: 3002 },
+  { id: 'ecity', name: 'RV PU College Electronic City', dir: 'rvpu-ecity-chatbot', port: 3003 },
+  { id: 'harohalli', name: 'RV PU College Harohalli', dir: 'rvpu-harohalli-chatbot', port: 3004 },
+  { id: 'ssmrv', name: 'SSMRV PU College', dir: 'ssmrvpu-chatbot', port: 3006 },
+  { id: 'nmkrv', name: 'NMKRV PU College for Women', dir: 'nmkrvpu-chatbot', port: 3007 },
+  { id: 'mysore', name: 'RV PU College Mysuru', dir: 'rvpu-mysore-chatbot', port: 3005 }
 ];
 
 const sharedCampusCards = [
@@ -63,6 +63,191 @@ const sharedCampusCards = [
   }
 ];
 
+const facilityCardsByInstitute = {
+  harohalli: [
+    {
+      title: "Eco-Friendly Green Campus",
+      badge: "Infrastructure",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-3@2x-1024x841.png",
+      description: "Serene, modern academic campus with smart interactive digital classrooms, spacious courtyards, and lush landscaped surroundings."
+    },
+    {
+      title: "Science & Tech Laboratories",
+      badge: "Laboratories",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-1@2x-1024x841.png",
+      description: "State-of-the-art Physics, Chemistry, Biology & High-Tech Computer Science labs designed for hands-on experimentation and practical board exams."
+    },
+    {
+      title: "Expansive Library & Digital Hub",
+      badge: "Knowledge Hub",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.52-PM@2x-1024x841.png",
+      description: "Vast repository of academic textbooks, reference journals, competitive exam materials (NEET / JEE / KCET / CA), and tranquil study bays."
+    },
+    {
+      title: "Sports Arena & Gymnasium",
+      badge: "Sports & Fitness",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2@2x-1024x841.png",
+      description: "Full sports complex featuring football, basketball, volleyball courts, badminton facilities, modern gym amenities, and swimming pool."
+    }
+  ],
+  ssmrv: [
+    {
+      title: "SSMRV Academic Campus",
+      badge: "Infrastructure",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/04/Group-7011-768x527.png",
+      description: "Premier academic campus in Jayanagar featuring multimedia smart classrooms, seminar halls, and vibrant student learning zones."
+    },
+    {
+      title: "Science & Computer Labs",
+      badge: "Laboratories",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-2.png",
+      description: "Well-equipped Physics, Chemistry, Biology, and Computer Science laboratories for empirical learning and scientific inquiry."
+    },
+    {
+      title: "SSMRV Central Library",
+      badge: "Library",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM.png",
+      description: "Comprehensive academic library housing thousands of curriculum titles, reference books, national journals, and quiet study spaces."
+    },
+    {
+      title: "Sports Arena & Physical Education",
+      badge: "Sports",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-1.png",
+      description: "Extensive sports amenities supporting cricket, football, basketball, volleyball, table tennis, and annual athletic meets."
+    }
+  ],
+  north: [
+    {
+      title: "RVPU North Modern Campus",
+      badge: "Infrastructure",
+      image: "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/Group-11941@2x-1024x890.png",
+      description: "World-class campus situated at DPS Bangalore North with advanced digital classrooms, vast grounds, and tranquil learning environment."
+    },
+    {
+      title: "Advanced Science Labs",
+      badge: "Laboratories",
+      image: "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/DSC08490-1-scaled.jpg",
+      description: "High-spec laboratories for Physics, Chemistry, Biology & Computer Science empowering students in practical discovery."
+    },
+    {
+      title: "Student Activity & Cultural Complex",
+      badge: "Auditorium",
+      image: "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/DSC08670-scaled.jpg",
+      description: "State-of-the-art auditorium and seminar halls hosting cultural fests, national days, and leadership workshops."
+    },
+    {
+      title: "Sports Grounds & Athletics",
+      badge: "Sports & Fitness",
+      image: "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/VED05146-1-scaled.jpg",
+      description: "Sprawling outdoor sports arenas with dedicated coaching in athletics, cricket, football, basketball, and tennis."
+    }
+  ],
+  south: [
+    {
+      title: "Historic RV Campus Infrastructure",
+      badge: "Infrastructure",
+      image: "https://south.rvpucollege.edu.in/wp-content/uploads/2026/01/Group-18131@2x-2-scaled.png",
+      description: "Iconic campus on RV Road, Jayanagar featuring historic academic architecture, smart classrooms, and leafy courtyards."
+    },
+    {
+      title: "Modern Science Laboratories",
+      badge: "Laboratories",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-1@2x-1024x841.png",
+      description: "Comprehensive Physics, Chemistry, Biology, and Computer Science laboratories for board exam practicals and research."
+    },
+    {
+      title: "RV Central Library",
+      badge: "Library",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.52-PM@2x-1024x841.png",
+      description: "Vast learning resource center with expansive catalog of textbooks, reference works, competitive exam guides, and digital catalog."
+    },
+    {
+      title: "Sports & Recreation Ground",
+      badge: "Sports",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2@2x-1024x841.png",
+      description: "Full-sized playground for athletics, cricket, football, basketball, and indoor sports facilities."
+    }
+  ],
+  ecity: [
+    {
+      title: "Electronic City Tech Campus",
+      badge: "Infrastructure",
+      image: "https://ecity.rvpucollege.edu.in/wp-content/uploads/2025/12/Group-7078@2x-1024x649.png",
+      description: "Contemporary urban campus in the heart of Bengaluru's IT corridor with high-tech smart classrooms and digital facilities."
+    },
+    {
+      title: "Science & Computer Labs",
+      badge: "Laboratories",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-1@2x-1024x841.png",
+      description: "High-performance computer terminals and fully equipped science labs for hands-on experimentations."
+    },
+    {
+      title: "Digital Library & Study Zone",
+      badge: "Library",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.52-PM@2x-1024x841.png",
+      description: "Rich collection of competitive books, journals, and dedicated research bays for students."
+    },
+    {
+      title: "Sports Complex",
+      badge: "Sports",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2@2x-1024x841.png",
+      description: "Basketball courts, volleyball, badminton, table tennis, and physical education training."
+    }
+  ],
+  nmkrv: [
+    {
+      title: "NMKRV Academic Campus",
+      badge: "Infrastructure",
+      image: "https://www.nmkrvpu.edu.in/new_nmkrvpu/wp-content/uploads/2026/04/Group-7011-768x527.png",
+      description: "Prestigious campus in Jayanagar dedicated to women's education with state-of-the-art smart classrooms and hostel amenities."
+    },
+    {
+      title: "Modern Science Laboratories",
+      badge: "Laboratories",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-2.png",
+      description: "Fully equipped Physics, Chemistry, Biology, and Computer Science laboratories supporting advanced practical training."
+    },
+    {
+      title: "NMKRV Library & Knowledge Center",
+      badge: "Library",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM.png",
+      description: "Extensive literature, journals, research volumes, and competitive entrance coaching materials."
+    },
+    {
+      title: "Mangala Mantapa Auditorium & Sports",
+      badge: "Auditorium & Sports",
+      image: "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-1.png",
+      description: "Grand auditorium for performing arts, international seminars, indoor sports arenas, and sports fields."
+    }
+  ],
+  mysore: [
+    {
+      title: "RVPU Mysuru Campus",
+      badge: "Infrastructure",
+      image: "https://mys.rvpucollege.edu.in/wp-content/uploads/2025/12/Group-7011@2x.png",
+      description: "Lush green campus in Vijayanagar, Mysuru with peaceful scholastic ambiance and modern smart classrooms."
+    },
+    {
+      title: "Advanced Science Labs",
+      badge: "Laboratories",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-1@2x-1024x841.png",
+      description: "Modern laboratory apparatus for Physics, Chemistry, Biology, and high-speed Computer Science workstations."
+    },
+    {
+      title: "Mysuru Knowledge Library",
+      badge: "Library",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.52-PM@2x-1024x841.png",
+      description: "Thousands of curriculum titles, periodicals, reference volumes, and quiet individual reading zones."
+    },
+    {
+      title: "Sports Ground & Athletics",
+      badge: "Sports",
+      image: "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2@2x-1024x841.png",
+      description: "Dedicated athletic tracks, cricket, volleyball, badminton, and holistic sports coaching."
+    }
+  ]
+};
+
 const courseSpecs = {
   PCMB: {
     title: 'PCMB (Physics, Chemistry, Mathematics, Biology)',
@@ -98,7 +283,7 @@ const courseSpecs = {
     title: 'PEBA (Political Science, Economics, Business Studies, Accountancy)',
     keywords: ['peba', 'political science economics business accountancy', 'peba combination'],
     career: 'Civil Services (UPSC / KPSC), Corporate Law, Public Administration, Economic Journalism, and International Business.',
-    prep: 'In-depth grounding in political institutions, macroeconomic policy, commercial law, and business accounting.'
+    prep: 'Interdisciplinary grounding in governance, economic markets, and statutory accountancy.'
   },
   BAMS: {
     title: 'BAMS (Business Studies, Accountancy, Basic Maths, Statistics)',
@@ -405,14 +590,17 @@ function buildInstituteKnowledgeBase(data, inst) {
     quickChips: ['Admission Process', 'Our Courses', 'Our Campuses', 'Contact Us']
   });
 
-  // Facilities
+  // Facilities with verified photo cards
+  const facCards = facilityCardsByInstitute[inst.id] || facilityCardsByInstitute['harohalli'];
   kb.push({
     id: 'facilities',
     category: 'campus',
     title: 'Campus Facilities & Infrastructure',
     keywords: ['facilities', 'facility', 'infrastructure', 'labs', 'laboratory', 'library', 'sports', 'playground', 'auditorium', 'smart class', 'classrooms', 'gym', 'canteen', 'amenities'],
     weight: 3.5,
-    answer: `I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at ${shortName}**:\n\n${facilitiesList}\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.`,
+    answer: `I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at ${shortName}**:\n\n${facilitiesList}\n\nSwipe through the facility cards below to see our campus:`,
+    cardsType: 'facility_list',
+    facilityCards: facCards,
     quickChips: ['Our Courses', 'Our Campuses', 'Contact Us', 'Events'],
     navigation: { label: 'Explore Facilities Page', url: pages.facilities || website }
   });
@@ -478,10 +666,6 @@ function buildKeywordsTable(knowledgeBase) {
 }
 
 function generateEngineCode(instId, instName, instShort, brandColors, kb, keywords) {
-  const embeddedKB = JSON.stringify(kb);
-  const embeddedKW = JSON.stringify(keywords);
-  const colorsStr = JSON.stringify(brandColors);
-
   return `/**
  * RVPU Intelligent Chatbot Engine — ${instName}
  * Dual-write compatible, TF-IDF weighted scoring, intent matching, website navigation & telemetry.
@@ -492,9 +676,9 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
   const INST_ID = '${instId}';
   const INST_NAME = ${JSON.stringify(instName)};
   const INST_SHORT = ${JSON.stringify(instShort)};
-  const BRAND_COLORS = ${colorsStr};
-  const DEFAULT_KB = ${embeddedKB};
-  const DEFAULT_KW = ${embeddedKW};
+  const BRAND_COLORS = ${JSON.stringify(brandColors)};
+  const DEFAULT_KB = ${JSON.stringify(kb)};
+  const DEFAULT_KW = ${JSON.stringify(keywords)};
 
   // Common stop words to filter
   const STOP_WORDS = new Set([
@@ -538,15 +722,18 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
       const tokens = this.tokenize(raw);
       const scores = new Map();
 
-      // Initialize scores
+      // Initialize all KB items with 0 score
       this.kb.forEach(item => scores.set(item.id, 0));
 
-      // 1. Phrase / exact substring match boost
+      // 1. Phrase / Substring Matching (5x multiplier)
       this.kb.forEach(item => {
         for (const kw of item.keywords) {
-          if (raw === kw) {
+          const cleanKw = kw.toLowerCase().trim();
+          if (raw === cleanKw) {
             scores.set(item.id, scores.get(item.id) + (item.weight * 5.0));
-          } else if (raw.includes(kw)) {
+          } else if (raw.includes(cleanKw) && cleanKw.length >= 3) {
+            scores.set(item.id, scores.get(item.id) + (item.weight * 3.0));
+          } else if (cleanKw.includes(raw) && raw.length >= 4) {
             scores.set(item.id, scores.get(item.id) + (item.weight * 2.5));
           }
         }
@@ -592,7 +779,8 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
           navigation: item.navigation || null,
           navigationMenu: item.navigationMenu || null,
           cardsType: item.cardsType || null,
-          campusCards: item.campusCards || null
+          campusCards: item.campusCards || null,
+          facilityCards: item.facilityCards || null
         };
       }
 
@@ -675,13 +863,7 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
 `;
 }
 
-function updateWidgetCSS(cssPath) {
-  let content = fs.readFileSync(cssPath, 'utf8');
-  if (content.includes('.rv-carousel-wrapper')) {
-    return; // Already updated
-  }
-
-  const carouselCSS = `
+const carouselCSS = `
 /* ==========================================================================
    Campus Cards Horizontal Scrolling Carousel (Exact RVLH Style)
    ========================================================================== */
@@ -838,14 +1020,327 @@ function updateWidgetCSS(cssPath) {
   font-weight: 600;
 }
 `;
-  fs.writeFileSync(cssPath, content + '\n' + carouselCSS, 'utf8');
+
+const newFeaturesCSS = `
+/* ============================================================
+   1. Proactive Welcome Nudge / Speech Balloon
+   ============================================================ */
+.rv-chat-nudge {
+  position: absolute;
+  bottom: 74px;
+  right: 4px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  cursor: pointer;
+  z-index: 99999;
+  opacity: 0;
+  transform: translateY(12px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
+.rv-chat-nudge.rv-nudge-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+.rv-chat-nudge::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 25px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transform: rotate(45deg);
+}
+
+.rv-nudge-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: all 0.15s;
+}
+
+.rv-nudge-close:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+.rv-nudge-avatar {
+  font-size: 26px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rv-wave 2s infinite ease-in-out;
+}
+
+@keyframes rv-wave {
+  0%, 100% { transform: rotate(0deg); }
+  20%, 60% { transform: rotate(14deg); }
+  40%, 80% { transform: rotate(-14deg); }
+}
+
+.rv-nudge-body {
+  flex: 1;
+  padding-right: 8px;
+}
+
+.rv-nudge-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rv-primary);
+  line-height: 1.3;
+}
+
+.rv-nudge-text {
+  font-size: 12px;
+  color: #475467;
+  margin-top: 3px;
+  line-height: 1.35;
+}
+
+/* ============================================================
+   2. Smart Search & Auto-complete Suggestions
+   ============================================================ */
+.rv-autocomplete-dropdown {
+  position: absolute;
+  bottom: 64px;
+  left: 12px;
+  right: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.14);
+  max-height: 220px;
+  overflow-y: auto;
+  display: none;
+  z-index: 150;
+  padding: 4px 0;
+}
+
+.rv-autocomplete-dropdown.rv-show {
+  display: block;
+  animation: rv-slide-up 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes rv-slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rv-suggestion-item {
+  padding: 9px 14px;
+  font-size: 12.5px;
+  color: #1f2937;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #f8fafc;
+  transition: all 0.15s ease;
+}
+
+.rv-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.rv-suggestion-item:hover, .rv-suggestion-item.active {
+  background: #f1f5f9;
+  color: var(--rv-primary);
+}
+
+.rv-suggestion-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.rv-suggestion-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rv-suggestion-label strong {
+  color: var(--rv-primary);
+  font-weight: 700;
+  background: rgba(216, 155, 39, 0.18);
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+.rv-suggestion-badge {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.rv-suggestion-item:hover .rv-suggestion-badge {
+  background: var(--rv-primary);
+  color: #ffffff;
+}
+
+/* ============================================================
+   3. Campus Photo & Facility Carousel
+   ============================================================ */
+.rv-facility-card {
+  width: 240px;
+  min-width: 240px;
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.rv-facility-card:hover {
+  border-color: rgba(216, 155, 39, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(216, 155, 39, 0.2);
+}
+
+.rv-facility-card-img-wrap {
+  width: 100%;
+  height: 125px;
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.rv-facility-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.rv-facility-card:hover .rv-facility-card-img {
+  transform: scale(1.06);
+}
+
+.rv-facility-card-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(6px);
+  color: #F4B846;
+  border: 1px solid rgba(244, 184, 70, 0.4);
+  padding: 2.5px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.rv-facility-card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #1e293b;
+}
+
+.rv-facility-card-title {
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.rv-facility-card-desc {
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.4;
+}
+`;
+
+function updateWidgetCSS(cssPath) {
+  let content = fs.readFileSync(cssPath, 'utf8');
+  let additions = '';
+
+  if (!content.includes('.rv-carousel-wrapper')) {
+    additions += '\n' + carouselCSS;
+  }
+  if (!content.includes('.rv-chat-nudge')) {
+    additions += '\n' + newFeaturesCSS;
+  }
+
+  if (additions) {
+    fs.writeFileSync(cssPath, content + '\n' + additions, 'utf8');
+  }
+}
+
+function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combinations) {
+  const combos = (combinations && combinations.length > 0) ? combinations : [{code:'PCMB', stream:'Science'}, {code:'PCMC', stream:'Science'}];
+
+  const comboSuggestions = combos.map(c => ({
+    text: `${c.code} (${c.stream} Stream)`,
+    icon: c.stream === 'Science' ? '🔬' : '📊',
+    query: c.code,
+    tag: c.stream
+  }));
+
+  const standardSuggestions = [
+    { text: 'Admission Process & Steps', icon: '📝', query: 'admission process', tag: 'Admissions' },
+    { text: 'Required Documents for Admission', icon: '📄', query: 'required documents', tag: 'Admissions' },
+    { text: 'Cutoff Marks & Eligibility Criteria', icon: '🎯', query: 'eligibility cutoff', tag: 'Admissions' },
+    { text: 'How to Apply post SSLC / 10th', icon: '✍️', query: 'how to apply', tag: 'Admissions' },
+    ...comboSuggestions,
+    { text: 'Science Stream Overview', icon: '🔬', query: 'science stream', tag: 'Academics' },
+    { text: 'Commerce Stream Overview', icon: '📊', query: 'commerce stream', tag: 'Academics' },
+    { text: 'JEE Advanced (Main + KCET Decoded)', icon: '🚀', query: 'JEE Advanced', tag: 'Integrated' },
+    { text: 'JEE (Main + KCET Decoded)', icon: '📐', query: 'JEE Main', tag: 'Integrated' },
+    { text: 'NEET UG + KCET Medical Track', icon: '🩺', query: 'NEET UG', tag: 'Medical' },
+    { text: 'Commerce Decoded (CA + CLAT)', icon: '⚖️', query: 'Commerce Decoded', tag: 'Commerce' },
+    { text: 'Campus Facilities & Photo Tour', icon: '🏫', query: 'facilities', tag: 'Campus' },
+    { text: 'Science & Computer Laboratories', icon: '🔬', query: 'labs', tag: 'Campus' },
+    { text: 'Sports Complex, Gym & Pool', icon: '⚽', query: 'sports', tag: 'Campus' },
+    { text: 'Library & Digital Resource Center', icon: '📚', query: 'library', tag: 'Campus' },
+    { text: 'Principal & Leadership Desk', icon: '👨‍🏫', query: 'principal', tag: 'Leadership' },
+    { text: `About ${instShort} & RSST Trust`, icon: '🏛️', query: 'about us', tag: 'About' },
+    { text: 'Our 7 Sister Campuses Across Karnataka', icon: '🌐', query: 'our campuses', tag: 'Campuses' },
+    { text: 'Contact Us & Campus Location', icon: '📍', query: 'contact us', tag: 'Contact' },
+    { text: 'College Events & Cultural Fests', icon: '🎉', query: 'events', tag: 'Campus' }
+  ];
+
   return `/**
  * RVPU Front-End Chatbot Widget Component
  * Campus: ${instName}
- * Features: Branded UI, Keyword Chips, Horizontal Campus Cards, Deep Navigation, Dual-Write Telemetry.
+ * Features: Branded UI, Smart Auto-complete, Proactive Nudge, Facility Photo Carousel, Campus Cards, Dual-Write Telemetry.
  */
 (function() {
   'use strict';
@@ -856,11 +1351,20 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
   const WP_REST_URL = ${JSON.stringify(wpUrl)};
   const VERCEL_URL = ${JSON.stringify(vercelUrl)};
 
+  // Persistent Session Continuity
+  let sessionId = 'sess_' + Date.now();
+  try {
+    sessionId = sessionStorage.getItem('rv_chat_session') || ('sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6));
+    sessionStorage.setItem('rv_chat_session', sessionId);
+  } catch(e) {}
+
   let engine = (typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID] && window.RVPUChatbot[INST_ID].engine)
     ? window.RVPUChatbot[INST_ID].engine
     : null;
   let kb = null;
   let kw = null;
+
+  const suggestionsData = ${JSON.stringify(standardSuggestions)};
 
   function loadDependencies(callback) {
     if (!engine && typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID]) {
@@ -894,10 +1398,22 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
     const container = document.createElement('div');
     container.id = 'rv-chatbot-widget';
     container.innerHTML = \`
+      <!-- Proactive Welcome Nudge -->
+      <div class="rv-chat-nudge" id="rv-chat-nudge" role="button" aria-label="Open Admissions Chat">
+        <button type="button" class="rv-nudge-close" id="rv-nudge-close" title="Dismiss" aria-label="Dismiss">✕</button>
+        <div class="rv-nudge-avatar">👋</div>
+        <div class="rv-nudge-body">
+          <div class="rv-nudge-title">Planning for I PUC admissions?</div>
+          <div class="rv-nudge-text">Ask me about combinations, cutoffs &amp; campus life!</div>
+        </div>
+      </div>
+
+      <!-- Floating Launcher Button -->
       <button class="rv-chat-launcher" id="rv-launcher-btn" aria-label="Open Admissions Chat">
         <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
       </button>
 
+      <!-- Main Chat Window -->
       <div class="rv-chat-window" id="rv-window">
         <div class="rv-chat-header">
           <div class="rv-header-left">
@@ -918,6 +1434,9 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
 
         <div class="rv-chat-messages" id="rv-messages"></div>
 
+        <!-- Smart Auto-complete Suggestions Dropdown -->
+        <div class="rv-autocomplete-dropdown" id="rv-autocomplete-dropdown"></div>
+
         <div class="rv-chat-input-area">
           <input type="text" class="rv-chat-input" id="rv-input" placeholder="Ask about combinations, admissions..." autocomplete="off"/>
           <button class="rv-send-btn" id="rv-send-btn" aria-label="Send">
@@ -932,6 +1451,12 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
     showWelcome();
   }
 
+  function highlightMatch(text, query) {
+    const idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return text;
+    return text.substring(0, idx) + '<strong>' + text.substring(idx, idx + query.length) + '</strong>' + text.substring(idx + query.length);
+  }
+
   function attachEvents() {
     const launcher = document.getElementById('rv-launcher-btn');
     const windowEl = document.getElementById('rv-window');
@@ -939,24 +1464,125 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
     const resetBtn = document.getElementById('rv-reset-btn');
     const input = document.getElementById('rv-input');
     const sendBtn = document.getElementById('rv-send-btn');
+    const nudge = document.getElementById('rv-chat-nudge');
+    const nudgeClose = document.getElementById('rv-nudge-close');
+    const autocomplete = document.getElementById('rv-autocomplete-dropdown');
 
+    // 1. Proactive Welcome Nudge (Triggers after 5 seconds)
+    setTimeout(() => {
+      if (windowEl && !windowEl.classList.contains('rv-open') && nudge) {
+        let dismissed = false;
+        try { dismissed = sessionStorage.getItem('rv_nudge_dismissed') === 'true'; } catch(e) {}
+        if (!dismissed) {
+          nudge.classList.add('rv-nudge-visible');
+        }
+      }
+    }, 5000);
+
+    if (nudge) {
+      nudge.addEventListener('click', (e) => {
+        if (e.target.closest('#rv-nudge-close')) return;
+        nudge.classList.remove('rv-nudge-visible');
+        windowEl.classList.add('rv-open');
+        input.focus();
+        sendTelemetry('chat_opened', { source: 'welcome_nudge' });
+      });
+    }
+
+    if (nudgeClose) {
+      nudgeClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (nudge) nudge.classList.remove('rv-nudge-visible');
+        try { sessionStorage.setItem('rv_nudge_dismissed', 'true'); } catch(err) {}
+      });
+    }
+
+    // 2. Launcher & Window Toggle
     launcher.addEventListener('click', () => {
+      if (nudge) nudge.classList.remove('rv-nudge-visible');
       windowEl.classList.toggle('rv-open');
       if (windowEl.classList.contains('rv-open')) {
         input.focus();
-        sendTelemetry('chat_opened');
+        sendTelemetry('chat_opened', { source: 'launcher_button' });
       }
     });
 
     closeBtn.addEventListener('click', () => windowEl.classList.remove('rv-open'));
     resetBtn.addEventListener('click', () => {
       document.getElementById('rv-messages').innerHTML = '';
+      if (autocomplete) {
+        autocomplete.innerHTML = '';
+        autocomplete.classList.remove('rv-show');
+      }
       showWelcome();
     });
 
     sendBtn.addEventListener('click', () => handleUserSend());
+
+    // 3. Smart Search & Auto-complete Suggestions
+    input.addEventListener('input', () => {
+      const val = input.value.trim().toLowerCase();
+      if (!autocomplete) return;
+
+      if (val.length < 2) {
+        autocomplete.innerHTML = '';
+        autocomplete.classList.remove('rv-show');
+        return;
+      }
+
+      const matches = suggestionsData.filter(item =>
+        item.text.toLowerCase().includes(val) ||
+        item.query.toLowerCase().includes(val) ||
+        item.tag.toLowerCase().includes(val)
+      ).slice(0, 5);
+
+      if (matches.length === 0) {
+        autocomplete.innerHTML = '';
+        autocomplete.classList.remove('rv-show');
+        return;
+      }
+
+      autocomplete.innerHTML = matches.map(m => \`
+        <div class="rv-suggestion-item" data-query="\${m.query}">
+          <span class="rv-suggestion-icon">\${m.icon}</span>
+          <span class="rv-suggestion-label">\${highlightMatch(m.text, val)}</span>
+          <span class="rv-suggestion-badge">\${m.tag}</span>
+        </div>
+      \`).join('');
+      autocomplete.classList.add('rv-show');
+
+      autocomplete.querySelectorAll('.rv-suggestion-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const q = this.getAttribute('data-query');
+          input.value = q;
+          autocomplete.innerHTML = '';
+          autocomplete.classList.remove('rv-show');
+          handleUserSend();
+        });
+      });
+    });
+
     input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') handleUserSend();
+      if (e.key === 'Enter') {
+        if (autocomplete) {
+          autocomplete.innerHTML = '';
+          autocomplete.classList.remove('rv-show');
+        }
+        handleUserSend();
+      } else if (e.key === 'Escape') {
+        if (autocomplete) {
+          autocomplete.innerHTML = '';
+          autocomplete.classList.remove('rv-show');
+        }
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.rv-chat-input-area') && !e.target.closest('.rv-autocomplete-dropdown')) {
+        if (autocomplete) {
+          autocomplete.classList.remove('rv-show');
+        }
+      }
     });
   }
 
@@ -965,7 +1591,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
       answer: "👋 Welcome to **" + INST_NAME + "** Official AI Assistant! How may I assist you today?",
       quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us', 'Events']
     };
-    appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu, defaultResp.campusCards);
+    appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu, defaultResp.campusCards, defaultResp.facilityCards);
   }
 
   function handleUserSend() {
@@ -976,6 +1602,12 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
     appendMessage('user', text);
     input.value = '';
 
+    const autocomplete = document.getElementById('rv-autocomplete-dropdown');
+    if (autocomplete) {
+      autocomplete.innerHTML = '';
+      autocomplete.classList.remove('rv-show');
+    }
+
     sendTelemetry('query_sent', { query: text });
 
     setTimeout(() => {
@@ -984,7 +1616,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
       }
       if (engine) {
         const res = engine.match(text);
-        appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards);
+        appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards, res.facilityCards);
         sendTelemetry('bot_response', { intent: res.intent, score: res.score });
       } else {
         appendMessage('bot', 'Connecting to admissions database...');
@@ -992,7 +1624,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
     }, 200);
   }
 
-  function appendMessage(sender, text, chips, navigation, navMenu, campusCards) {
+  function appendMessage(sender, text, chips, navigation, navMenu, campusCards, facilityCards) {
     const container = document.getElementById('rv-messages');
     const msgEl = document.createElement('div');
     msgEl.className = 'rv-message rv-' + sender;
@@ -1008,7 +1640,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
       html += '<br/><a href="' + navigation.url + '" target="_blank" class="rv-nav-action-btn">🧭 ' + navigation.label + ' →</a>';
     }
 
-    if (navMenu && Array.isArray(navMenu) && (!campusCards || campusCards.length === 0)) {
+    if (navMenu && Array.isArray(navMenu) && (!campusCards || campusCards.length === 0) && (!facilityCards || facilityCards.length === 0)) {
       html += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">';
       navMenu.forEach(item => {
         html += '<a href="' + item.url + '" target="_blank" style="color: var(--rv-primary); font-size: 12.5px; font-weight: 600; text-decoration: none;">' + item.title + ' ↗</a>';
@@ -1028,6 +1660,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
 
     msgEl.innerHTML = html;
 
+    // A. Render Campus Cards Carousel
     if (campusCards && Array.isArray(campusCards) && campusCards.length > 0) {
       const bubble = msgEl.querySelector('.rv-msg-bubble');
       const carouselWrapper = document.createElement('div');
@@ -1082,6 +1715,54 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
       bubble.appendChild(carouselWrapper);
     }
 
+    // B. Render Campus Photo & Facility Carousel
+    if (facilityCards && Array.isArray(facilityCards) && facilityCards.length > 0) {
+      const bubble = msgEl.querySelector('.rv-msg-bubble');
+      const carouselWrapper = document.createElement('div');
+      carouselWrapper.className = 'rv-carousel-wrapper';
+
+      const scrollContainer = document.createElement('div');
+      scrollContainer.className = 'rv-cards-scroll';
+
+      facilityCards.forEach(card => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'rv-facility-card';
+
+        cardEl.innerHTML = \`
+          <div class="rv-facility-card-img-wrap">
+            <img src="\${card.image}" alt="\${card.title}" class="rv-facility-card-img" loading="lazy" />
+            <span class="rv-facility-card-badge">\${card.badge}</span>
+          </div>
+          <div class="rv-facility-card-body">
+            <div class="rv-facility-card-title">\${card.title}</div>
+            <div class="rv-facility-card-desc">\${card.description}</div>
+          </div>
+        \`;
+        scrollContainer.appendChild(cardEl);
+      });
+
+      carouselWrapper.appendChild(scrollContainer);
+
+      const controls = document.createElement('div');
+      controls.className = 'rv-carousel-controls';
+      controls.innerHTML = \`
+        <button type="button" class="rv-carousel-arrow prev" title="Scroll left">‹</button>
+        <span class="rv-carousel-counter">\${facilityCards.length} Facilities • Swipe ›</span>
+        <button type="button" class="rv-carousel-arrow next" title="Scroll right">›</button>
+      \`;
+      controls.querySelector('.prev').addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollContainer.scrollBy({ left: -250, behavior: 'smooth' });
+      });
+      controls.querySelector('.next').addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollContainer.scrollBy({ left: 250, behavior: 'smooth' });
+      });
+      carouselWrapper.appendChild(controls);
+
+      bubble.appendChild(carouselWrapper);
+    }
+
     container.appendChild(msgEl);
 
     if (sender === 'bot') {
@@ -1104,6 +1785,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
 
   function sendTelemetry(eventType, eventData) {
     const payload = {
+      sessionId: sessionId,
       instituteId: INST_ID,
       instituteName: INST_NAME,
       event: eventType,
@@ -1111,7 +1793,15 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl) {
       timestamp: new Date().toISOString()
     };
     try {
+      // 1. Dual-Write to Vercel/Node backend
       fetch(VERCEL_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(() => {});
+
+      // 2. Dual-Write to WordPress REST API
+      fetch(WP_REST_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -1164,9 +1854,10 @@ institutes.forEach(inst => {
   const baseWeb = (rawData.institute.website || '').replace(/\/+$/, '');
   const wpUrl = baseWeb + '/wp-json/rvpu/v1/telemetry';
   const vercelUrl = 'http://localhost:3000/api/telemetry';
-  fs.writeFileSync(jsPath, generateWidgetJS(inst.id, rawData.institute.name, rawData.institute.shortName || rawData.institute.name, wpUrl, vercelUrl), 'utf8');
+  const combinations = rawData.courses ? rawData.courses.combinations : [];
+  fs.writeFileSync(jsPath, generateWidgetJS(inst.id, rawData.institute.name, rawData.institute.shortName || rawData.institute.name, wpUrl, vercelUrl, combinations), 'utf8');
 
-  console.log(`✅ [${inst.name}] Upgraded with ${kb.length} intents, ${Object.keys(kw).length} keywords, cards carousel & scroll controls!`);
+  console.log(`✅ [${inst.name}] Upgraded with ${kb.length} intents, photo carousel, welcome nudge & auto-complete!`);
 });
 
 console.log('\n🎉 ALL 7 INSTITUTES REPLICATED AND SYNCHRONIZED SUCCESSFULLY!');

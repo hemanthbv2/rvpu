@@ -1,7 +1,7 @@
 /**
  * RVPU Front-End Chatbot Widget Component
  * Campus: RV Pre-University College South, Bengaluru
- * Features: Branded UI, Keyword Chips, Horizontal Campus Cards, Deep Navigation, Dual-Write Telemetry.
+ * Features: Branded UI, Smart Auto-complete, Proactive Nudge, Facility Photo Carousel, Campus Cards, Dual-Write Telemetry.
  */
 (function() {
   'use strict';
@@ -12,11 +12,20 @@
   const WP_REST_URL = "https://south.rvpucollege.edu.in/wp-json/rvpu/v1/telemetry";
   const VERCEL_URL = "http://localhost:3000/api/telemetry";
 
+  // Persistent Session Continuity
+  let sessionId = 'sess_' + Date.now();
+  try {
+    sessionId = sessionStorage.getItem('rv_chat_session') || ('sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6));
+    sessionStorage.setItem('rv_chat_session', sessionId);
+  } catch(e) {}
+
   let engine = (typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID] && window.RVPUChatbot[INST_ID].engine)
     ? window.RVPUChatbot[INST_ID].engine
     : null;
   let kb = null;
   let kw = null;
+
+  const suggestionsData = [{"text":"Admission Process & Steps","icon":"📝","query":"admission process","tag":"Admissions"},{"text":"Required Documents for Admission","icon":"📄","query":"required documents","tag":"Admissions"},{"text":"Cutoff Marks & Eligibility Criteria","icon":"🎯","query":"eligibility cutoff","tag":"Admissions"},{"text":"How to Apply post SSLC / 10th","icon":"✍️","query":"how to apply","tag":"Admissions"},{"text":"PCMB (Science Stream)","icon":"🔬","query":"PCMB","tag":"Science"},{"text":"PCMC (Science Stream)","icon":"🔬","query":"PCMC","tag":"Science"},{"text":"BAMS (Commerce Stream)","icon":"📊","query":"BAMS","tag":"Commerce"},{"text":"BAME (Commerce Stream)","icon":"📊","query":"BAME","tag":"Commerce"},{"text":"SEBA (Commerce Stream)","icon":"📊","query":"SEBA","tag":"Commerce"},{"text":"Science Stream Overview","icon":"🔬","query":"science stream","tag":"Academics"},{"text":"Commerce Stream Overview","icon":"📊","query":"commerce stream","tag":"Academics"},{"text":"JEE Advanced (Main + KCET Decoded)","icon":"🚀","query":"JEE Advanced","tag":"Integrated"},{"text":"JEE (Main + KCET Decoded)","icon":"📐","query":"JEE Main","tag":"Integrated"},{"text":"NEET UG + KCET Medical Track","icon":"🩺","query":"NEET UG","tag":"Medical"},{"text":"Commerce Decoded (CA + CLAT)","icon":"⚖️","query":"Commerce Decoded","tag":"Commerce"},{"text":"Campus Facilities & Photo Tour","icon":"🏫","query":"facilities","tag":"Campus"},{"text":"Science & Computer Laboratories","icon":"🔬","query":"labs","tag":"Campus"},{"text":"Sports Complex, Gym & Pool","icon":"⚽","query":"sports","tag":"Campus"},{"text":"Library & Digital Resource Center","icon":"📚","query":"library","tag":"Campus"},{"text":"Principal & Leadership Desk","icon":"👨‍🏫","query":"principal","tag":"Leadership"},{"text":"About RVPU South & RSST Trust","icon":"🏛️","query":"about us","tag":"About"},{"text":"Our 7 Sister Campuses Across Karnataka","icon":"🌐","query":"our campuses","tag":"Campuses"},{"text":"Contact Us & Campus Location","icon":"📍","query":"contact us","tag":"Contact"},{"text":"College Events & Cultural Fests","icon":"🎉","query":"events","tag":"Campus"}];
 
   function loadDependencies(callback) {
     if (!engine && typeof window !== 'undefined' && window.RVPUChatbot && window.RVPUChatbot[INST_ID]) {
@@ -50,10 +59,22 @@
     const container = document.createElement('div');
     container.id = 'rv-chatbot-widget';
     container.innerHTML = `
+      <!-- Proactive Welcome Nudge -->
+      <div class="rv-chat-nudge" id="rv-chat-nudge" role="button" aria-label="Open Admissions Chat">
+        <button type="button" class="rv-nudge-close" id="rv-nudge-close" title="Dismiss" aria-label="Dismiss">✕</button>
+        <div class="rv-nudge-avatar">👋</div>
+        <div class="rv-nudge-body">
+          <div class="rv-nudge-title">Planning for I PUC admissions?</div>
+          <div class="rv-nudge-text">Ask me about combinations, cutoffs &amp; campus life!</div>
+        </div>
+      </div>
+
+      <!-- Floating Launcher Button -->
       <button class="rv-chat-launcher" id="rv-launcher-btn" aria-label="Open Admissions Chat">
         <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
       </button>
 
+      <!-- Main Chat Window -->
       <div class="rv-chat-window" id="rv-window">
         <div class="rv-chat-header">
           <div class="rv-header-left">
@@ -74,6 +95,9 @@
 
         <div class="rv-chat-messages" id="rv-messages"></div>
 
+        <!-- Smart Auto-complete Suggestions Dropdown -->
+        <div class="rv-autocomplete-dropdown" id="rv-autocomplete-dropdown"></div>
+
         <div class="rv-chat-input-area">
           <input type="text" class="rv-chat-input" id="rv-input" placeholder="Ask about combinations, admissions..." autocomplete="off"/>
           <button class="rv-send-btn" id="rv-send-btn" aria-label="Send">
@@ -88,6 +112,12 @@
     showWelcome();
   }
 
+  function highlightMatch(text, query) {
+    const idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return text;
+    return text.substring(0, idx) + '<strong>' + text.substring(idx, idx + query.length) + '</strong>' + text.substring(idx + query.length);
+  }
+
   function attachEvents() {
     const launcher = document.getElementById('rv-launcher-btn');
     const windowEl = document.getElementById('rv-window');
@@ -95,24 +125,125 @@
     const resetBtn = document.getElementById('rv-reset-btn');
     const input = document.getElementById('rv-input');
     const sendBtn = document.getElementById('rv-send-btn');
+    const nudge = document.getElementById('rv-chat-nudge');
+    const nudgeClose = document.getElementById('rv-nudge-close');
+    const autocomplete = document.getElementById('rv-autocomplete-dropdown');
 
+    // 1. Proactive Welcome Nudge (Triggers after 5 seconds)
+    setTimeout(() => {
+      if (windowEl && !windowEl.classList.contains('rv-open') && nudge) {
+        let dismissed = false;
+        try { dismissed = sessionStorage.getItem('rv_nudge_dismissed') === 'true'; } catch(e) {}
+        if (!dismissed) {
+          nudge.classList.add('rv-nudge-visible');
+        }
+      }
+    }, 5000);
+
+    if (nudge) {
+      nudge.addEventListener('click', (e) => {
+        if (e.target.closest('#rv-nudge-close')) return;
+        nudge.classList.remove('rv-nudge-visible');
+        windowEl.classList.add('rv-open');
+        input.focus();
+        sendTelemetry('chat_opened', { source: 'welcome_nudge' });
+      });
+    }
+
+    if (nudgeClose) {
+      nudgeClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (nudge) nudge.classList.remove('rv-nudge-visible');
+        try { sessionStorage.setItem('rv_nudge_dismissed', 'true'); } catch(err) {}
+      });
+    }
+
+    // 2. Launcher & Window Toggle
     launcher.addEventListener('click', () => {
+      if (nudge) nudge.classList.remove('rv-nudge-visible');
       windowEl.classList.toggle('rv-open');
       if (windowEl.classList.contains('rv-open')) {
         input.focus();
-        sendTelemetry('chat_opened');
+        sendTelemetry('chat_opened', { source: 'launcher_button' });
       }
     });
 
     closeBtn.addEventListener('click', () => windowEl.classList.remove('rv-open'));
     resetBtn.addEventListener('click', () => {
       document.getElementById('rv-messages').innerHTML = '';
+      if (autocomplete) {
+        autocomplete.innerHTML = '';
+        autocomplete.classList.remove('rv-show');
+      }
       showWelcome();
     });
 
     sendBtn.addEventListener('click', () => handleUserSend());
+
+    // 3. Smart Search & Auto-complete Suggestions
+    input.addEventListener('input', () => {
+      const val = input.value.trim().toLowerCase();
+      if (!autocomplete) return;
+
+      if (val.length < 2) {
+        autocomplete.innerHTML = '';
+        autocomplete.classList.remove('rv-show');
+        return;
+      }
+
+      const matches = suggestionsData.filter(item =>
+        item.text.toLowerCase().includes(val) ||
+        item.query.toLowerCase().includes(val) ||
+        item.tag.toLowerCase().includes(val)
+      ).slice(0, 5);
+
+      if (matches.length === 0) {
+        autocomplete.innerHTML = '';
+        autocomplete.classList.remove('rv-show');
+        return;
+      }
+
+      autocomplete.innerHTML = matches.map(m => `
+        <div class="rv-suggestion-item" data-query="${m.query}">
+          <span class="rv-suggestion-icon">${m.icon}</span>
+          <span class="rv-suggestion-label">${highlightMatch(m.text, val)}</span>
+          <span class="rv-suggestion-badge">${m.tag}</span>
+        </div>
+      `).join('');
+      autocomplete.classList.add('rv-show');
+
+      autocomplete.querySelectorAll('.rv-suggestion-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const q = this.getAttribute('data-query');
+          input.value = q;
+          autocomplete.innerHTML = '';
+          autocomplete.classList.remove('rv-show');
+          handleUserSend();
+        });
+      });
+    });
+
     input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') handleUserSend();
+      if (e.key === 'Enter') {
+        if (autocomplete) {
+          autocomplete.innerHTML = '';
+          autocomplete.classList.remove('rv-show');
+        }
+        handleUserSend();
+      } else if (e.key === 'Escape') {
+        if (autocomplete) {
+          autocomplete.innerHTML = '';
+          autocomplete.classList.remove('rv-show');
+        }
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.rv-chat-input-area') && !e.target.closest('.rv-autocomplete-dropdown')) {
+        if (autocomplete) {
+          autocomplete.classList.remove('rv-show');
+        }
+      }
     });
   }
 
@@ -121,7 +252,7 @@
       answer: "👋 Welcome to **" + INST_NAME + "** Official AI Assistant! How may I assist you today?",
       quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us', 'Events']
     };
-    appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu, defaultResp.campusCards);
+    appendMessage('bot', defaultResp.answer, defaultResp.quickChips, null, defaultResp.navigationMenu, defaultResp.campusCards, defaultResp.facilityCards);
   }
 
   function handleUserSend() {
@@ -132,6 +263,12 @@
     appendMessage('user', text);
     input.value = '';
 
+    const autocomplete = document.getElementById('rv-autocomplete-dropdown');
+    if (autocomplete) {
+      autocomplete.innerHTML = '';
+      autocomplete.classList.remove('rv-show');
+    }
+
     sendTelemetry('query_sent', { query: text });
 
     setTimeout(() => {
@@ -140,7 +277,7 @@
       }
       if (engine) {
         const res = engine.match(text);
-        appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards);
+        appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards, res.facilityCards);
         sendTelemetry('bot_response', { intent: res.intent, score: res.score });
       } else {
         appendMessage('bot', 'Connecting to admissions database...');
@@ -148,7 +285,7 @@
     }, 200);
   }
 
-  function appendMessage(sender, text, chips, navigation, navMenu, campusCards) {
+  function appendMessage(sender, text, chips, navigation, navMenu, campusCards, facilityCards) {
     const container = document.getElementById('rv-messages');
     const msgEl = document.createElement('div');
     msgEl.className = 'rv-message rv-' + sender;
@@ -164,7 +301,7 @@
       html += '<br/><a href="' + navigation.url + '" target="_blank" class="rv-nav-action-btn">🧭 ' + navigation.label + ' →</a>';
     }
 
-    if (navMenu && Array.isArray(navMenu) && (!campusCards || campusCards.length === 0)) {
+    if (navMenu && Array.isArray(navMenu) && (!campusCards || campusCards.length === 0) && (!facilityCards || facilityCards.length === 0)) {
       html += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">';
       navMenu.forEach(item => {
         html += '<a href="' + item.url + '" target="_blank" style="color: var(--rv-primary); font-size: 12.5px; font-weight: 600; text-decoration: none;">' + item.title + ' ↗</a>';
@@ -184,6 +321,7 @@
 
     msgEl.innerHTML = html;
 
+    // A. Render Campus Cards Carousel
     if (campusCards && Array.isArray(campusCards) && campusCards.length > 0) {
       const bubble = msgEl.querySelector('.rv-msg-bubble');
       const carouselWrapper = document.createElement('div');
@@ -238,6 +376,54 @@
       bubble.appendChild(carouselWrapper);
     }
 
+    // B. Render Campus Photo & Facility Carousel
+    if (facilityCards && Array.isArray(facilityCards) && facilityCards.length > 0) {
+      const bubble = msgEl.querySelector('.rv-msg-bubble');
+      const carouselWrapper = document.createElement('div');
+      carouselWrapper.className = 'rv-carousel-wrapper';
+
+      const scrollContainer = document.createElement('div');
+      scrollContainer.className = 'rv-cards-scroll';
+
+      facilityCards.forEach(card => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'rv-facility-card';
+
+        cardEl.innerHTML = `
+          <div class="rv-facility-card-img-wrap">
+            <img src="${card.image}" alt="${card.title}" class="rv-facility-card-img" loading="lazy" />
+            <span class="rv-facility-card-badge">${card.badge}</span>
+          </div>
+          <div class="rv-facility-card-body">
+            <div class="rv-facility-card-title">${card.title}</div>
+            <div class="rv-facility-card-desc">${card.description}</div>
+          </div>
+        `;
+        scrollContainer.appendChild(cardEl);
+      });
+
+      carouselWrapper.appendChild(scrollContainer);
+
+      const controls = document.createElement('div');
+      controls.className = 'rv-carousel-controls';
+      controls.innerHTML = `
+        <button type="button" class="rv-carousel-arrow prev" title="Scroll left">‹</button>
+        <span class="rv-carousel-counter">${facilityCards.length} Facilities • Swipe ›</span>
+        <button type="button" class="rv-carousel-arrow next" title="Scroll right">›</button>
+      `;
+      controls.querySelector('.prev').addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollContainer.scrollBy({ left: -250, behavior: 'smooth' });
+      });
+      controls.querySelector('.next').addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollContainer.scrollBy({ left: 250, behavior: 'smooth' });
+      });
+      carouselWrapper.appendChild(controls);
+
+      bubble.appendChild(carouselWrapper);
+    }
+
     container.appendChild(msgEl);
 
     if (sender === 'bot') {
@@ -260,6 +446,7 @@
 
   function sendTelemetry(eventType, eventData) {
     const payload = {
+      sessionId: sessionId,
       instituteId: INST_ID,
       instituteName: INST_NAME,
       event: eventType,
@@ -267,7 +454,15 @@
       timestamp: new Date().toISOString()
     };
     try {
+      // 1. Dual-Write to Vercel/Node backend
       fetch(VERCEL_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(() => {});
+
+      // 2. Dual-Write to WordPress REST API
+      fetch(WP_REST_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

@@ -686,7 +686,34 @@
       "amenities"
     ],
     "weight": 3.5,
-    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU Mysore**:\n\n• Modern Classrooms at DPS Mysuru Campus\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Comprehensive Library & Digital Learning Center\n• Basketball Court & Football Field\n• Volleyball & Badminton Courts\n• Gymnasium & Swimming Pool\n• Active Cultural Clubs & College Fests\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU Mysore**:\n\n• Modern Classrooms at DPS Mysuru Campus\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Comprehensive Library & Digital Learning Center\n• Basketball Court & Football Field\n• Volleyball & Badminton Courts\n• Gymnasium & Swimming Pool\n• Active Cultural Clubs & College Fests\n\nSwipe through the facility cards below to see our campus:",
+    "cardsType": "facility_list",
+    "facilityCards": [
+      {
+        "title": "RVPU Mysuru Campus",
+        "badge": "Infrastructure",
+        "image": "https://mys.rvpucollege.edu.in/wp-content/uploads/2025/12/Group-7011@2x.png",
+        "description": "Lush green campus in Vijayanagar, Mysuru with peaceful scholastic ambiance and modern smart classrooms."
+      },
+      {
+        "title": "Advanced Science Labs",
+        "badge": "Laboratories",
+        "image": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-1@2x-1024x841.png",
+        "description": "Modern laboratory apparatus for Physics, Chemistry, Biology, and high-speed Computer Science workstations."
+      },
+      {
+        "title": "Mysuru Knowledge Library",
+        "badge": "Library",
+        "image": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.52-PM@2x-1024x841.png",
+        "description": "Thousands of curriculum titles, periodicals, reference volumes, and quiet individual reading zones."
+      },
+      {
+        "title": "Sports Ground & Athletics",
+        "badge": "Sports",
+        "image": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2@2x-1024x841.png",
+        "description": "Dedicated athletic tracks, cricket, volleyball, badminton, and holistic sports coaching."
+      }
+    ],
     "quickChips": [
       "Our Courses",
       "Our Campuses",

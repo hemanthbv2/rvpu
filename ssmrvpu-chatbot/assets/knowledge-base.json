@@ -370,7 +370,7 @@
       "peba combination"
     ],
     "weight": 4.5,
-    "answer": "That's a wonderful academic choice! Here is what you need to know about this combination:\n\n🎓 **PEBA (Commerce Stream) at SSMRV PU**:\n\n• **Core Subjects**: Political Science, Economics, Business Studies, Accountancy\n• **Compulsory Language**: English | **Second Language**: Kannada, Hindi, Sanskrit, French\n• **Career Avenues**: Civil Services (UPSC / KPSC), Corporate Law, Public Administration, Economic Journalism, and International Business.\n• **Integrated Competitive Prep**: In-depth grounding in political institutions, macroeconomic policy, commercial law, and business accounting.",
+    "answer": "That's a wonderful academic choice! Here is what you need to know about this combination:\n\n🎓 **PEBA (Commerce Stream) at SSMRV PU**:\n\n• **Core Subjects**: Political Science, Economics, Business Studies, Accountancy\n• **Compulsory Language**: English | **Second Language**: Kannada, Hindi, Sanskrit, French\n• **Career Avenues**: Civil Services (UPSC / KPSC), Corporate Law, Public Administration, Economic Journalism, and International Business.\n• **Integrated Competitive Prep**: Interdisciplinary grounding in governance, economic markets, and statutory accountancy.",
     "quickChips": [
       "Our Courses",
       "Our Campuses",
@@ -709,7 +709,34 @@
       "amenities"
     ],
     "weight": 3.5,
-    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at SSMRV PU**:\n\n• State-of-the-art Physics, Chemistry, and Biology Laboratories\n• Air-conditioned Computer Science Lab with high-speed internet\n• Comprehensive Digital and Physical Library & Reading Hall\n• Modern Multipurpose Seminar Hall & Auditorium\n• Indoor Sports Complex and Outdoor Playgrounds\n• Active NCC, NSS, and Youth Red Cross units\n• Career Guidance and Competitive Exam Cell\n• Canteen & Cafeteria serving hygienic food\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at SSMRV PU**:\n\n• State-of-the-art Physics, Chemistry, and Biology Laboratories\n• Air-conditioned Computer Science Lab with high-speed internet\n• Comprehensive Digital and Physical Library & Reading Hall\n• Modern Multipurpose Seminar Hall & Auditorium\n• Indoor Sports Complex and Outdoor Playgrounds\n• Active NCC, NSS, and Youth Red Cross units\n• Career Guidance and Competitive Exam Cell\n• Canteen & Cafeteria serving hygienic food\n\nSwipe through the facility cards below to see our campus:",
+    "cardsType": "facility_list",
+    "facilityCards": [
+      {
+        "title": "SSMRV Academic Campus",
+        "badge": "Infrastructure",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/04/Group-7011-768x527.png",
+        "description": "Premier academic campus in Jayanagar featuring multimedia smart classrooms, seminar halls, and vibrant student learning zones."
+      },
+      {
+        "title": "Science & Computer Labs",
+        "badge": "Laboratories",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-2.png",
+        "description": "Well-equipped Physics, Chemistry, Biology, and Computer Science laboratories for empirical learning and scientific inquiry."
+      },
+      {
+        "title": "SSMRV Central Library",
+        "badge": "Library",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM.png",
+        "description": "Comprehensive academic library housing thousands of curriculum titles, reference books, national journals, and quiet study spaces."
+      },
+      {
+        "title": "Sports Arena & Physical Education",
+        "badge": "Sports",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-1.png",
+        "description": "Extensive sports amenities supporting cricket, football, basketball, volleyball, table tennis, and annual athletic meets."
+      }
+    ],
     "quickChips": [
       "Our Courses",
       "Our Campuses",

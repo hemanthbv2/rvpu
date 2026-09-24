@@ -54,15 +54,18 @@
       const tokens = this.tokenize(raw);
       const scores = new Map();
 
-      // Initialize scores
+      // Initialize all KB items with 0 score
       this.kb.forEach(item => scores.set(item.id, 0));
 
-      // 1. Phrase / exact substring match boost
+      // 1. Phrase / Substring Matching (5x multiplier)
       this.kb.forEach(item => {
         for (const kw of item.keywords) {
-          if (raw === kw) {
+          const cleanKw = kw.toLowerCase().trim();
+          if (raw === cleanKw) {
             scores.set(item.id, scores.get(item.id) + (item.weight * 5.0));
-          } else if (raw.includes(kw)) {
+          } else if (raw.includes(cleanKw) && cleanKw.length >= 3) {
+            scores.set(item.id, scores.get(item.id) + (item.weight * 3.0));
+          } else if (cleanKw.includes(raw) && raw.length >= 4) {
             scores.set(item.id, scores.get(item.id) + (item.weight * 2.5));
           }
         }

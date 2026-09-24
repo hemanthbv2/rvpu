@@ -658,7 +658,34 @@
       "amenities"
     ],
     "weight": 3.5,
-    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU South**:\n\n• Smart Digital Interactive Classrooms\n• Modern Auditorium\n• Resource-Rich Library\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Basketball Court\n• Sports Grounds\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU South**:\n\n• Smart Digital Interactive Classrooms\n• Modern Auditorium\n• Resource-Rich Library\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Basketball Court\n• Sports Grounds\n\nSwipe through the facility cards below to see our campus:",
+    "cardsType": "facility_list",
+    "facilityCards": [
+      {
+        "title": "Historic RV Campus Infrastructure",
+        "badge": "Infrastructure",
+        "image": "https://south.rvpucollege.edu.in/wp-content/uploads/2026/01/Group-18131@2x-2-scaled.png",
+        "description": "Iconic campus on RV Road, Jayanagar featuring historic academic architecture, smart classrooms, and leafy courtyards."
+      },
+      {
+        "title": "Modern Science Laboratories",
+        "badge": "Laboratories",
+        "image": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-1@2x-1024x841.png",
+        "description": "Comprehensive Physics, Chemistry, Biology, and Computer Science laboratories for board exam practicals and research."
+      },
+      {
+        "title": "RV Central Library",
+        "badge": "Library",
+        "image": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.52-PM@2x-1024x841.png",
+        "description": "Vast learning resource center with expansive catalog of textbooks, reference works, competitive exam guides, and digital catalog."
+      },
+      {
+        "title": "Sports & Recreation Ground",
+        "badge": "Sports",
+        "image": "https://hrh.rvpucollege.edu.in/wp-content/uploads/2025/12/Screenshot-2@2x-1024x841.png",
+        "description": "Full-sized playground for athletics, cricket, football, basketball, and indoor sports facilities."
+      }
+    ],
     "quickChips": [
       "Our Courses",
       "Our Campuses",

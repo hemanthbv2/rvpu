@@ -686,7 +686,34 @@
       "amenities"
     ],
     "weight": 3.5,
-    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU North**:\n\n• Smart Digital Interactive Classrooms with Projectors\n• Advanced Library with Textbooks, Reference Books & E-Resources\n• State-of-the-art Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• High-tech Computer Science Laboratory with high-speed internet\n• Multipurpose Auditorium & Seminar Hall\n• Sports Facilities – Basketball, Football, Volleyball, Badminton\n• Outdoor Sports Grounds & Athletic Track\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU North**:\n\n• Smart Digital Interactive Classrooms with Projectors\n• Advanced Library with Textbooks, Reference Books & E-Resources\n• State-of-the-art Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• High-tech Computer Science Laboratory with high-speed internet\n• Multipurpose Auditorium & Seminar Hall\n• Sports Facilities – Basketball, Football, Volleyball, Badminton\n• Outdoor Sports Grounds & Athletic Track\n\nSwipe through the facility cards below to see our campus:",
+    "cardsType": "facility_list",
+    "facilityCards": [
+      {
+        "title": "RVPU North Modern Campus",
+        "badge": "Infrastructure",
+        "image": "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/Group-11941@2x-1024x890.png",
+        "description": "World-class campus situated at DPS Bangalore North with advanced digital classrooms, vast grounds, and tranquil learning environment."
+      },
+      {
+        "title": "Advanced Science Labs",
+        "badge": "Laboratories",
+        "image": "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/DSC08490-1-scaled.jpg",
+        "description": "High-spec laboratories for Physics, Chemistry, Biology & Computer Science empowering students in practical discovery."
+      },
+      {
+        "title": "Student Activity & Cultural Complex",
+        "badge": "Auditorium",
+        "image": "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/DSC08670-scaled.jpg",
+        "description": "State-of-the-art auditorium and seminar halls hosting cultural fests, national days, and leadership workshops."
+      },
+      {
+        "title": "Sports Grounds & Athletics",
+        "badge": "Sports & Fitness",
+        "image": "https://north.rvpucollege.edu.in/wp-content/uploads/2026/01/VED05146-1-scaled.jpg",
+        "description": "Sprawling outdoor sports arenas with dedicated coaching in athletics, cricket, football, basketball, and tennis."
+      }
+    ],
     "quickChips": [
       "Our Courses",
       "Our Campuses",

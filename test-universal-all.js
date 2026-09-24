@@ -88,6 +88,13 @@ institutes.forEach(inst => {
   if (commDecodedOk) passedTests++;
   console.log(`  ${commDecodedOk ? '✅' : '❌'} 'commerce decoded' -> [${commDecodedRes.intent}]`);
 
+  // Test 10: Facilities photo cards query
+  totalTests++;
+  const facRes = bot.match('facilities');
+  const facOk = facRes.intent === 'facilities' && Array.isArray(facRes.facilityCards) && facRes.facilityCards.length === 4;
+  if (facOk) passedTests++;
+  console.log(`  ${facOk ? '✅' : '❌'} 'facilities' -> [${facRes.intent}], ${facRes.facilityCards ? facRes.facilityCards.length : 0} photo cards returned`);
+
   console.log('');
 });
 

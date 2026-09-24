@@ -658,7 +658,34 @@
       "amenities"
     ],
     "weight": 3.5,
-    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at NMKRV PU**:\n\n• Modern Classrooms equipped with Digital Learning Aids & Projectors\n• Comprehensive Library with Textbooks, Reference Books, Journals & E-Resources\n• Specialized Physics, Chemistry, and Biology Laboratories\n• High-tech Computer Science Laboratory with high-speed internet\n• Sports Facilities for Indoor and Outdoor Games (Basketball, Football, Volleyball, Badminton)\n• Dedicated Gymnasium and Swimming Pool\n• Spacious Auditorium and Seminar Halls\n\nOur campus is designed to foster both academic rigour and all-round holistic development with world-class facilities.",
+    "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at NMKRV PU**:\n\n• Modern Classrooms equipped with Digital Learning Aids & Projectors\n• Comprehensive Library with Textbooks, Reference Books, Journals & E-Resources\n• Specialized Physics, Chemistry, and Biology Laboratories\n• High-tech Computer Science Laboratory with high-speed internet\n• Sports Facilities for Indoor and Outdoor Games (Basketball, Football, Volleyball, Badminton)\n• Dedicated Gymnasium and Swimming Pool\n• Spacious Auditorium and Seminar Halls\n\nSwipe through the facility cards below to see our campus:",
+    "cardsType": "facility_list",
+    "facilityCards": [
+      {
+        "title": "NMKRV Academic Campus",
+        "badge": "Infrastructure",
+        "image": "https://www.nmkrvpu.edu.in/new_nmkrvpu/wp-content/uploads/2026/04/Group-7011-768x527.png",
+        "description": "Prestigious campus in Jayanagar dedicated to women's education with state-of-the-art smart classrooms and hostel amenities."
+      },
+      {
+        "title": "Modern Science Laboratories",
+        "badge": "Laboratories",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-2.png",
+        "description": "Fully equipped Physics, Chemistry, Biology, and Computer Science laboratories supporting advanced practical training."
+      },
+      {
+        "title": "NMKRV Library & Knowledge Center",
+        "badge": "Library",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM.png",
+        "description": "Extensive literature, journals, research volumes, and competitive entrance coaching materials."
+      },
+      {
+        "title": "Mangala Mantapa Auditorium & Sports",
+        "badge": "Auditorium & Sports",
+        "image": "https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/08/Screenshot-2025-11-10-at-2.54.52-PM-1.png",
+        "description": "Grand auditorium for performing arts, international seminars, indoor sports arenas, and sports fields."
+      }
+    ],
     "quickChips": [
       "Our Courses",
       "Our Campuses",

@@ -83,6 +83,15 @@ Every single institute folder now possesses:
   - Deployed RVLH-style horizontal scrolling campus card carousel (`scroll-snap-type: x mandatory`, zero-retro scrollbars, ‹/› controls) with direct `Explore Campus ›` links across all 7 campuses.
   - Fixed scroll viewport alignment so bot responses smoothly align to the top of the message bubble.
   - Automated test suite `test-universal-all.js` verified 35/35 tests passed (100.0% pass rate).
+- **[Commit 6 - Humanized Conversational Openers & Polished Tone Across All 7 Institutes]**:
+  - Removed robotic database dumps by adding encouraging, warm conversational opening phrases to every single intent across all 7 campuses.
+  - Synchronized and verified 63/63 universal tests passed (100.0% pass rate).
+- **[Commit 7 - Universal Rollout: Smart Autocomplete, Proactive Welcome Nudge & Real Campus Facility Photo Carousels]**:
+  - **Proactive Welcome Nudge / Balloon**: 5-second automatic greeting balloon with close button and session memory.
+  - **Smart Search & Autocomplete**: Real-time suggestion dropdown matching combinations, admissions, leadership, and campus facilities with highlighted characters and icons.
+  - **Campus Photo & Facility Carousel**: Integrated verified official website photography (28 real images across 7 campuses, 100% HTTP 200 OK) with horizontal snap scrolling, badges, and ‹/› controls.
+  - **Session Continuity & Dual-Write**: Attached persistent `sessionId` to all telemetry and dispatching to both Vercel and WordPress REST endpoints.
+  - Automated test suite `test-universal-all.js` verified 70/70 checks passed (100.0% pass rate).
 
 ---
 
