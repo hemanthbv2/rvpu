@@ -103,7 +103,6 @@
     "keywords": [
       "our campuses",
       "campuses",
-      "campus",
       "all campuses",
       "other campuses",
       "sister campuses",
@@ -650,6 +649,10 @@
     "keywords": [
       "facilities",
       "facility",
+      "campus facilities",
+      "campus photos",
+      "photo tour",
+      "photos",
       "infrastructure",
       "labs",
       "laboratory",
@@ -663,7 +666,7 @@
       "canteen",
       "amenities"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU South**:\n\n• Smart Digital Interactive Classrooms\n• Modern Auditorium\n• Resource-Rich Library\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Basketball Court\n• Sports Grounds\n\nSwipe through the facility cards below to see our campus:",
     "cardsType": "facility_list",
     "facilityCards": [

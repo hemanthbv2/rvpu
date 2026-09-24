@@ -1,0 +1,28 @@
+{
+  "totalInstitutes": 7,
+  "institutesAudited": 7,
+  "fileIntegrityChecks": {
+    "passed": 42,
+    "failed": 0
+  },
+  "zeroDefectChecks": {
+    "passed": 1044,
+    "failed": 0,
+    "issues": []
+  },
+  "scrapedDataAlignment": {
+    "passed": 69,
+    "failed": 0,
+    "issues": []
+  },
+  "queryMatchingChecks": {
+    "passed": 105,
+    "failed": 0,
+    "issues": []
+  },
+  "urlHealthChecks": {
+    "totalUrls": 71,
+    "verified200": 71,
+    "issues": []
+  }
+}

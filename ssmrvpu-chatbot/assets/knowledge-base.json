@@ -103,7 +103,6 @@
     "keywords": [
       "our campuses",
       "campuses",
-      "campus",
       "all campuses",
       "other campuses",
       "sister campuses",
@@ -701,6 +700,10 @@
     "keywords": [
       "facilities",
       "facility",
+      "campus facilities",
+      "campus photos",
+      "photo tour",
+      "photos",
       "infrastructure",
       "labs",
       "laboratory",
@@ -714,7 +717,7 @@
       "canteen",
       "amenities"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at SSMRV PU**:\n\n• State-of-the-art Physics, Chemistry, and Biology Laboratories\n• Air-conditioned Computer Science Lab with high-speed internet\n• Comprehensive Digital and Physical Library & Reading Hall\n• Modern Multipurpose Seminar Hall & Auditorium\n• Indoor Sports Complex and Outdoor Playgrounds\n• Active NCC, NSS, and Youth Red Cross units\n• Career Guidance and Competitive Exam Cell\n• Canteen & Cafeteria serving hygienic food\n\nSwipe through the facility cards below to see our campus:",
     "cardsType": "facility_list",
     "facilityCards": [
@@ -789,7 +792,7 @@
     ],
     "navigation": {
       "label": "Open Contact Us Page",
-      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/contact-us/"
+      "url": "https://ssmrvpu.edu.in/new_ssmrvpu/contact_us/"
     }
   },
   {
@@ -871,7 +874,7 @@
       },
       {
         "title": "📞 Contact Us",
-        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/contact-us/"
+        "url": "https://ssmrvpu.edu.in/new_ssmrvpu/contact_us/"
       }
     ],
     "quickChips": [

@@ -103,7 +103,6 @@
     "keywords": [
       "our campuses",
       "campuses",
-      "campus",
       "all campuses",
       "other campuses",
       "sister campuses",
@@ -678,6 +677,10 @@
     "keywords": [
       "facilities",
       "facility",
+      "campus facilities",
+      "campus photos",
+      "photo tour",
+      "photos",
       "infrastructure",
       "labs",
       "laboratory",
@@ -691,7 +694,7 @@
       "canteen",
       "amenities"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU E-City**:\n\n• Smart Digital Interactive Classrooms\n• Modern Auditorium\n• Resource-Rich Library (Print & Digital Resources)\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Sports Grounds & Playgrounds\n• Indoor Games Facilities\n• Multi-Purpose Hall\n\nSwipe through the facility cards below to see our campus:",
     "cardsType": "facility_list",
     "facilityCards": [

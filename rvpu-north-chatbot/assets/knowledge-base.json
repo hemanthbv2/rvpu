@@ -103,7 +103,6 @@
     "keywords": [
       "our campuses",
       "campuses",
-      "campus",
       "all campuses",
       "other campuses",
       "sister campuses",
@@ -678,6 +677,10 @@
     "keywords": [
       "facilities",
       "facility",
+      "campus facilities",
+      "campus photos",
+      "photo tour",
+      "photos",
       "infrastructure",
       "labs",
       "laboratory",
@@ -691,7 +694,7 @@
       "canteen",
       "amenities"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU North**:\n\n• Smart Digital Interactive Classrooms with Projectors\n• Advanced Library with Textbooks, Reference Books & E-Resources\n• State-of-the-art Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• High-tech Computer Science Laboratory with high-speed internet\n• Multipurpose Auditorium & Seminar Hall\n• Sports Facilities – Basketball, Football, Volleyball, Badminton\n• Outdoor Sports Grounds & Athletic Track\n\nSwipe through the facility cards below to see our campus:",
     "cardsType": "facility_list",
     "facilityCards": [

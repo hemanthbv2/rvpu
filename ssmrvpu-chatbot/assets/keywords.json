@@ -251,12 +251,6 @@
       "weight": 4.5
     }
   ],
-  "campus": [
-    {
-      "id": "all_campuses",
-      "weight": 4.5
-    }
-  ],
   "all campuses": [
     {
       "id": "all_campuses",
@@ -1260,85 +1254,109 @@
   "facilities": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "facility": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
+    }
+  ],
+  "campus facilities": [
+    {
+      "id": "facilities",
+      "weight": 4.5
+    }
+  ],
+  "campus photos": [
+    {
+      "id": "facilities",
+      "weight": 4.5
+    }
+  ],
+  "photo tour": [
+    {
+      "id": "facilities",
+      "weight": 4.5
+    }
+  ],
+  "photos": [
+    {
+      "id": "facilities",
+      "weight": 4.5
     }
   ],
   "infrastructure": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "labs": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "laboratory": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "library": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "sports": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "playground": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "auditorium": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "smart class": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "classrooms": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "gym": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "canteen": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "amenities": [
     {
       "id": "facilities",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "contact us": [

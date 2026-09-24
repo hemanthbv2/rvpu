@@ -454,7 +454,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       category: 'campuses',
       title: 'Our Campuses Across Karnataka',
       keywords: [
-        'our campuses', 'campuses', 'campus', 'all campuses', 'other campuses', 'sister campuses',
+        'our campuses', 'campuses', 'all campuses', 'other campuses', 'sister campuses',
         'other colleges', 'branches', 'locations', 'rv colleges', 'rv campuses', 'sister institutions',
         'list of campuses', 'all rv colleges', 'where are your campuses', 'show campuses'
       ],
@@ -627,8 +627,8 @@ function buildInstituteKnowledgeBase(data, inst) {
     id: 'facilities',
     category: 'campus',
     title: 'Campus Facilities & Infrastructure',
-    keywords: ['facilities', 'facility', 'infrastructure', 'labs', 'laboratory', 'library', 'sports', 'playground', 'auditorium', 'smart class', 'classrooms', 'gym', 'canteen', 'amenities'],
-    weight: 3.5,
+    keywords: ['facilities', 'facility', 'campus facilities', 'campus photos', 'photo tour', 'photos', 'infrastructure', 'labs', 'laboratory', 'library', 'sports', 'playground', 'auditorium', 'smart class', 'classrooms', 'gym', 'canteen', 'amenities'],
+    weight: 4.5,
     answer: `I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at ${shortName}**:\n\n${facilitiesList}\n\nSwipe through the facility cards below to see our campus:`,
     cardsType: 'facility_list',
     facilityCards: facCards,

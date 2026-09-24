@@ -103,7 +103,6 @@
     "keywords": [
       "our campuses",
       "campuses",
-      "campus",
       "all campuses",
       "other campuses",
       "sister campuses",
@@ -650,6 +649,10 @@
     "keywords": [
       "facilities",
       "facility",
+      "campus facilities",
+      "campus photos",
+      "photo tour",
+      "photos",
       "infrastructure",
       "labs",
       "laboratory",
@@ -663,7 +666,7 @@
       "canteen",
       "amenities"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at NMKRV PU**:\n\n• Modern Classrooms equipped with Digital Learning Aids & Projectors\n• Comprehensive Library with Textbooks, Reference Books, Journals & E-Resources\n• Specialized Physics, Chemistry, and Biology Laboratories\n• High-tech Computer Science Laboratory with high-speed internet\n• Sports Facilities for Indoor and Outdoor Games (Basketball, Football, Volleyball, Badminton)\n• Dedicated Gymnasium and Swimming Pool\n• Spacious Auditorium and Seminar Halls\n\nSwipe through the facility cards below to see our campus:",
     "cardsType": "facility_list",
     "facilityCards": [
@@ -738,7 +741,7 @@
     ],
     "navigation": {
       "label": "Open Contact Us Page",
-      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/contact-us/"
+      "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/contact_us/"
     }
   },
   {
@@ -820,7 +823,7 @@
       },
       {
         "title": "📞 Contact Us",
-        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/contact-us/"
+        "url": "https://www.nmkrvpu.edu.in/new_nmkrvpu/contact_us/"
       }
     ],
     "quickChips": [

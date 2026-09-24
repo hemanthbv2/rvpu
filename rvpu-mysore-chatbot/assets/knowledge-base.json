@@ -103,7 +103,6 @@
     "keywords": [
       "our campuses",
       "campuses",
-      "campus",
       "all campuses",
       "other campuses",
       "sister campuses",
@@ -678,6 +677,10 @@
     "keywords": [
       "facilities",
       "facility",
+      "campus facilities",
+      "campus photos",
+      "photo tour",
+      "photos",
       "infrastructure",
       "labs",
       "laboratory",
@@ -691,7 +694,7 @@
       "canteen",
       "amenities"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "I'd love to tell you about our campus environment! We provide state-of-the-art infrastructure for learning, sports, and overall growth:\n\n🏫 **Campus Facilities at RVPU Mysore**:\n\n• Modern Classrooms at DPS Mysuru Campus\n• Physics Laboratory\n• Chemistry Laboratory\n• Biology Laboratory\n• Computer Science Laboratory\n• Comprehensive Library & Digital Learning Center\n• Basketball Court & Football Field\n• Volleyball & Badminton Courts\n• Gymnasium & Swimming Pool\n• Active Cultural Clubs & College Fests\n\nSwipe through the facility cards below to see our campus:",
     "cardsType": "facility_list",
     "facilityCards": [
