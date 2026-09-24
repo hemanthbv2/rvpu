@@ -342,7 +342,8 @@ const rvlhTracks = [
     title: 'NEET UG + KCET + PU Board',
     keywords: [
       'neet', 'neet ug', 'neet coaching', 'medical entrance', 'doctor entrance',
-      'neet kcet pu board', 'neet decoded', 'mbbs coaching', 'neet ug kcet pu board'
+      'neet kcet pu board', 'neet decoded', 'mbbs coaching', 'neet ug kcet pu board',
+      'neet in college', 'is neet in college', 'whether neet is in college', 'do you have neet', 'neet available'
     ],
     weight: 4.8,
     summary: 'Medical entrance mastery focusing on 100% NCERT line-by-line dissection for Biology, Chemistry, and Physics, paired with weekly OMR simulation drills for top government medical colleges (AIIMS, JIPMER, BMCRI).',
@@ -501,13 +502,13 @@ function buildInstituteKnowledgeBase(data, inst) {
   // Add RVLH Integrated Decoded Tracks
   rvlhTracks.forEach(track => {
     const campusBullets = track.campuses.map(c => `• ${c}`).join('\n');
-    let introPhrase = "I'd be glad to share the details on this engineering track! 🚀";
+    let introPhrase = `Yes! Integrated JEE Advanced coaching is available at ${shortName}. Here are the program details: 🚀`;
     if (track.id.includes('neet')) {
-      introPhrase = "Great ambition! Becoming a doctor requires dedicated focus, and this program is built specifically for that journey. Here are the details:";
+      introPhrase = `Yes! Integrated NEET UG coaching is available at ${shortName} alongside Karnataka PU Board studies. Here are the program details: 🩺`;
     } else if (track.id.includes('commerce')) {
-      introPhrase = "I'm delighted you asked! Commerce Decoded is an exceptional stepping stone for finance, chartered accountancy, and corporate law. Here are the program highlights:";
+      introPhrase = `Yes! The integrated Commerce Decoded (CA + CLAT + PU Board) programme is offered at ${shortName}. Here are the program highlights: ⚖️`;
     } else if (track.id.includes('jee_main')) {
-      introPhrase = "Certainly! This is one of our most popular integrated engineering pathways, perfectly synchronized with PU Board studies. Here are the full details:";
+      introPhrase = `Yes! Integrated JEE Main + KCET coaching is available at ${shortName}, synchronized with PU Board classes. Here are the program details: 📐`;
     }
 
     kb.push({

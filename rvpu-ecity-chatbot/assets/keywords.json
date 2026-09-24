@@ -719,6 +719,36 @@
       "weight": 4.8
     }
   ],
+  "neet in college": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "is neet in college": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "whether neet is in college": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "do you have neet": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
+  "neet available": [
+    {
+      "id": "course_neet_ug",
+      "weight": 4.8
+    }
+  ],
   "commerce decoded": [
     {
       "id": "course_commerce_decoded",
