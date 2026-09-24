@@ -530,3 +530,269 @@
   font-weight: 600;
 }
 
+/* ============================================================
+   1. Proactive Welcome Nudge / Speech Balloon
+   ============================================================ */
+.rv-chat-nudge {
+  position: absolute;
+  bottom: 74px;
+  right: 4px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(27, 54, 93, 0.15);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  cursor: pointer;
+  z-index: 99999;
+  opacity: 0;
+  transform: translateY(12px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rv-chat-nudge.rv-nudge-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+.rv-chat-nudge::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 25px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-right: 1px solid rgba(27, 54, 93, 0.15);
+  border-bottom: 1px solid rgba(27, 54, 93, 0.15);
+  transform: rotate(45deg);
+}
+
+.rv-nudge-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: all 0.15s;
+}
+
+.rv-nudge-close:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+.rv-nudge-avatar {
+  font-size: 26px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rv-wave 2s infinite ease-in-out;
+}
+
+@keyframes rv-wave {
+  0%, 100% { transform: rotate(0deg); }
+  20%, 60% { transform: rotate(14deg); }
+  40%, 80% { transform: rotate(-14deg); }
+}
+
+.rv-nudge-body {
+  flex: 1;
+  padding-right: 8px;
+}
+
+.rv-nudge-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rv-primary);
+  line-height: 1.3;
+}
+
+.rv-nudge-text {
+  font-size: 12px;
+  color: #475467;
+  margin-top: 3px;
+  line-height: 1.35;
+}
+
+/* ============================================================
+   2. Smart Search & Auto-complete Suggestions
+   ============================================================ */
+.rv-autocomplete-dropdown {
+  position: absolute;
+  bottom: 64px;
+  left: 12px;
+  right: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.14);
+  max-height: 220px;
+  overflow-y: auto;
+  display: none;
+  z-index: 150;
+  padding: 4px 0;
+}
+
+.rv-autocomplete-dropdown.rv-show {
+  display: block;
+  animation: rv-slide-up 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes rv-slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rv-suggestion-item {
+  padding: 9px 14px;
+  font-size: 12.5px;
+  color: #1f2937;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #f8fafc;
+  transition: all 0.15s ease;
+}
+
+.rv-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.rv-suggestion-item:hover, .rv-suggestion-item.active {
+  background: #f1f5f9;
+  color: var(--rv-primary);
+}
+
+.rv-suggestion-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.rv-suggestion-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rv-suggestion-label strong {
+  color: var(--rv-primary);
+  font-weight: 700;
+  background: rgba(216, 155, 39, 0.18);
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+.rv-suggestion-badge {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.rv-suggestion-item:hover .rv-suggestion-badge {
+  background: var(--rv-primary);
+  color: #ffffff;
+}
+
+/* ============================================================
+   3. Campus Photo & Facility Carousel
+   ============================================================ */
+.rv-facility-card {
+  width: 240px;
+  min-width: 240px;
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.rv-facility-card:hover {
+  border-color: rgba(216, 155, 39, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(216, 155, 39, 0.2);
+}
+
+.rv-facility-card-img-wrap {
+  width: 100%;
+  height: 125px;
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.rv-facility-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.rv-facility-card:hover .rv-facility-card-img {
+  transform: scale(1.06);
+}
+
+.rv-facility-card-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(6px);
+  color: #F4B846;
+  border: 1px solid rgba(244, 184, 70, 0.4);
+  padding: 2.5px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.rv-facility-card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #1e293b;
+}
+
+.rv-facility-card-title {
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.rv-facility-card-desc {
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+
