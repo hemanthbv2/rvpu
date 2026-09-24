@@ -278,7 +278,13 @@
       if (engine) {
         const res = engine.match(text);
         appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards, res.facilityCards);
-        sendTelemetry('bot_response', { intent: res.intent, score: res.score });
+        sendTelemetry('bot_response', {
+          intent: res.intent,
+          score: res.score,
+          confidence: res.confidence,
+          confidencePercent: res.confidencePercent,
+          matchQuality: res.matchQuality
+        });
       } else {
         appendMessage('bot', 'Connecting to admissions database...');
       }

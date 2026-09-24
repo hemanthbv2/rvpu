@@ -251,13 +251,21 @@ const facilityCardsByInstitute = {
 const courseSpecs = {
   PCMB: {
     title: 'PCMB (Physics, Chemistry, Mathematics, Biology)',
-    keywords: ['pcmb', 'physics chemistry maths biology', 'biology combination', 'medical stream', 'neet course', 'neet batch', 'neet coaching', 'doctor course', 'biology'],
+    keywords: [
+      'pcmb', 'pcmb combination', 'pcmb combination details', 'pcmb course', 'about pcmb',
+      'physics chemistry maths biology', 'biology combination', 'medical stream', 'neet course',
+      'neet batch', 'neet coaching', 'doctor course', 'biology'
+    ],
     career: 'Medical (MBBS, BDS, BAMS), Biotechnology, Pure Sciences (Research, B.Sc), Agricultural Sciences, Veterinary Science, and Engineering.',
     prep: 'Comprehensive Karnataka PU Board syllabus paired with integrated NEET & KCET coaching, test series, and laboratory practicals.'
   },
   PCMC: {
     title: 'PCMC (Physics, Chemistry, Mathematics, Computer Science)',
-    keywords: ['pcmc', 'physics chemistry maths computer science', 'computer science combination', 'cs stream', 'coding stream', 'engineering combination', 'jee course', 'computer science'],
+    keywords: [
+      'pcmc', 'pcmc combination', 'pcmc combination details', 'pcmc course', 'about pcmc',
+      'physics chemistry maths computer science', 'computer science combination', 'cs stream',
+      'coding stream', 'engineering combination', 'jee course', 'computer science'
+    ],
     career: 'Engineering (Computer Science, AI & ML, Robotics, Electronics, Mechanical), BCA, Data Science, and IT careers.',
     prep: 'Specialized coaching for JEE Main, JEE Advanced & KCET alongside advanced computer laboratory training in C++, Python, and algorithm design.'
   },
@@ -362,8 +370,9 @@ const rvlhTracks = [
     id: 'course_commerce_decoded',
     title: 'Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)',
     keywords: [
-      'commerce decoded', 'commerce decoded programme', 'ca', 'clat', 'commerce ca clat pu board',
-      'ca foundation', 'clat coaching', 'ca coaching', 'law entrance', 'commerce ca clat'
+      'commerce decoded', 'commerce decoded course', 'commerce decoded programme', 'commerce decoded program',
+      'decoded', 'ca', 'clat', 'commerce ca clat pu board', 'ca foundation', 'clat coaching',
+      'ca coaching', 'law entrance', 'commerce ca clat'
     ],
     weight: 4.8,
     summary: 'Karnataka premier integrated commerce track uniting Karnataka PU Board with direct CA Foundation (ICAI), Common Law Admission Test (CLAT), and CUET mastery led by practicing Chartered Accountants and legal veterans.',
@@ -469,8 +478,13 @@ function buildInstituteKnowledgeBase(data, inst) {
       id: 'courses_all',
       category: 'academics',
       title: 'Our Courses and Combinations Offered',
-      keywords: ['our courses', 'courses', 'course', 'combinations', 'combination', 'streams', 'stream', 'subjects', 'academic programs', 'programs offered', 'what courses'],
-      weight: 3.5,
+      keywords: [
+        'our courses', 'courses', 'course', 'combinations', 'combination', 'streams', 'stream',
+        'subjects', 'academic programs', 'programs offered', 'what courses',
+        'what courses do you offer', 'courses available', 'all courses', 'list of courses',
+        'streams available', 'subjects offered', 'combinations available', 'what combinations do you have'
+      ],
+      weight: 4.5,
       answer: `We offer a comprehensive selection of Pre-University programs! Here is the complete breakdown of our streams, subjects, and integrated entrance tracks:\n\n🎓 **Academic Courses & Combinations at ${shortName}**:\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n${scienceCombos || '• PCMB: Physics, Chemistry, Mathematics, Biology\n• PCMC: Physics, Chemistry, Mathematics, Computer Science'}\n\n${commerceCombos ? `**📊 Commerce Stream**:\n${commerceCombos}\n\n` : ''}**🗣️ Languages**:\n• Compulsory: ${compulsoryLang}\n• Second Language Options: ${secondLangs}\n\n---\n\n🚀 **RV Learning Hub (RVLH) Integrated Programmes**:\n• **JEE Advanced (Main + KCET Decoded) + PU Board**\n• **JEE (Main + KCET Decoded) + PU Board**\n• **NEET UG + KCET + PU Board**\n• **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**`,
       quickChips: combinations.map(c => c.code).concat(['JEE Advanced', 'JEE Main', 'NEET UG', 'Commerce Decoded', 'Our Campuses']),
       navigation: { label: 'Explore Our Courses Page', url: pages.courses || website }
@@ -528,8 +542,11 @@ function buildInstituteKnowledgeBase(data, inst) {
     id: 'courses_science',
     category: 'academics',
     title: 'Science Stream Overview',
-    keywords: ['science', 'science stream', 'physics', 'chemistry', 'maths', 'mathematics', 'neet', 'jee', 'kcet', 'engineering', 'medical'],
-    weight: 2.5,
+    keywords: [
+      'science', 'science stream', 'physics', 'chemistry', 'maths', 'mathematics',
+      'neet', 'jee', 'kcet', 'engineering', 'medical', 'science combinations', 'science subjects'
+    ],
+    weight: 3.8,
     answer: `Great question! Science at ${shortName} opens diverse doors in engineering, medicine, pure research, and technology:\n\n🔬 **Science Stream Combinations at ${shortName}**:\n\n${scienceCombos}\n\nAll science programs feature intensive laboratory practicals and integrated competitive exam coaching (NEET / JEE / KCET).`,
     quickChips: ['PCMB', 'PCMC', 'Our Courses', 'Our Campuses', 'Facilities'],
     navigation: { label: 'Explore Science Courses', url: pages.courses || website }
@@ -541,8 +558,11 @@ function buildInstituteKnowledgeBase(data, inst) {
       id: 'courses_commerce',
       category: 'academics',
       title: 'Commerce Stream Overview',
-      keywords: ['commerce', 'commerce stream', 'business studies', 'accountancy', 'economics', 'statistics', 'ca', 'cs', 'finance', 'cma'],
-      weight: 2.5,
+      keywords: [
+        'commerce', 'commerce stream', 'business studies', 'accountancy', 'economics',
+        'statistics', 'ca', 'cs', 'finance', 'cma', 'commerce combinations', 'commerce subjects'
+      ],
+      weight: 3.8,
       answer: `Certainly! Our Commerce department is renowned for creating future business leaders and finance professionals:\n\n📊 **Commerce Stream Combinations at ${shortName}**:\n\n${commerceCombos}\n\nThese combinations build an exceptional foundation for CA Foundation, Company Secretaryship (CS), BBA/MBA, and corporate finance.`,
       quickChips: combinations.filter(c => c.stream === 'Commerce').map(c => c.code).concat(['Our Campuses']),
       navigation: { label: 'Explore Commerce Courses', url: pages.courses || website }
@@ -554,8 +574,8 @@ function buildInstituteKnowledgeBase(data, inst) {
     id: 'languages',
     category: 'academics',
     title: 'Language Options',
-    keywords: ['language', 'languages', 'second language', 'kannada', 'hindi', 'sanskrit', 'french', 'english', 'medium'],
-    weight: 2.0,
+    keywords: ['language', 'languages', 'second language', 'kannada', 'hindi', 'sanskrit', 'french', 'english', 'medium', 'languages offered', 'which languages'],
+    weight: 3.5,
     answer: `Here are the language choices offered at our campus:\n\n🗣️ **Language Options at ${shortName}**:\n\n• **Part I (Compulsory)**: ${compulsoryLang}\n• **Part II (Second Language Choice)**: ${secondLangs}\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada per DPUE regulations.`,
     quickChips: ['Our Courses', 'Our Campuses', 'Facilities', 'Contact Us']
   });
@@ -583,8 +603,13 @@ function buildInstituteKnowledgeBase(data, inst) {
     id: 'admissions_process',
     category: 'admissions',
     title: 'Admission Procedure & Steps',
-    keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'procedure', 'process', 'enroll', 'seat', 'registration', 'form', 'dates'],
-    weight: 2.5,
+    keywords: [
+      'admission', 'admissions', 'apply', 'application', 'how to apply', 'procedure',
+      'process', 'enroll', 'seat', 'registration', 'form', 'dates',
+      'admission procedure', 'how to get admission', 'how to join', 'admission steps',
+      'how can i apply', 'admissions process', 'admissions procedure', 'how to apply for admission'
+    ],
+    weight: 4.2,
     answer: `Here is the admission procedure as published on the ${shortName} website:\n\n📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n*Note*: Application forms can be obtained post-SSLC result announcement. Admissions proceed on merit and first-come, first-served counseling.`,
     quickChips: ['Required Documents', 'Eligibility Criteria', 'Our Courses', 'Our Campuses'],
     navigation: { label: 'Open Admission Portal', url: pages.admissions || website }
@@ -594,8 +619,13 @@ function buildInstituteKnowledgeBase(data, inst) {
     id: 'admissions_documents',
     category: 'admissions',
     title: 'Required Documents for Admission',
-    keywords: ['documents', 'required documents', 'certificates', 'marksheet', 'marks card', 'tc', 'transfer certificate', 'aadhaar', 'caste certificate', 'income certificate', 'photographs', 'eligibility certificate'],
-    weight: 2.5,
+    keywords: [
+      'documents', 'required documents', 'certificates', 'marksheet', 'marks card', 'tc',
+      'transfer certificate', 'aadhaar', 'caste certificate', 'income certificate', 'photographs',
+      'eligibility certificate', 'what documents are required', 'documents required', 'documents needed',
+      'certificates required', 'list of documents', 'which documents', 'documents for admission', 'documents to submit'
+    ],
+    weight: 4.2,
     answer: `Here are the required documents for admission verification as listed on the ${shortName} website:\n\n📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Candidates must bring the original certificates along with attested photocopies for verification during counseling.`,
     quickChips: ['Admission Process', 'Eligibility Criteria', 'Our Courses', 'Our Campuses']
   });
@@ -615,9 +645,10 @@ function buildInstituteKnowledgeBase(data, inst) {
     keywords: [
       'eligibility', 'admission criteria', 'criteria', 'eligibility criteria',
       'qualification', 'qualifying exam', 'sslc marks', 'marks required', 'pass marks',
-      'who can apply', 'can i get admission', 'cutoff', 'cut off', 'cut-off', 'percentage', 'minimum marks'
+      'who can apply', 'can i get admission', 'cutoff', 'cut off', 'cut-off', 'percentage',
+      'minimum marks', 'marks needed', 'eligibility for admission', 'marks required for admission', 'what percentage is required'
     ],
-    weight: 2.5,
+    weight: 4.0,
     answer: `Here is the admission eligibility criteria as stated on the ${shortName} website:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **Qualifying Examination**: Candidates who have successfully passed the Karnataka SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Admissions are conducted on merit basis following the declaration of Class 10 results. Candidates submit the application with marks card and documents for counseling verification.${examRules}${scholarshipInfo}`,
     quickChips: ['Admission Process', 'Required Documents', 'Our Courses', 'Our Campuses']
   });
@@ -642,8 +673,13 @@ function buildInstituteKnowledgeBase(data, inst) {
     id: 'contact_location',
     category: 'contact',
     title: 'Contact Us & Campus Location',
-    keywords: ['contact us', 'contact', 'contacts', 'address', 'phone', 'telephone', 'mobile', 'call', 'email', 'location', 'where', 'timings', 'hours', 'working hours', 'map', 'directions', 'reach', 'helpline', 'office'],
-    weight: 3.5,
+    keywords: [
+      'contact us', 'contact', 'contacts', 'address', 'phone', 'telephone', 'mobile',
+      'call', 'email', 'location', 'where', 'timings', 'hours', 'working hours', 'map',
+      'directions', 'reach', 'helpline', 'office', 'contact number', 'phone number',
+      'helpline number', 'mobile number', 'how to call', 'college address', 'where is college located', 'reach college', 'office number'
+    ],
+    weight: 4.2,
     answer: `We are always happy to connect with students and parents! You can reach us or visit our admissions office here:\n\n📍 **Contact Us — ${shortName}**\n\n• **Campus Address**:\n  ${address}\n• **Phone / Helpline**: ${phones}\n• **Email**: ${email}\n• **Office Working Hours**: ${timings}\n• **Official Website**: ${website}`,
     quickChips: ['Our Campuses', 'Our Courses', 'Facilities', 'Events'],
     navigation: { label: 'Open Contact Us Page', url: pages.contact || website }
@@ -734,6 +770,16 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
     'would', 'may', 'might', 'must', 'tell', 'me', 'please', 'know', 'want', 'give', 'college', 'rv', 'pu', 'rvpu'
   ]);
 
+  const stemWord = (w) => {
+    if (!w || w.length <= 4) return w;
+    if (w.endsWith('ies') && w.length > 4) return w.slice(0, -3) + 'y';
+    if (w.endsWith('ing') && w.length > 5) return w.slice(0, -3);
+    if (w.endsWith('es') && w.length > 5 && !w.endsWith('ses')) return w.slice(0, -2);
+    if (w.endsWith('s') && !w.endsWith('ss') && !w.endsWith('us') && !w.endsWith('is') && !w.endsWith('ics') && w.length > 4) return w.slice(0, -1);
+    if (w.endsWith('ed') && w.length > 4) return w.slice(0, -2);
+    return w;
+  };
+
   class ChatbotEngine {
     constructor(knowledgeBase, keywordMap) {
       this.kb = knowledgeBase || DEFAULT_KB;
@@ -762,42 +808,74 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
         return navMatch;
       }
 
-      const tokens = this.tokenize(raw);
+      const rawTokens = this.tokenize(raw);
+      const tokens = Array.from(new Set(rawTokens));
+      const stemmedTokens = tokens.map(t => stemWord(t));
+      const allQueryTokens = Array.from(new Set([...tokens, ...stemmedTokens]));
+
       const scores = new Map();
+      const matchedTokensPerIntent = new Map();
+      const exactMatchPerIntent = new Map();
 
       // Initialize all KB items with 0 score
-      this.kb.forEach(item => scores.set(item.id, 0));
-
-      // 1. Phrase / Substring Matching (5x multiplier)
       this.kb.forEach(item => {
+        scores.set(item.id, 0);
+        matchedTokensPerIntent.set(item.id, new Set());
+        exactMatchPerIntent.set(item.id, false);
+      });
+
+      // 1. Phrase / Substring Matching (Direct & High-Confidence)
+      this.kb.forEach(item => {
+        let kwInclusionCount = 0;
         for (const kw of item.keywords) {
           const cleanKw = kw.toLowerCase().trim();
           if (raw === cleanKw) {
-            scores.set(item.id, scores.get(item.id) + (item.weight * 5.0));
+            scores.set(item.id, scores.get(item.id) + (item.weight * 6.0));
+            exactMatchPerIntent.set(item.id, true);
           } else if (raw.includes(cleanKw) && cleanKw.length >= 3) {
-            scores.set(item.id, scores.get(item.id) + (item.weight * 3.0));
-          } else if (cleanKw.includes(raw) && raw.length >= 4) {
+            const phraseBonus = cleanKw.includes(' ') ? 4.5 : 3.2;
+            scores.set(item.id, scores.get(item.id) + (item.weight * phraseBonus));
+          } else if (cleanKw.includes(raw) && raw.length >= 4 && kwInclusionCount < 2) {
             scores.set(item.id, scores.get(item.id) + (item.weight * 2.5));
+            kwInclusionCount++;
           }
         }
       });
 
-      // 2. Token / keyword occurrence scoring
-      tokens.forEach(token => {
+      // 2. Token / keyword occurrence & stemming scoring
+      allQueryTokens.forEach(token => {
         if (this.keywordMap[token]) {
           this.keywordMap[token].forEach(entry => {
-            scores.set(entry.id, scores.get(entry.id) + (entry.weight * 1.5));
+            scores.set(entry.id, scores.get(entry.id) + (entry.weight * 1.8));
+            matchedTokensPerIntent.get(entry.id).add(token);
+          });
+        } else {
+          // Fuzzy prefix match only when token is not an exact keyword, checking single-word keys
+          Object.keys(this.keywordMap).forEach(kw => {
+            if (!kw.includes(' ') && kw.length >= 4 && (token.startsWith(kw) || kw.startsWith(token))) {
+              this.keywordMap[kw].forEach(entry => {
+                scores.set(entry.id, scores.get(entry.id) + (entry.weight * 0.9));
+                matchedTokensPerIntent.get(entry.id).add(token);
+              });
+            }
           });
         }
+      });
 
-        // Fuzzy prefix match
-        Object.keys(this.keywordMap).forEach(kw => {
-          if (kw.length >= 4 && (token.startsWith(kw) || kw.startsWith(token))) {
-            this.keywordMap[kw].forEach(entry => {
-              scores.set(entry.id, scores.get(entry.id) + (entry.weight * 0.8));
-            });
+      // 3. Information Density & Coverage Boost
+      const totalMeaningfulTokens = Math.max(1, tokens.length);
+      scores.forEach((currentScore, id) => {
+        if (currentScore > 0) {
+          const matchedCount = matchedTokensPerIntent.get(id).size;
+          const coverageRatio = matchedCount / totalMeaningfulTokens;
+          let densityBoost = 1.0;
+          if (coverageRatio >= 0.75) {
+            densityBoost = 1.35;
+          } else if (coverageRatio >= 0.45) {
+            densityBoost = 1.18;
           }
-        });
+          scores.set(id, currentScore * densityBoost);
+        }
       });
 
       // Find highest scoring intent
@@ -813,10 +891,29 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
       // Threshold check
       if (highestId && maxScore >= 1.2) {
         const item = this.kb.find(i => i.id === highestId);
+        const isExact = exactMatchPerIntent.get(highestId) === true;
+        const matchedCount = matchedTokensPerIntent.get(highestId).size;
+        const coverageRatio = matchedCount / totalMeaningfulTokens;
+
+        // Calibrated Normalized Confidence (0.0 to 1.0 & 0% to 100%)
+        let conf;
+        if (isExact) {
+          conf = 0.99;
+        } else {
+          const baseConf = maxScore / (maxScore + 14.0);
+          conf = Math.min(0.98, baseConf * (1 + coverageRatio * 0.22));
+          conf = Math.max(0.20, Math.round(conf * 100) / 100);
+        }
+        const confPercent = Math.round(conf * 100) + '%';
+        const matchQuality = conf >= 0.85 ? 'High' : conf >= 0.65 ? 'Medium' : 'Low';
+
         return {
           intent: item.id,
           category: item.category,
-          score: maxScore,
+          score: Math.round(maxScore * 100) / 100,
+          confidence: conf,
+          confidencePercent: confPercent,
+          matchQuality: matchQuality,
           answer: item.answer,
           quickChips: item.quickChips || [],
           navigation: item.navigation || null,
@@ -832,6 +929,9 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
         intent: 'fallback',
         category: 'fallback',
         score: 0,
+        confidence: 0.0,
+        confidencePercent: '0%',
+        matchQuality: 'None',
         answer: \`I'm sorry, I couldn't find exact details for "\${userQuery}".\\n\\nHere are some popular topics you can explore at **\${INST_SHORT}**:\`,
         quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us', 'Events']
       };
@@ -855,6 +955,9 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
               intent: 'navigation_' + key,
               category: 'navigation',
               score: 9.9,
+              confidence: 0.99,
+              confidencePercent: '99%',
+              matchQuality: 'High',
               answer: \`🚀 Taking you directly to **\${item.title}**...\`,
               navigation: item.navigation,
               quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us']
@@ -871,6 +974,9 @@ function generateEngineCode(instId, instName, instShort, brandColors, kb, keywor
         intent: 'greeting',
         category: 'general',
         score: 1.0,
+        confidence: 0.95,
+        confidencePercent: '95%',
+        matchQuality: 'High',
         answer: greeting ? greeting.answer : \`👋 Welcome to **\${INST_NAME}** AI Assistant!\`,
         quickChips: greeting ? greeting.quickChips : ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us']
       };
@@ -1660,7 +1766,13 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
       if (engine) {
         const res = engine.match(text);
         appendMessage('bot', res.answer, res.quickChips, res.navigation, res.navigationMenu, res.campusCards, res.facilityCards);
-        sendTelemetry('bot_response', { intent: res.intent, score: res.score });
+        sendTelemetry('bot_response', {
+          intent: res.intent,
+          score: res.score,
+          confidence: res.confidence,
+          confidencePercent: res.confidencePercent,
+          matchQuality: res.matchQuality
+        });
       } else {
         appendMessage('bot', 'Connecting to admissions database...');
       }

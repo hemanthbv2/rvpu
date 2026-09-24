@@ -214,9 +214,17 @@
       "subjects",
       "academic programs",
       "programs offered",
-      "what courses"
+      "what courses",
+      "what courses do you offer",
+      "courses available",
+      "all courses",
+      "list of courses",
+      "streams available",
+      "subjects offered",
+      "combinations available",
+      "what combinations do you have"
     ],
-    "weight": 3.5,
+    "weight": 4.5,
     "answer": "We offer a comprehensive selection of Pre-University programs! Here is the complete breakdown of our streams, subjects, and integrated entrance tracks:\n\n🎓 **Academic Courses & Combinations at RVPU South**:\n**Duration**: 2 Academic Years (I PUC & II PUC)\n**Medium of Instruction**: English (Board exams can be answered in English or Kannada)\n\n**🔬 Science Stream**:\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\n**📊 Commerce Stream**:\n• **BAMS**: Business Studies, Accountancy, Basic Mathematics, Statistics\n• **BAME**: Business Studies, Accountancy, Basic Mathematics, Economics\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n\n**🗣️ Languages**:\n• Compulsory: English\n• Second Language Options: Kannada, Hindi, Sanskrit, French\n\n---\n\n🚀 **RV Learning Hub (RVLH) Integrated Programmes**:\n• **JEE Advanced (Main + KCET Decoded) + PU Board**\n• **JEE (Main + KCET Decoded) + PU Board**\n• **NEET UG + KCET + PU Board**\n• **Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)**",
     "quickChips": [
       "PCMB",
@@ -241,6 +249,10 @@
     "title": "PCMB (Physics, Chemistry, Mathematics, Biology)",
     "keywords": [
       "pcmb",
+      "pcmb combination",
+      "pcmb combination details",
+      "pcmb course",
+      "about pcmb",
       "physics chemistry maths biology",
       "biology combination",
       "medical stream",
@@ -269,6 +281,10 @@
     "title": "PCMC (Physics, Chemistry, Mathematics, Computer Science)",
     "keywords": [
       "pcmc",
+      "pcmc combination",
+      "pcmc combination details",
+      "pcmc course",
+      "about pcmc",
       "physics chemistry maths computer science",
       "computer science combination",
       "cs stream",
@@ -451,7 +467,10 @@
     "title": "Commerce Decoded Programme (Commerce + CA + CLAT + PU Board)",
     "keywords": [
       "commerce decoded",
+      "commerce decoded course",
       "commerce decoded programme",
+      "commerce decoded program",
+      "decoded",
       "ca",
       "clat",
       "commerce ca clat pu board",
@@ -489,9 +508,11 @@
       "jee",
       "kcet",
       "engineering",
-      "medical"
+      "medical",
+      "science combinations",
+      "science subjects"
     ],
-    "weight": 2.5,
+    "weight": 3.8,
     "answer": "Great question! Science at RVPU South opens diverse doors in engineering, medicine, pure research, and technology:\n\n🔬 **Science Stream Combinations at RVPU South**:\n\n• **PCMB**: Physics, Chemistry, Mathematics, Biology\n• **PCMC**: Physics, Chemistry, Mathematics, Computer Science\n\nAll science programs feature intensive laboratory practicals and integrated competitive exam coaching (NEET / JEE / KCET).",
     "quickChips": [
       "PCMB",
@@ -519,9 +540,11 @@
       "ca",
       "cs",
       "finance",
-      "cma"
+      "cma",
+      "commerce combinations",
+      "commerce subjects"
     ],
-    "weight": 2.5,
+    "weight": 3.8,
     "answer": "Certainly! Our Commerce department is renowned for creating future business leaders and finance professionals:\n\n📊 **Commerce Stream Combinations at RVPU South**:\n\n• **BAMS**: Business Studies, Accountancy, Basic Mathematics, Statistics\n• **BAME**: Business Studies, Accountancy, Basic Mathematics, Economics\n• **SEBA**: Statistics, Economics, Business Studies, Accountancy\n\nThese combinations build an exceptional foundation for CA Foundation, Company Secretaryship (CS), BBA/MBA, and corporate finance.",
     "quickChips": [
       "BAMS",
@@ -547,9 +570,11 @@
       "sanskrit",
       "french",
       "english",
-      "medium"
+      "medium",
+      "languages offered",
+      "which languages"
     ],
-    "weight": 2,
+    "weight": 3.5,
     "answer": "Here are the language choices offered at our campus:\n\n🗣️ **Language Options at RVPU South**:\n\n• **Part I (Compulsory)**: English\n• **Part II (Second Language Choice)**: Kannada, Hindi, Sanskrit, French\n\nMedium of instruction is English, while students are permitted to answer public examinations in either English or Kannada per DPUE regulations.",
     "quickChips": [
       "Our Courses",
@@ -574,9 +599,17 @@
       "seat",
       "registration",
       "form",
-      "dates"
+      "dates",
+      "admission procedure",
+      "how to get admission",
+      "how to join",
+      "admission steps",
+      "how can i apply",
+      "admissions process",
+      "admissions procedure",
+      "how to apply for admission"
     ],
-    "weight": 2.5,
+    "weight": 4.2,
     "answer": "Here is the admission procedure as published on the RVPU South website:\n\n📝 **Admission Procedure at RVPU South**:\n\n1. Application forms obtainable post-SSLC result announcement.\n2. Submission of application with 4 passport-size photographs & 10th marksheet.\n3. Document verification and merit-based counseling.\n4. Admission finalized on first-come, first-served basis per merit list.\n\n*Note*: Application forms can be obtained post-SSLC result announcement. Admissions proceed on merit and first-come, first-served counseling.",
     "quickChips": [
       "Required Documents",
@@ -605,9 +638,17 @@
       "caste certificate",
       "income certificate",
       "photographs",
-      "eligibility certificate"
+      "eligibility certificate",
+      "what documents are required",
+      "documents required",
+      "documents needed",
+      "certificates required",
+      "list of documents",
+      "which documents",
+      "documents for admission",
+      "documents to submit"
     ],
-    "weight": 2.5,
+    "weight": 4.2,
     "answer": "Here are the required documents for admission verification as listed on the RVPU South website:\n\n📄 **Documents Required for Admission at RVPU South**:\n\n• SSLC/10th Marks Card\n• Aadhaar Card\n• Transfer Certificate\n• Conduct Certificate\n• Caste Certificate (SC/ST/BCM)\n• Income Certificate (if family income < ₹44,500/year)\n• Provisional Eligibility Certificate (Foreign/Other board students)\n\n*Note*: Candidates must bring the original certificates along with attested photocopies for verification during counseling.",
     "quickChips": [
       "Admission Process",
@@ -636,9 +677,13 @@
       "cut off",
       "cut-off",
       "percentage",
-      "minimum marks"
+      "minimum marks",
+      "marks needed",
+      "eligibility for admission",
+      "marks required for admission",
+      "what percentage is required"
     ],
-    "weight": 2.5,
+    "weight": 4,
     "answer": "Here is the admission eligibility criteria as stated on the RVPU South website:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **Qualifying Examination**: Candidates who have successfully passed the Karnataka SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Admissions are conducted on merit basis following the declaration of Class 10 results. Candidates submit the application with marks card and documents for counseling verification.\n\n📊 **Examination & Promotion Rules**:\n• **I PUC**: District-level exam by DPUE (Min. 30% per subject, 35% aggregate to pass).\n• **II PUC**: State-level Board Examination.",
     "quickChips": [
       "Admission Process",
@@ -734,9 +779,18 @@
       "directions",
       "reach",
       "helpline",
-      "office"
+      "office",
+      "contact number",
+      "phone number",
+      "helpline number",
+      "mobile number",
+      "how to call",
+      "college address",
+      "where is college located",
+      "reach college",
+      "office number"
     ],
-    "weight": 3.5,
+    "weight": 4.2,
     "answer": "We are always happy to connect with students and parents! You can reach us or visit our admissions office here:\n\n📍 **Contact Us — RVPU South**\n\n• **Campus Address**:\n  DPS Bengaluru South Campus, 11th KM, Bikaspura Main Road, Kanakapura Road, Konanakunte, Bengaluru – 560062, Karnataka, India\n• **Phone / Helpline**: +91-9606924466, +91-8050178394, +91-8123032380\n• **Email**: info.rvpus@rvei.edu.in\n• **Office Working Hours**: Monday – Saturday: 9:00 AM – 5:00 PM\n• **Official Website**: https://south.rvpucollege.edu.in/",
     "quickChips": [
       "Our Campuses",

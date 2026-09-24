@@ -332,70 +332,142 @@
   "our courses": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "courses": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "course": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "combinations": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "combination": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "streams": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "stream": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "subjects": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "academic programs": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "programs offered": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
     }
   ],
   "what courses": [
     {
       "id": "courses_all",
-      "weight": 3.5
+      "weight": 4.5
+    }
+  ],
+  "what courses do you offer": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "courses available": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "all courses": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "list of courses": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "streams available": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "subjects offered": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "combinations available": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
+    }
+  ],
+  "what combinations do you have": [
+    {
+      "id": "courses_all",
+      "weight": 4.5
     }
   ],
   "pcmb": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "pcmb combination": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "pcmb combination details": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "pcmb course": [
+    {
+      "id": "course_pcmb",
+      "weight": 4.5
+    }
+  ],
+  "about pcmb": [
     {
       "id": "course_pcmb",
       "weight": 4.5
@@ -454,6 +526,30 @@
     }
   ],
   "pcmc": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "pcmc combination": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "pcmc combination details": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "pcmc course": [
+    {
+      "id": "course_pcmc",
+      "weight": 4.5
+    }
+  ],
+  "about pcmc": [
     {
       "id": "course_pcmc",
       "weight": 4.5
@@ -628,7 +724,7 @@
     },
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "kcet decoded": [
@@ -674,7 +770,7 @@
     },
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "neet ug": [
@@ -755,7 +851,25 @@
       "weight": 4.8
     }
   ],
+  "commerce decoded course": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
   "commerce decoded programme": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "commerce decoded program": [
+    {
+      "id": "course_commerce_decoded",
+      "weight": 4.8
+    }
+  ],
+  "decoded": [
     {
       "id": "course_commerce_decoded",
       "weight": 4.8
@@ -768,7 +882,7 @@
     },
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "clat": [
@@ -816,163 +930,199 @@
   "science": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "science stream": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "physics": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "chemistry": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "maths": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "mathematics": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "kcet": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "engineering": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "medical": [
     {
       "id": "courses_science",
-      "weight": 2.5
+      "weight": 3.8
+    }
+  ],
+  "science combinations": [
+    {
+      "id": "courses_science",
+      "weight": 3.8
+    }
+  ],
+  "science subjects": [
+    {
+      "id": "courses_science",
+      "weight": 3.8
     }
   ],
   "commerce": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "commerce stream": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "business studies": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "accountancy": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "economics": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "statistics": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "cs": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "finance": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
     }
   ],
   "cma": [
     {
       "id": "courses_commerce",
-      "weight": 2.5
+      "weight": 3.8
+    }
+  ],
+  "commerce combinations": [
+    {
+      "id": "courses_commerce",
+      "weight": 3.8
+    }
+  ],
+  "commerce subjects": [
+    {
+      "id": "courses_commerce",
+      "weight": 3.8
     }
   ],
   "language": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "languages": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "second language": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "kannada": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "hindi": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "sanskrit": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "french": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "english": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
     }
   ],
   "medium": [
     {
       "id": "languages",
-      "weight": 2
+      "weight": 3.5
+    }
+  ],
+  "languages offered": [
+    {
+      "id": "languages",
+      "weight": 3.5
+    }
+  ],
+  "which languages": [
+    {
+      "id": "languages",
+      "weight": 3.5
     }
   ],
   "faculty": [
@@ -1032,241 +1182,361 @@
   "admission": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "admissions": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "apply": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "application": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "how to apply": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "procedure": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "process": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "enroll": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "seat": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "registration": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "form": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "dates": [
     {
       "id": "admissions_process",
-      "weight": 2.5
+      "weight": 4.2
+    }
+  ],
+  "admission procedure": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "how to get admission": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "how to join": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "admission steps": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "how can i apply": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "admissions process": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "admissions procedure": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
+    }
+  ],
+  "how to apply for admission": [
+    {
+      "id": "admissions_process",
+      "weight": 4.2
     }
   ],
   "documents": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "required documents": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "certificates": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "marksheet": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "marks card": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "tc": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "transfer certificate": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "aadhaar": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "caste certificate": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "income certificate": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "photographs": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
     }
   ],
   "eligibility certificate": [
     {
       "id": "admissions_documents",
-      "weight": 2.5
+      "weight": 4.2
+    }
+  ],
+  "what documents are required": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "documents required": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "documents needed": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "certificates required": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "list of documents": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "which documents": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "documents for admission": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
+    }
+  ],
+  "documents to submit": [
+    {
+      "id": "admissions_documents",
+      "weight": 4.2
     }
   ],
   "eligibility": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "admission criteria": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "criteria": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "eligibility criteria": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "qualification": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "qualifying exam": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "sslc marks": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "marks required": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "pass marks": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "who can apply": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "can i get admission": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "cutoff": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "cut off": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "cut-off": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "percentage": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
     }
   ],
   "minimum marks": [
     {
       "id": "eligibility_cutoff",
-      "weight": 2.5
+      "weight": 4
+    }
+  ],
+  "marks needed": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 4
+    }
+  ],
+  "eligibility for admission": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 4
+    }
+  ],
+  "marks required for admission": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 4
+    }
+  ],
+  "what percentage is required": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 4
     }
   ],
   "facilities": [
@@ -1380,115 +1650,169 @@
   "contact us": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "contact": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "contacts": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "address": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "phone": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "telephone": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "mobile": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "call": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "email": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "location": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "where": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "timings": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "hours": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "working hours": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "map": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "directions": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "reach": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "helpline": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
     }
   ],
   "office": [
     {
       "id": "contact_location",
-      "weight": 3.5
+      "weight": 4.2
+    }
+  ],
+  "contact number": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "phone number": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "helpline number": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "mobile number": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "how to call": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "college address": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "where is college located": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "reach college": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
+    }
+  ],
+  "office number": [
+    {
+      "id": "contact_location",
+      "weight": 4.2
     }
   ],
   "events": [
