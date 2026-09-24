@@ -601,10 +601,10 @@
       "dates"
     ],
     "weight": 2.5,
-    "answer": "We would love to welcome you to our college family! Here is how our admission process works:\n\n📝 **Admission Procedure at RVPU Harohalli**:\n\n1. Application forms obtainable post-SSLC result announcement.\n2. Submission of application with passport photographs & 10th marksheet.\n3. Cut-off percentage determination & Merit List announcement.\n4. Admission finalized on first-come, first-served basis per merit list.\n\n💡 **Helpful Tip**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.",
+    "answer": "We would love to welcome you to our college family! Here is how our admission process works:\n\n📝 **Admission Procedure at RVPU Harohalli**:\n\n1. Application forms obtainable post-SSLC result announcement.\n2. Submission of application with passport photographs & 10th marksheet.\n3. Document verification and merit-based counseling.\n4. Admission finalized on first-come, first-served basis per merit list.\n\n💡 **Helpful Tip**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.",
     "quickChips": [
       "Required Documents",
-      "Eligibility Cutoff",
+      "Eligibility Criteria",
       "Our Courses",
       "Our Campuses"
     ],
@@ -635,7 +635,7 @@
     "answer": "To make your admission verification seamless, please keep these documents ready:\n\n📄 **Documents Required for Admission at RVPU Harohalli**:\n\n• SSLC / 10th standard original marks card + photocopies\n• Aadhaar card (photocopy)\n• Transfer Certificate (TC) from previous school/institution\n• Conduct Certificate from previous school/institution\n• Provisional Eligibility Certificate (issued by Department of Pre-University Education for non-Karnataka / international candidates)\n• Caste Certificate (for SC/ST/BCM candidates)\n• Income Certificate (if annual family income is below ₹44,500)\n• Passport size photographs\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.",
     "quickChips": [
       "Admission Process",
-      "Eligibility Cutoff",
+      "Eligibility Criteria",
       "Our Courses",
       "Our Campuses"
     ]
@@ -643,26 +643,29 @@
   {
     "id": "eligibility_cutoff",
     "category": "admissions",
-    "title": "Eligibility & Cutoff Criteria",
+    "title": "Eligibility & Admission Criteria",
     "keywords": [
       "eligibility",
+      "admission criteria",
+      "criteria",
       "cutoff",
       "cut off",
       "cut-off",
       "percentage",
       "marks",
       "minimum marks",
-      "criteria",
-      "sslc percentage",
-      "pass marks"
+      "sslc marks",
+      "marks required",
+      "pass marks",
+      "who can apply"
     ],
     "weight": 2.5,
-    "answer": "Here is the eligibility and passing criteria you should know:\n\n🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.",
+    "answer": "Here is the eligibility criteria for admission:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **No Minimum Cutoff**: There is no minimum cutoff percentage mentioned on our websites. Admissions are conducted on merit and first-come, first-served counseling following the declaration of Class 10 results.\n• **Qualifying Examination**: Candidates who have successfully passed SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Merit-based counseling upon submission of the 10th marksheet and required verification documents.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in annual promotional examinations.",
     "quickChips": [
       "Admission Process",
+      "Required Documents",
       "Our Courses",
-      "Our Campuses",
-      "Contact Us"
+      "Our Campuses"
     ]
   },
   {

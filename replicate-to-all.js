@@ -566,7 +566,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'procedure', 'process', 'enroll', 'seat', 'registration', 'form', 'dates'],
     weight: 2.5,
     answer: `We would love to welcome you to our college family! Here is how our admission process works:\n\n📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n💡 **Helpful Tip**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.`,
-    quickChips: ['Required Documents', 'Eligibility Cutoff', 'Our Courses', 'Our Campuses'],
+    quickChips: ['Required Documents', 'Eligibility Criteria', 'Our Courses', 'Our Campuses'],
     navigation: { label: 'Open Admission Portal', url: pages.admissions || website }
   });
 
@@ -577,17 +577,17 @@ function buildInstituteKnowledgeBase(data, inst) {
     keywords: ['documents', 'required documents', 'certificates', 'marksheet', 'marks card', 'tc', 'transfer certificate', 'aadhaar', 'caste certificate', 'income certificate', 'photographs', 'eligibility certificate'],
     weight: 2.5,
     answer: `To make your admission verification seamless, please keep these documents ready:\n\n📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.`,
-    quickChips: ['Admission Process', 'Eligibility Cutoff', 'Our Courses', 'Our Campuses']
+    quickChips: ['Admission Process', 'Eligibility Criteria', 'Our Courses', 'Our Campuses']
   });
 
   kb.push({
     id: 'eligibility_cutoff',
     category: 'admissions',
-    title: 'Eligibility & Cutoff Criteria',
-    keywords: ['eligibility', 'cutoff', 'cut off', 'cut-off', 'percentage', 'marks', 'minimum marks', 'criteria', 'sslc percentage', 'pass marks'],
+    title: 'Eligibility & Admission Criteria',
+    keywords: ['eligibility', 'admission criteria', 'criteria', 'cutoff', 'cut off', 'cut-off', 'percentage', 'marks', 'minimum marks', 'sslc marks', 'marks required', 'pass marks', 'who can apply'],
     weight: 2.5,
-    answer: `Here is the eligibility and passing criteria you should know:\n\n🎯 **Eligibility & Cutoff Criteria**:\n\n• **Eligibility**: Candidates who have successfully cleared SSLC / ICSE / CBSE / 10th Standard or equivalent board.\n• **Cutoff Announcement**: Cutoffs are finalized upon declaration of 10th board results and displayed on the college notice board & website.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in district-level promotional exams.`,
-    quickChips: ['Admission Process', 'Our Courses', 'Our Campuses', 'Contact Us']
+    answer: `Here is the eligibility criteria for admission:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **No Minimum Cutoff**: There is no minimum cutoff percentage mentioned on our websites. Admissions are conducted on merit and first-come, first-served counseling following the declaration of Class 10 results.\n• **Qualifying Examination**: Candidates who have successfully passed SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Merit-based counseling upon submission of the 10th marksheet and required verification documents.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in annual promotional examinations.`,
+    quickChips: ['Admission Process', 'Required Documents', 'Our Courses', 'Our Campuses']
   });
 
   // Facilities with verified photo cards
@@ -1317,7 +1317,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
   const standardSuggestions = [
     { text: 'Admission Process & Steps', icon: '📝', query: 'admission process', tag: 'Admissions' },
     { text: 'Required Documents for Admission', icon: '📄', query: 'required documents', tag: 'Admissions' },
-    { text: 'Cutoff Marks & Eligibility Criteria', icon: '🎯', query: 'eligibility cutoff', tag: 'Admissions' },
+    { text: 'Eligibility & Admission Criteria', icon: '🎯', query: 'eligibility criteria', tag: 'Admissions' },
     { text: 'How to Apply post SSLC / 10th', icon: '✍️', query: 'how to apply', tag: 'Admissions' },
     ...comboSuggestions,
     { text: 'Science Stream Overview', icon: '🔬', query: 'science stream', tag: 'Academics' },
@@ -1404,7 +1404,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
         <div class="rv-nudge-avatar">👋</div>
         <div class="rv-nudge-body">
           <div class="rv-nudge-title">Planning for I PUC admissions?</div>
-          <div class="rv-nudge-text">Ask me about combinations, cutoffs &amp; campus life!</div>
+          <div class="rv-nudge-text">Ask me about combinations, admissions &amp; campus life!</div>
         </div>
       </div>
 

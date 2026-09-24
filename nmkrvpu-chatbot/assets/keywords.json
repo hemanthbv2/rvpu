@@ -1101,6 +1101,18 @@
       "weight": 2.5
     }
   ],
+  "admission criteria": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "criteria": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
   "cutoff": [
     {
       "id": "eligibility_cutoff",
@@ -1137,19 +1149,25 @@
       "weight": 2.5
     }
   ],
-  "criteria": [
+  "sslc marks": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5
     }
   ],
-  "sslc percentage": [
+  "marks required": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5
     }
   ],
   "pass marks": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "who can apply": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5
