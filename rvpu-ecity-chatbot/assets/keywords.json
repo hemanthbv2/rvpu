@@ -1167,37 +1167,19 @@
       "weight": 2.5
     }
   ],
-  "cutoff": [
+  "eligibility criteria": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5
     }
   ],
-  "cut off": [
+  "qualification": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5
     }
   ],
-  "cut-off": [
-    {
-      "id": "eligibility_cutoff",
-      "weight": 2.5
-    }
-  ],
-  "percentage": [
-    {
-      "id": "eligibility_cutoff",
-      "weight": 2.5
-    }
-  ],
-  "marks": [
-    {
-      "id": "eligibility_cutoff",
-      "weight": 2.5
-    }
-  ],
-  "minimum marks": [
+  "qualifying exam": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5
@@ -1222,6 +1204,42 @@
     }
   ],
   "who can apply": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "can i get admission": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "cutoff": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "cut off": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "cut-off": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "percentage": [
+    {
+      "id": "eligibility_cutoff",
+      "weight": 2.5
+    }
+  ],
+  "minimum marks": [
     {
       "id": "eligibility_cutoff",
       "weight": 2.5

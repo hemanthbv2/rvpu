@@ -48,7 +48,7 @@
       "a.s. venkatesan"
     ],
     "weight": 4.5,
-    "answer": "Certainly! Let me introduce our college leadership.\n\n👨‍🏫 **Principal of RV Pre-University College South, Bengaluru**:\nOur college is headed by our respected Principal, **Mr. A.S. Venkatesan**.\n\nUnder visionary academic leadership, RVPU South emphasizes disciplined academic rigor, integrated entrance coaching (NEET, JEE, KCET, CA Foundation), personal mentoring, and holistic student growth.\n\nWould you like to read the Principal's message, view faculty details, or explore our academic courses?",
+    "answer": "Certainly! Here is information regarding our college leadership:\n\n👨‍🏫 **Principal of RV Pre-University College South, Bengaluru**:\nOur college is headed by our respected Principal, **Mr. A.S. Venkatesan**.\n\nWould you like to explore our academic combinations, facilities, or contact our admissions desk?",
     "quickChips": [
       "About Us",
       "Our Courses",
@@ -83,7 +83,7 @@
       "nagaraj"
     ],
     "weight": 3.5,
-    "answer": "I'd be delighted to tell you about our rich heritage!\n\n🏛️ **About RV Pre-University College South, Bengaluru**:\nRVPU South is a premier Pre-University institution managed by the renowned **Rashtreeya Sikshana Samithi Trust (RSST)**, upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board results, integrated entrance coaching, and state-of-the-art facilities.\n\n👨‍🏫 **Key Leadership**:\n• **Principal**: **Mr. A.S. Venkatesan**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary (RSST)**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Director, RV Learning Hub**: Mr. Mayur Goyal",
+    "answer": "I'd be delighted to tell you about our institution! 🏛️\n\n**About RV Pre-University College South, Bengaluru**:\nRVPU South is managed by the renowned **Rashtreeya Sikshana Samithi Trust (RSST)**, upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board results, personalized student mentoring, and state-of-the-art campus facilities.\n\n👨‍🏫 **Key Leadership**:\n• **RSST President**: Dr. M.P. Shyam\n• **Vice President**: Dr. A.C. Chandrashekar Raju\n• **Treasurer**: Mr. P.S. Venkatesh Babu\n• **Hon. Secretary (RSST)**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Director, RV Learning Hub**: Mr. Mayur Goyal\n• **Principal**: **Mr. A.S. Venkatesan**",
     "quickChips": [
       "Principal",
       "Our Courses",
@@ -573,7 +573,7 @@
       "dates"
     ],
     "weight": 2.5,
-    "answer": "We would love to welcome you to our college family! Here is how our admission process works:\n\n📝 **Admission Procedure at RVPU South**:\n\n1. Application forms obtainable post-SSLC result announcement.\n2. Submission of application with 4 passport-size photographs & 10th marksheet.\n3. Document verification and merit-based counseling.\n4. Admission finalized on first-come, first-served basis per merit list.\n\n💡 **Helpful Tip**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.",
+    "answer": "Here is the admission procedure as published on the RVPU South website:\n\n📝 **Admission Procedure at RVPU South**:\n\n1. Application forms obtainable post-SSLC result announcement.\n2. Submission of application with 4 passport-size photographs & 10th marksheet.\n3. Document verification and merit-based counseling.\n4. Admission finalized on first-come, first-served basis per merit list.\n\n*Note*: Application forms can be obtained post-SSLC result announcement. Admissions proceed on merit and first-come, first-served counseling.",
     "quickChips": [
       "Required Documents",
       "Eligibility Criteria",
@@ -604,7 +604,7 @@
       "eligibility certificate"
     ],
     "weight": 2.5,
-    "answer": "To make your admission verification seamless, please keep these documents ready:\n\n📄 **Documents Required for Admission at RVPU South**:\n\n• SSLC/10th Marks Card\n• Aadhaar Card\n• Transfer Certificate\n• Conduct Certificate\n• Caste Certificate (SC/ST/BCM)\n• Income Certificate (if family income < ₹44,500/year)\n• Provisional Eligibility Certificate (Foreign/Other board students)\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.",
+    "answer": "Here are the required documents for admission verification as listed on the RVPU South website:\n\n📄 **Documents Required for Admission at RVPU South**:\n\n• SSLC/10th Marks Card\n• Aadhaar Card\n• Transfer Certificate\n• Conduct Certificate\n• Caste Certificate (SC/ST/BCM)\n• Income Certificate (if family income < ₹44,500/year)\n• Provisional Eligibility Certificate (Foreign/Other board students)\n\n*Note*: Candidates must bring the original certificates along with attested photocopies for verification during counseling.",
     "quickChips": [
       "Admission Process",
       "Eligibility Criteria",
@@ -620,19 +620,22 @@
       "eligibility",
       "admission criteria",
       "criteria",
+      "eligibility criteria",
+      "qualification",
+      "qualifying exam",
+      "sslc marks",
+      "marks required",
+      "pass marks",
+      "who can apply",
+      "can i get admission",
       "cutoff",
       "cut off",
       "cut-off",
       "percentage",
-      "marks",
-      "minimum marks",
-      "sslc marks",
-      "marks required",
-      "pass marks",
-      "who can apply"
+      "minimum marks"
     ],
     "weight": 2.5,
-    "answer": "Here is the eligibility criteria for admission:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **No Minimum Cutoff**: There is no minimum cutoff percentage mentioned on our websites. Admissions are conducted on merit and first-come, first-served counseling following the declaration of Class 10 results.\n• **Qualifying Examination**: Candidates who have successfully passed SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Merit-based counseling upon submission of the 10th marksheet and required verification documents.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in annual promotional examinations.",
+    "answer": "Here is the admission eligibility criteria as stated on the RVPU South website:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **Qualifying Examination**: Candidates who have successfully passed the Karnataka SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Admissions are conducted on merit basis following the declaration of Class 10 results. Candidates submit the application with marks card and documents for counseling verification.\n\n📊 **Examination & Promotion Rules**:\n• **I PUC**: District-level exam by DPUE (Min. 30% per subject, 35% aggregate to pass).\n• **II PUC**: State-level Board Examination.",
     "quickChips": [
       "Admission Process",
       "Required Documents",
@@ -762,7 +765,7 @@
       "youth festival"
     ],
     "weight": 3.5,
-    "answer": "Life at RVPU South is filled with energy, talent, and excitement! Here are some of our major annual events and activities:\n\n🎉 **College Events & Activities at RVPU South**:\n\n• **Annual Cultural Fest & Talent Day**: Grand celebration of student talent in music, dance, theatre, and creative arts.\n• **Annual Athletic Meet & Sports Day**: Inter-house track and field events, cricket, volleyball, basketball, and indoor tournaments.\n• **Science Seminars & Tech Exhibitions**: Hands-on laboratory project displays, model making, and interactive sessions with eminent academicians.\n• **National Celebrations**: Patriotic celebrations of Independence Day, Republic Day, and Kannada Rajyotsava.\n• **Student Enrichment & Leadership Activities**: Career counseling, personality development workshops, and active student club initiatives.",
+    "answer": "Here are the college events and student activities as highlighted on the RVPU South website:\n\n🎉 **College Events & Activities at RVPU South**:\n\n• **Cultural Events**: Music, dance, drama, and art competitions\n• **Sports Events**: Annual sports day, inter-class/inter-college athletic meets\n• **Activities Events**: Orientation programs, academic seminars, festival celebrations",
     "quickChips": [
       "Our Courses",
       "Our Campuses",

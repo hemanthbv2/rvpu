@@ -399,6 +399,22 @@ function buildInstituteKnowledgeBase(data, inst) {
   const compulsoryLang = data.courses.languages ? data.courses.languages.compulsory : 'English';
   const secondLangs = data.courses.languages ? data.courses.languages.second_language_options.join(', ') : 'Kannada, Hindi, Sanskrit';
 
+  const principalMsg = (data.leadership && data.leadership.principal && data.leadership.principal.message)
+    ? `\n\n💬 **Principal's Message**:\n*"${data.leadership.principal.message}"*`
+    : '';
+
+  const leadershipLines = [];
+  if (data.leadership) {
+    if (data.leadership.president_rvei) leadershipLines.push(`• **RSST President**: ${data.leadership.president_rvei}`);
+    if (data.leadership.vice_president_1) leadershipLines.push(`• **Vice President**: ${data.leadership.vice_president_1}`);
+    if (data.leadership.treasurer) leadershipLines.push(`• **Treasurer**: ${data.leadership.treasurer}`);
+    if (data.leadership.hon_secretary_rvei) leadershipLines.push(`• **Hon. Secretary (RSST)**: ${data.leadership.hon_secretary_rvei}`);
+    if (data.leadership.hon_jt_secretary_rvei) leadershipLines.push(`• **Hon. Joint Secretary**: ${data.leadership.hon_jt_secretary_rvei}`);
+    if (data.leadership.director_rv_learning_hub) leadershipLines.push(`• **Director, RV Learning Hub**: ${data.leadership.director_rv_learning_hub}`);
+    if (principalName && principalName !== 'Principal') leadershipLines.push(`• **Principal**: **${principalName}**`);
+  }
+  const leadershipText = leadershipLines.length > 0 ? `\n\n👨‍🏫 **Key Leadership**:\n${leadershipLines.join('\n')}` : '';
+
   const kb = [
     {
       id: 'greeting',
@@ -419,7 +435,7 @@ function buildInstituteKnowledgeBase(data, inst) {
         principalName.toLowerCase(), principalName.toLowerCase().replace(/^(mr\.|mrs\.|dr\.)\s*/, '')
       ],
       weight: 4.5,
-      answer: `Certainly! Let me introduce our college leadership.\n\n👨‍🏫 **Principal of ${fullName}**:\nOur college is headed by our respected Principal, **${principalName}**.\n\nUnder visionary academic leadership, ${shortName} emphasizes disciplined academic rigor, integrated entrance coaching (NEET, JEE, KCET, CA Foundation), personal mentoring, and holistic student growth.\n\nWould you like to read the Principal's message, view faculty details, or explore our academic courses?`,
+      answer: `Certainly! Here is information regarding our college leadership:\n\n👨‍🏫 **Principal of ${fullName}**:\nOur college is headed by our respected Principal, **${principalName}**.${principalMsg}\n\nWould you like to explore our academic combinations, facilities, or contact our admissions desk?`,
       quickChips: ['About Us', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us'],
       navigation: { label: "View Principal's Profile", url: pages.principal || pages.about || website }
     },
@@ -429,7 +445,7 @@ function buildInstituteKnowledgeBase(data, inst) {
       title: 'About Us & Management Trust',
       keywords: ['about us', 'about', 'about college', 'who are you', 'tell me about college', 'college info', 'overview', 'history', 'management', 'trust', 'rsst', 'rvei', 'shyam', 'murthy', 'nagaraj'],
       weight: 3.5,
-      answer: `I'd be delighted to tell you about our rich heritage!\n\n🏛️ **About ${fullName}**:\n${shortName} is a premier Pre-University institution managed by the renowned **Rashtreeya Sikshana Samithi Trust (RSST)**, upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board results, integrated entrance coaching, and state-of-the-art facilities.\n\n👨‍🏫 **Key Leadership**:\n• **Principal**: **${principalName}**\n• **RSST President**: Dr. M.P. Shyam\n• **Hon. Secretary (RSST)**: Dr. (h.c.) A.V.S. Murthy\n• **Hon. Joint Secretary**: Mr. D.P. Nagaraj\n• **Director, RV Learning Hub**: Mr. Mayur Goyal`,
+      answer: `I'd be delighted to tell you about our institution! 🏛️\n\n**About ${fullName}**:\n${shortName} is managed by the renowned **Rashtreeya Sikshana Samithi Trust (RSST)**, upholding over 80+ years of educational excellence. Affiliated with the Karnataka Pre-University Education Board (DPUE), the college is recognized for delivering outstanding board results, personalized student mentoring, and state-of-the-art campus facilities.${leadershipText}`,
       quickChips: ['Principal', 'Our Courses', 'Our Campuses', 'Facilities', 'Contact Us'],
       navigation: { label: 'Visit Official About Us Page', url: pages.about || website }
     },
@@ -545,14 +561,17 @@ function buildInstituteKnowledgeBase(data, inst) {
 
   // Faculty if available
   if (data.faculty && Array.isArray(data.faculty.teaching_staff) && data.faculty.teaching_staff.length > 0) {
-    const facultyList = data.faculty.teaching_staff.map(f => `• **${f.subject}**: ${f.name}`).join('\n');
+    const facultyList = data.faculty.teaching_staff.map(f => {
+      const deptOrSubject = f.department || f.subject || f.role || 'Faculty';
+      return `• **${deptOrSubject}**: ${f.name}`;
+    }).join('\n');
     kb.push({
       id: 'faculty',
       category: 'academics',
       title: 'Faculty & Teaching Staff',
       keywords: ['faculty', 'teachers', 'lecturers', 'staff', 'teaching staff', 'professors', 'who teaches', 'mentors', 'lecturer'],
       weight: 4.0,
-      answer: `Our experienced educators are the backbone of student success! Here is our teaching team:\n\n👨‍🏫 **Distinguished Faculty at ${shortName}**:\n\n${facultyList}`,
+      answer: `Here is the distinguished teaching faculty as listed on the ${shortName} website:\n\n👨‍🏫 **Faculty Directory at ${shortName}**:\n\n${facultyList}`,
       quickChips: ['Principal', 'Our Courses', 'Our Campuses', 'Contact Us'],
       navigation: { label: 'View Faculty Directory', url: pages.faculty || website }
     });
@@ -565,7 +584,7 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Admission Procedure & Steps',
     keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'procedure', 'process', 'enroll', 'seat', 'registration', 'form', 'dates'],
     weight: 2.5,
-    answer: `We would love to welcome you to our college family! Here is how our admission process works:\n\n📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n💡 **Helpful Tip**: Admissions commence immediately following the declaration of Class 10 / SSLC board exam results. We advise applying early as seats are allotted on merit and first-come, first-served basis.`,
+    answer: `Here is the admission procedure as published on the ${shortName} website:\n\n📝 **Admission Procedure at ${shortName}**:\n\n${admissionSteps}\n\n*Note*: Application forms can be obtained post-SSLC result announcement. Admissions proceed on merit and first-come, first-served counseling.`,
     quickChips: ['Required Documents', 'Eligibility Criteria', 'Our Courses', 'Our Campuses'],
     navigation: { label: 'Open Admission Portal', url: pages.admissions || website }
   });
@@ -576,17 +595,29 @@ function buildInstituteKnowledgeBase(data, inst) {
     title: 'Required Documents for Admission',
     keywords: ['documents', 'required documents', 'certificates', 'marksheet', 'marks card', 'tc', 'transfer certificate', 'aadhaar', 'caste certificate', 'income certificate', 'photographs', 'eligibility certificate'],
     weight: 2.5,
-    answer: `To make your admission verification seamless, please keep these documents ready:\n\n📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Ensure you bring the original certificates along with at least 3 attested photocopies for verification during counseling.`,
+    answer: `Here are the required documents for admission verification as listed on the ${shortName} website:\n\n📄 **Documents Required for Admission at ${shortName}**:\n\n${docsList}\n\n*Note*: Candidates must bring the original certificates along with attested photocopies for verification during counseling.`,
     quickChips: ['Admission Process', 'Eligibility Criteria', 'Our Courses', 'Our Campuses']
   });
+
+  const examRules = (data.admissions && data.admissions.examination_rules)
+    ? `\n\n📊 **Examination & Promotion Rules**:\n• **I PUC**: ${data.admissions.examination_rules.i_puc || ''}\n• **II PUC**: ${data.admissions.examination_rules.ii_puc || ''}`
+    : '';
+
+  const scholarshipInfo = (data.admissions && Array.isArray(data.admissions.scholarships) && data.admissions.scholarships.length > 0)
+    ? `\n\n🏆 **Scholarships & Concessions**:\n${data.admissions.scholarships.map(s => `• ${s}`).join('\n')}`
+    : '';
 
   kb.push({
     id: 'eligibility_cutoff',
     category: 'admissions',
     title: 'Eligibility & Admission Criteria',
-    keywords: ['eligibility', 'admission criteria', 'criteria', 'cutoff', 'cut off', 'cut-off', 'percentage', 'marks', 'minimum marks', 'sslc marks', 'marks required', 'pass marks', 'who can apply'],
+    keywords: [
+      'eligibility', 'admission criteria', 'criteria', 'eligibility criteria',
+      'qualification', 'qualifying exam', 'sslc marks', 'marks required', 'pass marks',
+      'who can apply', 'can i get admission', 'cutoff', 'cut off', 'cut-off', 'percentage', 'minimum marks'
+    ],
     weight: 2.5,
-    answer: `Here is the eligibility criteria for admission:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **No Minimum Cutoff**: There is no minimum cutoff percentage mentioned on our websites. Admissions are conducted on merit and first-come, first-served counseling following the declaration of Class 10 results.\n• **Qualifying Examination**: Candidates who have successfully passed SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Merit-based counseling upon submission of the 10th marksheet and required verification documents.\n• **Promotion Criteria (I PUC to II PUC)**: Minimum 30% marks in each individual subject and 35% overall aggregate in annual promotional examinations.`,
+    answer: `Here is the admission eligibility criteria as stated on the ${shortName} website:\n\n🎯 **Eligibility & Admission Criteria**:\n\n• **Qualifying Examination**: Candidates who have successfully passed the Karnataka SSLC / ICSE / CBSE / 10th Standard or any equivalent examination recognized by the Department of Pre-University Education (DPUE), Karnataka.\n• **Admission Basis**: Admissions are conducted on merit basis following the declaration of Class 10 results. Candidates submit the application with marks card and documents for counseling verification.${examRules}${scholarshipInfo}`,
     quickChips: ['Admission Process', 'Required Documents', 'Our Courses', 'Our Campuses']
   });
 
@@ -618,13 +649,24 @@ function buildInstituteKnowledgeBase(data, inst) {
   });
 
   // Events
+  let eventsList = '';
+  if (data.events && typeof data.events === 'object') {
+    eventsList = Object.entries(data.events)
+      .filter(([k]) => !k.endsWith('_url'))
+      .map(([k, v]) => `• **${k.charAt(0).toUpperCase() + k.slice(1)} Events**: ${v}`)
+      .join('\n');
+  }
+  if (!eventsList) {
+    eventsList = `• Cultural Events & Annual Day Celebrations\n• Sports Meets & Athletic Competitions\n• Academic Seminars & Exhibitions`;
+  }
+
   kb.push({
     id: 'events',
     category: 'campus',
     title: 'College Events & Student Activities',
     keywords: ['events', 'event', 'activities', 'activity', 'cultural', 'cultural fest', 'fest', 'fests', 'annual day', 'sports day', 'functions', 'celebrations', 'seminars', 'workshops', 'calendar', 'competitions', 'youth festival'],
     weight: 3.5,
-    answer: `Life at ${shortName} is filled with energy, talent, and excitement! Here are some of our major annual events and activities:\n\n🎉 **College Events & Activities at ${shortName}**:\n\n• **Annual Cultural Fest & Talent Day**: Grand celebration of student talent in music, dance, theatre, and creative arts.\n• **Annual Athletic Meet & Sports Day**: Inter-house track and field events, cricket, volleyball, basketball, and indoor tournaments.\n• **Science Seminars & Tech Exhibitions**: Hands-on laboratory project displays, model making, and interactive sessions with eminent academicians.\n• **National Celebrations**: Patriotic celebrations of Independence Day, Republic Day, and Kannada Rajyotsava.\n• **Student Enrichment & Leadership Activities**: Career counseling, personality development workshops, and active student club initiatives.`,
+    answer: `Here are the college events and student activities as highlighted on the ${shortName} website:\n\n🎉 **College Events & Activities at ${shortName}**:\n\n${eventsList}`,
     quickChips: ['Our Courses', 'Our Campuses', 'Facilities', 'Contact Us'],
     navigation: { label: 'View College Events Page', url: pages.events || website }
   });
