@@ -1437,10 +1437,47 @@ const newFeaturesCSS = `
 }
 `;
 
-function updateWidgetCSS(cssPath) {
-  let content = fs.readFileSync(cssPath, 'utf8');
-  let additions = '';
+function hexToRgb(hex) {
+  if (!hex) return '227, 6, 19';
+  const clean = hex.replace('#', '');
+  const full = clean.length === 3 ? clean.split('').map(x => x + x).join('') : clean;
+  const num = parseInt(full, 16);
+  return `${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}`;
+}
 
+function updateWidgetCSS(cssPath, colors, instName) {
+  let content = fs.readFileSync(cssPath, 'utf8');
+
+  if (colors && colors.primary) {
+    const primary = colors.primary;
+    const primaryAlt = colors.primary_alt || colors.primary;
+    const accent = (colors.accent && colors.accent !== '#FFFFFF') ? colors.accent : (colors.secondary || '#D89B27');
+    const accentLight = colors.accent_light || colors.accent || '#F4B846';
+    const dark = colors.text_dark || colors.footer || colors.secondary_dark || colors.secondary || '#1E1E1E';
+    const bgLight = colors.background || '#F9FAFB';
+    const rgb = hexToRgb(primary);
+
+    content = content.replace(/:root\s*\{[^}]*\}/s, `:root {
+  --rv-primary: ${primary};
+  --rv-primary-alt: ${primaryAlt};
+  --rv-accent: ${accent};
+  --rv-accent-light: ${accentLight};
+  --rv-dark: ${dark};
+  --rv-bg-light: ${bgLight};
+  --rv-card-bg: rgba(255, 255, 255, 0.96);
+  --rv-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  --rv-radius: 16px;
+  --rv-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}`);
+
+    content = content.replace(/@keyframes rv-pulse\s*\{[\s\S]*?\n\}/, `@keyframes rv-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(${rgb}, 0.45); }
+  70% { box-shadow: 0 0 0 16px rgba(${rgb}, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(${rgb}, 0); }
+}`);
+  }
+
+  let additions = '';
   if (!content.includes('.rv-carousel-wrapper')) {
     additions += '\n' + carouselCSS;
   }
@@ -1449,8 +1486,9 @@ function updateWidgetCSS(cssPath) {
   }
 
   if (additions) {
-    fs.writeFileSync(cssPath, content + '\n' + additions, 'utf8');
+    content += '\n' + additions;
   }
+  fs.writeFileSync(cssPath, content, 'utf8');
 }
 
 function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combinations) {
@@ -2040,7 +2078,7 @@ institutes.forEach(inst => {
   // 3. Update CSS
   const cssPath = path.join(assetsDir, 'chatbot-widget.css');
   if (fs.existsSync(cssPath)) {
-    updateWidgetCSS(cssPath);
+    updateWidgetCSS(cssPath, rawData.colors, rawData.institute.name);
   }
 
   // 4. Update Widget JS

@@ -1,11 +1,11 @@
 /* RVPU Chatbot Design System — RV PU College Mysuru */
 :root {
-  --rv-primary: #E30613;
-  --rv-primary-alt: #C00000;
-  --rv-accent: #46B3CA;
-  --rv-accent-light: #55C3DC;
-  --rv-dark: #1E1E1E;
-  --rv-bg-light: #F9FAFB;
+  --rv-primary: #E58D4D;
+  --rv-primary-alt: #D47A38;
+  --rv-accent: #D1C59D;
+  --rv-accent-light: #F2AA74;
+  --rv-dark: #252525;
+  --rv-bg-light: #FBFBFB;
   --rv-card-bg: rgba(255, 255, 255, 0.96);
   --rv-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
   --rv-radius: 16px;
@@ -48,9 +48,9 @@
 }
 
 @keyframes rv-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0.45); }
-  70% { box-shadow: 0 0 0 16px rgba(227, 6, 19, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(229, 141, 77, 0.45); }
+  70% { box-shadow: 0 0 0 16px rgba(229, 141, 77, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 141, 77, 0); }
 }
 
 .rv-chat-launcher svg {

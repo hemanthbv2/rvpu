@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,8 +11,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background: transparent !important;
-      background-color: transparent !important;
+      background: transparent;
       overflow: hidden;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
@@ -22,28 +21,5 @@
   <!-- Chatbot Widget Integration -->
   <script src="assets/chatbot-engine.js"></script>
   <script src="assets/chatbot-widget.js"></script>
-  <script>
-    // Force auto-open chatbot on page load
-    (function autoOpen() {
-      const openChat = () => {
-        const win = document.getElementById('rv-window');
-        const nudge = document.getElementById('rv-chat-nudge');
-        if (win) {
-          win.classList.add('rv-open');
-          if (nudge) nudge.classList.remove('rv-nudge-visible');
-          const inp = document.getElementById('rv-input');
-          if (inp) inp.focus();
-          return true;
-        }
-        return false;
-      };
-      if (!openChat()) {
-        const t = setInterval(() => {
-          if (openChat()) clearInterval(t);
-        }, 50);
-        setTimeout(() => clearInterval(t), 4000);
-      }
-    })();
-  </script>
 </body>
 </html>

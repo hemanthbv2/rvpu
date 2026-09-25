@@ -126,13 +126,13 @@
     ]
   },
   "colors": {
-    "primary": "#E30613",
-    "primary_alt": "#C00000",
-    "secondary": "#1E1E1E",
-    "accent": "#46B3CA",
-    "accent_light": "#55C3DC",
-    "background": "#F9FAFB",
-    "button_dark": "#1F2430"
+    "primary": "#E58D4D",
+    "primary_alt": "#D47A38",
+    "secondary": "#252525",
+    "accent": "#D1C59D",
+    "accent_light": "#F2AA74",
+    "background": "#FBFBFB",
+    "text_dark": "#252525"
   },
   "pages": {
     "home": "https://mys.rvpucollege.edu.in/",
