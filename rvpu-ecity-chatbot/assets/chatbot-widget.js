@@ -129,7 +129,17 @@
     const nudgeClose = document.getElementById('rv-nudge-close');
     const autocomplete = document.getElementById('rv-autocomplete-dropdown');
 
-    // 1. Proactive Welcome Nudge (Triggers after 5 seconds)
+    // 0. Auto-open Chatbot Window on Page Load
+    setTimeout(() => {
+      if (windowEl && !windowEl.classList.contains('rv-open')) {
+        windowEl.classList.add('rv-open');
+        if (nudge) nudge.classList.remove('rv-nudge-visible');
+        if (input) input.focus();
+        sendTelemetry('chat_opened', { source: 'auto_open' });
+      }
+    }, 250);
+
+    // 1. Proactive Welcome Nudge (Triggers after 5 seconds if chat is closed)
     setTimeout(() => {
       if (windowEl && !windowEl.classList.contains('rv-open') && nudge) {
         let dismissed = false;

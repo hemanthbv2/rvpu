@@ -1617,7 +1617,17 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
     const nudgeClose = document.getElementById('rv-nudge-close');
     const autocomplete = document.getElementById('rv-autocomplete-dropdown');
 
-    // 1. Proactive Welcome Nudge (Triggers after 5 seconds)
+    // 0. Auto-open Chatbot Window on Page Load
+    setTimeout(() => {
+      if (windowEl && !windowEl.classList.contains('rv-open')) {
+        windowEl.classList.add('rv-open');
+        if (nudge) nudge.classList.remove('rv-nudge-visible');
+        if (input) input.focus();
+        sendTelemetry('chat_opened', { source: 'auto_open' });
+      }
+    }, 250);
+
+    // 1. Proactive Welcome Nudge (Triggers after 5 seconds if chat is closed)
     setTimeout(() => {
       if (windowEl && !windowEl.classList.contains('rv-open') && nudge) {
         let dismissed = false;
@@ -1973,6 +1983,35 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
 `;
 }
 
+function generateCleanIndexHtml(instName, instShort) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${instName} — Chatbot</title>
+  <link rel="stylesheet" href="assets/chatbot-widget.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Chatbot Widget Integration -->
+  <script src="assets/chatbot-engine.js"></script>
+  <script src="assets/chatbot-widget.js"></script>
+</body>
+</html>
+`;
+}
+
 console.log('🚀 Starting Universal Chatbot Replicate Across All 7 RVPU Institutes...\n');
 
 institutes.forEach(inst => {
@@ -2012,7 +2051,11 @@ institutes.forEach(inst => {
   const combinations = rawData.courses ? rawData.courses.combinations : [];
   fs.writeFileSync(jsPath, generateWidgetJS(inst.id, rawData.institute.name, rawData.institute.shortName || rawData.institute.name, wpUrl, vercelUrl, combinations), 'utf8');
 
-  console.log(`✅ [${inst.name}] Upgraded with ${kb.length} intents, photo carousel, welcome nudge & auto-complete!`);
+  // 5. Update Clean index.html (no website background, auto-opening chatbot)
+  const indexPath = path.join(dirPath, 'index.html');
+  fs.writeFileSync(indexPath, generateCleanIndexHtml(rawData.institute.name, rawData.institute.shortName || rawData.institute.name), 'utf8');
+
+  console.log(`✅ [${inst.name}] Upgraded with ${kb.length} intents, clean background & auto-opened chatbot!`);
 });
 
 console.log('\n🎉 ALL 7 INSTITUTES REPLICATED AND SYNCHRONIZED SUCCESSFULLY!');
