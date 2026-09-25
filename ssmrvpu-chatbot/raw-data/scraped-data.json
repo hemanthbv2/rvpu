@@ -17,8 +17,7 @@
     "hon_secretary_rvei": "Dr. (h.c.) A.V.S. Murthy",
     "hon_jt_secretary_rvei": "Mr. D.P. Nagaraj",
     "principal": {
-      "name": "Dr. S. Anil Kumar",
-      "qualifications": "M.Com, M.Phil, Ph.D",
+      "name": "Mrs. Sunitha Acharya",
       "designation": "Principal"
     }
   },
@@ -136,13 +135,13 @@
     "College Terms & Conditions document available at: https://ssmrvpu.edu.in/new_ssmrvpu/wp-content/uploads/2026/04/Terms-conditions-3.pdf"
   ],
   "colors": {
-    "primary": "#7A0000",
-    "primary_alt": "#990000",
-    "secondary": "#1A1A1A",
-    "accent": "#D4A017",
-    "accent_light": "#F3C043",
-    "background": "#FFFFFF",
-    "card_bg": "#F8F9FA"
+    "primary": "#5EB791",
+    "primary_alt": "#55B595",
+    "secondary": "#252525",
+    "accent": "#5EB791",
+    "accent_light": "#93D6BC",
+    "background": "#FBFBFB",
+    "text_dark": "#252525"
   },
   "pages": {
     "home": "https://ssmrvpu.edu.in/new_ssmrvpu/",
@@ -153,6 +152,7 @@
     "admissions": "https://ssmrvpu.edu.in/new_ssmrvpu/admissions/",
     "events": "https://ssmrvpu.edu.in/new_ssmrvpu/events/",
     "facilities": "https://ssmrvpu.edu.in/new_ssmrvpu/facilities/",
-    "contact": "https://ssmrvpu.edu.in/new_ssmrvpu/contact_us/"
+    "contact": "https://ssmrvpu.edu.in/new_ssmrvpu/contact_us/",
+    "principal": "https://ssmrvpu.edu.in/new_ssmrvpu/mrs_sunitha_acharya/"
   }
 }

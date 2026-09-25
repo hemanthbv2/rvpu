@@ -1,11 +1,11 @@
 /* RVPU Chatbot Design System — NMKRV PU College */
 :root {
-  --rv-primary: #EE9B54;
-  --rv-primary-alt: #F09E53;
-  --rv-accent: #F5C155;
-  --rv-accent-light: #FCD882;
-  --rv-dark: #222222;
-  --rv-bg-light: #F8F6F0;
+  --rv-primary: #F9A63C;
+  --rv-primary-alt: #F3A74E;
+  --rv-accent: #FABF53;
+  --rv-accent-light: #FCD685;
+  --rv-dark: #231F20;
+  --rv-bg-light: #FBFBFB;
   --rv-card-bg: rgba(255, 255, 255, 0.96);
   --rv-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
   --rv-radius: 16px;
@@ -27,19 +27,21 @@
 
 /* Floating Launcher Button */
 .rv-chat-launcher {
-  width: 62px;
-  height: 62px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--rv-primary), var(--rv-primary-alt));
-  color: #ffffff;
+  color: #ffffff !important;
   border: none;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 0 0 var(--rv-primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 0 var(--rv-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
   animation: rv-pulse 2.5s infinite;
+  padding: 0;
+  outline: none;
 }
 
 .rv-chat-launcher:hover {
@@ -48,22 +50,25 @@
 }
 
 @keyframes rv-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(238, 155, 84, 0.45); }
-  70% { box-shadow: 0 0 0 16px rgba(238, 155, 84, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(238, 155, 84, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(249, 166, 60, 0.45); }
+  70% { box-shadow: 0 0 0 16px rgba(249, 166, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(249, 166, 60, 0); }
 }
 
 .rv-chat-launcher svg {
-  width: 30px;
-  height: 30px;
-  fill: currentColor;
+  width: 22px;
+  height: 22px;
+  fill: #ffffff !important;
+  color: #ffffff !important;
+  stroke: none;
+  display: block;
   transition: transform 0.2s ease;
 }
 
 /* Chat Window */
 .rv-chat-window {
   position: absolute;
-  bottom: 78px;
+  bottom: 0;
   right: 0;
   width: 400px;
   max-width: calc(100vw - 32px);
@@ -613,7 +618,7 @@
    ============================================================ */
 .rv-autocomplete-dropdown {
   position: absolute;
-  bottom: 64px;
+  bottom: 0;
   left: 12px;
   right: 12px;
   background: #ffffff;
@@ -774,4 +779,15 @@
   color: #94a3b8;
   font-size: 11px;
   line-height: 1.4;
+}
+
+
+
+
+
+.rv-chat-launcher.rv-launcher-active {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0.6) !important;
+  visibility: hidden !important;
 }

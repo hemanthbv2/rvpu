@@ -106,13 +106,13 @@
     "note": "Individual faculty listings are not currently published on the website (department tabs are placeholder-only as of scraping date)."
   },
   "colors": {
-    "primary": "#EE9B54",
-    "primary_alt": "#F09E53",
-    "secondary": "#1E1E1E",
-    "accent": "#F5C155",
-    "accent_light": "#FCD882",
-    "background": "#F8F6F0",
-    "text_dark": "#222222"
+    "primary": "#F9A63C",
+    "primary_alt": "#F3A74E",
+    "secondary": "#231F20",
+    "accent": "#FABF53",
+    "accent_light": "#FCD685",
+    "background": "#FBFBFB",
+    "text_dark": "#231F20"
   },
   "pages": {
     "home": "https://www.nmkrvpu.edu.in/new_nmkrvpu/",
@@ -124,6 +124,7 @@
     "faculty": "https://www.nmkrvpu.edu.in/new_nmkrvpu/faculty/",
     "events": "https://www.nmkrvpu.edu.in/new_nmkrvpu/events/",
     "contact": "https://www.nmkrvpu.edu.in/new_nmkrvpu/contact_us/",
+    "principal": "https://www.nmkrvpu.edu.in/new_nmkrvpu/sheela_prakash_s_n/",
     "admission_portal": "https://admissions.rvlearninghub.com/"
   }
 }

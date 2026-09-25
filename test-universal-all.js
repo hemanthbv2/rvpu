@@ -6,7 +6,7 @@ const institutes = [
   { id: 'south', dir: 'rvpu-south-chatbot', expectedPrincipal: 'A.S. Venkatesan' },
   { id: 'ecity', dir: 'rvpu-ecity-chatbot', expectedPrincipal: 'Suman G.V.' },
   { id: 'harohalli', dir: 'rvpu-harohalli-chatbot', expectedPrincipal: 'Umesh K.N.' },
-  { id: 'ssmrvpu', dir: 'ssmrvpu-chatbot', expectedPrincipal: 'Anil Kumar' },
+  { id: 'ssmrvpu', dir: 'ssmrvpu-chatbot', expectedPrincipal: 'Sunitha Acharya' },
   { id: 'nmkrvpu', dir: 'nmkrvpu-chatbot', expectedPrincipal: 'Sheela Prakash' },
   { id: 'mysore', dir: 'rvpu-mysore-chatbot', expectedPrincipal: 'Ashwin Raj' }
 ];

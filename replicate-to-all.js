@@ -1475,6 +1475,37 @@ function updateWidgetCSS(cssPath, colors, instName) {
   70% { box-shadow: 0 0 0 16px rgba(${rgb}, 0); }
   100% { box-shadow: 0 0 0 0 rgba(${rgb}, 0); }
 }`);
+
+    // Update .rv-chat-launcher size and styling to sleek 50px
+    content = content.replace(/\.rv-chat-launcher\s*\{[^}]*\}/s, `.rv-chat-launcher {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rv-primary), var(--rv-primary-alt));
+  color: #ffffff !important;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 0 var(--rv-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: rv-pulse 2.5s infinite;
+  padding: 0;
+  outline: none;
+}`);
+
+    content = content.replace(/\.rv-chat-launcher\s+svg\s*\{[^}]*\}/s, `.rv-chat-launcher svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffffff !important;
+  color: #ffffff !important;
+  stroke: none;
+  display: block;
+  transition: transform 0.2s ease;
+}`);
+
+    content = content.replace(/bottom:\s*(?:78px|64px);/, 'bottom: 0;');
   }
 
   let additions = '';
@@ -1483,6 +1514,19 @@ function updateWidgetCSS(cssPath, colors, instName) {
   }
   if (!content.includes('.rv-chat-nudge')) {
     additions += '\n' + newFeaturesCSS;
+  }
+  if (content.includes('.rv-launcher-icon-close')) {
+    content = content.replace(/\.rv-chat-launcher\s*\.rv-launcher-icon-close[\s\S]*?\.rv-chat-launcher\.rv-launcher-active\s*\.rv-launcher-icon-close\s*\{[^}]*\}/s, '');
+  }
+  if (!content.includes('.rv-chat-launcher.rv-launcher-active {')) {
+    additions += `
+.rv-chat-launcher.rv-launcher-active {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0.6) !important;
+  visibility: hidden !important;
+}
+`;
   }
 
   if (additions) {
@@ -1596,8 +1640,13 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
       </div>
 
       <!-- Floating Launcher Button -->
-      <button class="rv-chat-launcher" id="rv-launcher-btn" aria-label="Open Admissions Chat">
-        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+      <button class="rv-chat-launcher" id="rv-launcher-btn" aria-label="Toggle Admissions Chat">
+        <svg class="rv-launcher-icon-chat" viewBox="0 0 24 24" width="22" height="22" fill="#ffffff">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+        <svg class="rv-launcher-icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
       </button>
 
       <!-- Main Chat Window -->
@@ -1659,6 +1708,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
     setTimeout(() => {
       if (windowEl && !windowEl.classList.contains('rv-open')) {
         windowEl.classList.add('rv-open');
+        if (launcher) launcher.classList.add('rv-launcher-active');
         if (nudge) nudge.classList.remove('rv-nudge-visible');
         if (input) input.focus();
         sendTelemetry('chat_opened', { source: 'auto_open' });
@@ -1681,6 +1731,7 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
         if (e.target.closest('#rv-nudge-close')) return;
         nudge.classList.remove('rv-nudge-visible');
         windowEl.classList.add('rv-open');
+        if (launcher) launcher.classList.add('rv-launcher-active');
         input.focus();
         sendTelemetry('chat_opened', { source: 'welcome_nudge' });
       });
@@ -1699,12 +1750,18 @@ function generateWidgetJS(instId, instName, instShort, wpUrl, vercelUrl, combina
       if (nudge) nudge.classList.remove('rv-nudge-visible');
       windowEl.classList.toggle('rv-open');
       if (windowEl.classList.contains('rv-open')) {
+        launcher.classList.add('rv-launcher-active');
         input.focus();
         sendTelemetry('chat_opened', { source: 'launcher_button' });
+      } else {
+        launcher.classList.remove('rv-launcher-active');
       }
     });
 
-    closeBtn.addEventListener('click', () => windowEl.classList.remove('rv-open'));
+    closeBtn.addEventListener('click', () => {
+      windowEl.classList.remove('rv-open');
+      launcher.classList.remove('rv-launcher-active');
+    });
     resetBtn.addEventListener('click', () => {
       document.getElementById('rv-messages').innerHTML = '';
       if (autocomplete) {

@@ -89,13 +89,13 @@
     "The I PUC Annual Examination 2025–26 results have been announced."
   ],
   "colors": {
-    "primary": "#6EC195",
-    "primary_alt": "#72C597",
-    "secondary": "#4E8F67",
-    "secondary_dark": "#3A7550",
-    "alert": "#E00000",
-    "footer": "#2B2B2B",
-    "background": "#F0EFEB"
+    "primary": "#7CCB9D",
+    "primary_alt": "#64C38A",
+    "secondary": "#252525",
+    "accent": "#7CCB9D",
+    "accent_light": "#AEE0C4",
+    "background": "#FBFBFB",
+    "text_dark": "#252525"
   },
   "pages": {
     "home": "https://south.rvpucollege.edu.in/",
@@ -106,6 +106,7 @@
     "admissions": "https://south.rvpucollege.edu.in/admissions/",
     "facilities": "https://south.rvpucollege.edu.in/facilities/",
     "events": "https://south.rvpucollege.edu.in/events/",
-    "contact": "https://south.rvpucollege.edu.in/contact-us/"
+    "contact": "https://south.rvpucollege.edu.in/contact-us/",
+    "principal": "https://south.rvpucollege.edu.in/demo_south/a-s-venkatesan/"
   }
 }

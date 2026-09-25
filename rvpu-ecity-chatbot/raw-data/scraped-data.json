@@ -114,11 +114,11 @@
   "colors": {
     "primary": "#1B3C2D",
     "primary_alt": "#2D5A3F",
-    "secondary": "#F5A623",
-    "accent": "#FFFFFF",
-    "header_bg": "#1B3C2D",
-    "background": "#F5F5F5",
-    "footer": "#1B3C2D"
+    "secondary": "#1A1A1A",
+    "accent": "#F5A623",
+    "accent_light": "#FFC04D",
+    "background": "#FBFBFB",
+    "text_dark": "#1B3C2D"
   },
   "pages": {
     "home": "https://ecity.rvpucollege.edu.in/",
@@ -130,6 +130,7 @@
     "facilities": "https://ecity.rvpucollege.edu.in/facilities/",
     "events": "https://ecity.rvpucollege.edu.in/events/",
     "contact": "https://ecity.rvpucollege.edu.in/contact_us/",
+    "principal": "https://ecity.rvpucollege.edu.in/mr-suman-g-v/",
     "campuses": "https://rvpucollege.com/",
     "donate": "https://www.rvinstitutions.com/donate/"
   }

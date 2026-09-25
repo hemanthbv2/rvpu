@@ -123,13 +123,13 @@
     ]
   },
   "colors": {
-    "primary": "#1B365D",
-    "primary_alt": "#D89B27",
-    "secondary": "#1C1C1C",
-    "accent": "#D89B27",
-    "accent_light": "#F4B846",
-    "background": "#F9FAFB",
-    "text_dark": "#101828"
+    "primary": "#102B5C",
+    "primary_alt": "#122D5C",
+    "secondary": "#17243B",
+    "accent": "#D9A441",
+    "accent_light": "#F4C46A",
+    "background": "#FBFBFB",
+    "text_dark": "#102B5C"
   },
   "pages": {
     "home": "https://hrh.rvpucollege.edu.in/home/",

@@ -70,8 +70,13 @@
       </div>
 
       <!-- Floating Launcher Button -->
-      <button class="rv-chat-launcher" id="rv-launcher-btn" aria-label="Open Admissions Chat">
-        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+      <button class="rv-chat-launcher" id="rv-launcher-btn" aria-label="Toggle Admissions Chat">
+        <svg class="rv-launcher-icon-chat" viewBox="0 0 24 24" width="22" height="22" fill="#ffffff">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+        <svg class="rv-launcher-icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
       </button>
 
       <!-- Main Chat Window -->
@@ -133,6 +138,7 @@
     setTimeout(() => {
       if (windowEl && !windowEl.classList.contains('rv-open')) {
         windowEl.classList.add('rv-open');
+        if (launcher) launcher.classList.add('rv-launcher-active');
         if (nudge) nudge.classList.remove('rv-nudge-visible');
         if (input) input.focus();
         sendTelemetry('chat_opened', { source: 'auto_open' });
@@ -155,6 +161,7 @@
         if (e.target.closest('#rv-nudge-close')) return;
         nudge.classList.remove('rv-nudge-visible');
         windowEl.classList.add('rv-open');
+        if (launcher) launcher.classList.add('rv-launcher-active');
         input.focus();
         sendTelemetry('chat_opened', { source: 'welcome_nudge' });
       });
@@ -173,12 +180,18 @@
       if (nudge) nudge.classList.remove('rv-nudge-visible');
       windowEl.classList.toggle('rv-open');
       if (windowEl.classList.contains('rv-open')) {
+        launcher.classList.add('rv-launcher-active');
         input.focus();
         sendTelemetry('chat_opened', { source: 'launcher_button' });
+      } else {
+        launcher.classList.remove('rv-launcher-active');
       }
     });
 
-    closeBtn.addEventListener('click', () => windowEl.classList.remove('rv-open'));
+    closeBtn.addEventListener('click', () => {
+      windowEl.classList.remove('rv-open');
+      launcher.classList.remove('rv-launcher-active');
+    });
     resetBtn.addEventListener('click', () => {
       document.getElementById('rv-messages').innerHTML = '';
       if (autocomplete) {

@@ -21,10 +21,8 @@
     "issues": []
   },
   "urlHealthChecks": {
-    "totalUrls": 71,
-    "verified200": 70,
-    "issues": [
-      "[Error: This operation was aborted] https://www.nmkrvpu.edu.in/new_nmkrvpu/"
-    ]
+    "totalUrls": 77,
+    "verified200": 77,
+    "issues": []
   }
 }

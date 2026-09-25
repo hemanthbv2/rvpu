@@ -95,13 +95,13 @@
     "sports_url": "https://north.rvpucollege.edu.in/sports-events/"
   },
   "colors": {
-    "primary": "#E30613",
-    "primary_alt": "#FF0000",
-    "secondary": "#1E1E1E",
-    "accent": "#46B3CA",
-    "accent_light": "#55C3DC",
-    "background": "#F4F4F4",
-    "button_dark": "#1F2430"
+    "primary": "#5DC3E6",
+    "primary_alt": "#53B9DB",
+    "secondary": "#252525",
+    "accent": "#5DC3E6",
+    "accent_light": "#96DCF2",
+    "background": "#FBFBFB",
+    "text_dark": "#252525"
   },
   "pages": {
     "home": "https://north.rvpucollege.edu.in/",
@@ -111,6 +111,7 @@
     "faculty": "https://north.rvpucollege.edu.in/north_new/faculty/",
     "facilities": "https://north.rvpucollege.edu.in/north_new/facilities/",
     "events": "https://north.rvpucollege.edu.in/north_new/events/",
-    "contact": "https://north.rvpucollege.edu.in/contact-us/"
+    "contact": "https://north.rvpucollege.edu.in/contact-us/",
+    "principal": "https://north.rvpucollege.edu.in/mr-kumar-s/"
   }
 }
